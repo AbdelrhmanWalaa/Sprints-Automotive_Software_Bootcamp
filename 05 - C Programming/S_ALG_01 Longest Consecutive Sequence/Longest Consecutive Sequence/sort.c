@@ -33,21 +33,21 @@ int8_t insertionSort(int32_t* array, uint8_t arraySize)
 	/* Check 3: Array can be sorted */
 	else
 	{	
-		int8_t index, j;
+		int8_t index, index2;
 		int32_t current;
 
 		/* Loop: Until the end of the array */
 		for (index = 1; index < arraySize; index++) 
 		{
 			current = array[index];
-			j = index - 1;
+			index2 = index - 1;
 
-			while ((j >= 0) && (current < array[j]))
+			while ((index2 >= 0) && (current < array[index2]))
 			{
-				array[j + 1] = array[j];
-				j = j - 1;
+				array[index2 + 1] = array[index2];
+				index2 = index2 - 1;
 			}
-			array[j + 1] = current;
+			array[index2 + 1] = current;
 		}		
 	}
 
