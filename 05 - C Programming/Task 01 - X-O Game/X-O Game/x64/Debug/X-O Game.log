@@ -1,6 +1,0 @@
-﻿  main.c
-  APP_Program.c
-E:\Courses\Sprints\Automotive Software BootCamp\Part 05 - C Programming\Task 1 - X-O Game\X-O Game\APP_Program.c(180,40): warning C4244: 'function': conversion from 'uint32_t' to 'uint8_t', possible loss of data
-  Generating Code...
-  APP_Interface.h
-  X-O Game.vcxproj -> E:\Courses\Sprints\Automotive Software BootCamp\Part 05 - C Programming\Task 1 - X-O Game\X-O Game\x64\Debug\X-O Game.exe
