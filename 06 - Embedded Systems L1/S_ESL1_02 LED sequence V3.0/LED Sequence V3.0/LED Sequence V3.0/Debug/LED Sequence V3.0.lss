@@ -1,0 +1,2823 @@
+
+LED Sequence V3.0.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000e4e  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000001c  00800060  00000e4e  00000ee2  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000016  0080007c  0080007c  00000efe  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000efe  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000f30  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000001e0  00000000  00000000  00000f6c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000017b8  00000000  00000000  0000114c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000a8e  00000000  00000000  00002904  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000141f  00000000  00000000  00003392  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000004f0  00000000  00000000  000047b4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000097c  00000000  00000000  00004ca4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00001a73  00000000  00000000  00005620  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000188  00000000  00000000  00007093  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 b2 01 	jmp	0x364	; 0x364 <__vector_1>
+   8:	0c 94 db 01 	jmp	0x3b6	; 0x3b6 <__vector_2>
+   c:	0c 94 04 02 	jmp	0x408	; 0x408 <__vector_3>
+  10:	0c 94 db 03 	jmp	0x7b6	; 0x7b6 <__vector_4>
+  14:	0c 94 f8 03 	jmp	0x7f0	; 0x7f0 <__vector_5>
+  18:	0c 94 18 04 	jmp	0x830	; 0x830 <__vector_6>
+  1c:	0c 94 22 04 	jmp	0x844	; 0x844 <__vector_7>
+  20:	0c 94 3f 04 	jmp	0x87e	; 0x87e <__vector_8>
+  24:	0c 94 5c 04 	jmp	0x8b8	; 0x8b8 <__vector_9>
+  28:	0c 94 7d 04 	jmp	0x8fa	; 0x8fa <__vector_10>
+  2c:	0c 94 9a 04 	jmp	0x934	; 0x934 <__vector_11>
+  30:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  34:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  38:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  3c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  40:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  44:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  48:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  4c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  50:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_copy_data>:
+  60:	10 e0       	ldi	r17, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	ee e4       	ldi	r30, 0x4E	; 78
+  68:	fe e0       	ldi	r31, 0x0E	; 14
+  6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
+  6c:	05 90       	lpm	r0, Z+
+  6e:	0d 92       	st	X+, r0
+  70:	ac 37       	cpi	r26, 0x7C	; 124
+  72:	b1 07       	cpc	r27, r17
+  74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
+
+00000076 <__do_clear_bss>:
+  76:	20 e0       	ldi	r18, 0x00	; 0
+  78:	ac e7       	ldi	r26, 0x7C	; 124
+  7a:	b0 e0       	ldi	r27, 0x00	; 0
+  7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
+
+0000007e <.do_clear_bss_loop>:
+  7e:	1d 92       	st	X+, r1
+
+00000080 <.do_clear_bss_start>:
+  80:	a2 39       	cpi	r26, 0x92	; 146
+  82:	b2 07       	cpc	r27, r18
+  84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
+  86:	0e 94 f2 00 	call	0x1e4	; 0x1e4 <main>
+  8a:	0c 94 25 07 	jmp	0xe4a	; 0xe4a <_exit>
+
+0000008e <__bad_interrupt>:
+  8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000092 <APP_vdChangeLEDsSequence>:
+ Description: Function to change LEDs Sequence using EXI peripheral.
+*/
+vd APP_vdChangeLEDsSequence( void )
+{
+	/* Increment NumberOfBTNTicks */
+	Glb_u8NumberOfBTN0Ticks++;
+  92:	80 91 7d 00 	lds	r24, 0x007D	; 0x80007d <Glb_u8NumberOfBTN0Ticks>
+  96:	8f 5f       	subi	r24, 0xFF	; 255
+  98:	80 93 7d 00 	sts	0x007D, r24	; 0x80007d <Glb_u8NumberOfBTN0Ticks>
+	
+	/* Check: NumberOfBTNTicks reaches 8 */
+	if ( Glb_u8NumberOfBTN0Ticks == 8 )
+  9c:	88 30       	cpi	r24, 0x08	; 8
+  9e:	11 f4       	brne	.+4      	; 0xa4 <APP_vdChangeLEDsSequence+0x12>
+	{
+		/* Reset NumberOfBTNTicks */
+		Glb_u8NumberOfBTN0Ticks = 0;
+  a0:	10 92 7d 00 	sts	0x007D, r1	; 0x80007d <Glb_u8NumberOfBTN0Ticks>
+  a4:	08 95       	ret
+
+000000a6 <APP_vdChangeBlinkMode>:
+ Description: Function to change Blink Mode using EXI peripheral.
+*/
+vd APP_vdChangeBlinkMode   ( void )
+{
+	/* Increment NumberOfBTNTicks */
+	Glb_u8NumberOfBTN1Ticks++;
+  a6:	80 91 7c 00 	lds	r24, 0x007C	; 0x80007c <__data_end>
+  aa:	8f 5f       	subi	r24, 0xFF	; 255
+  ac:	80 93 7c 00 	sts	0x007C, r24	; 0x80007c <__data_end>
+	
+	/* Check: NumberOfBTNTicks reaches 5 */
+	if ( Glb_u8NumberOfBTN1Ticks == 5 )
+  b0:	85 30       	cpi	r24, 0x05	; 5
+  b2:	11 f4       	brne	.+4      	; 0xb8 <APP_vdChangeBlinkMode+0x12>
+	{
+		/* Reset NumberOfBTNTicks */
+		Glb_u8NumberOfBTN1Ticks = 0;
+  b4:	10 92 7c 00 	sts	0x007C, r1	; 0x80007c <__data_end>
+  b8:	08 95       	ret
+
+000000ba <APP_vdInitialization>:
+ Description: Function to initialize the application.
+*/
+vd APP_vdInitialization    ( void )
+{
+	/* HAL Initialization */
+	LED_vdInitialization();
+  ba:	0e 94 d8 00 	call	0x1b0	; 0x1b0 <LED_vdInitialization>
+	
+	/* MCAL Initialization */
+	GLI_vdEnableGIE();
+  be:	0e 94 2d 02 	call	0x45a	; 0x45a <GLI_vdEnableGIE>
+	EXI_u8INTSetCallBack( EXI_U8_INT0, &APP_vdChangeLEDsSequence );
+  c2:	69 e4       	ldi	r22, 0x49	; 73
+  c4:	70 e0       	ldi	r23, 0x00	; 0
+  c6:	80 e0       	ldi	r24, 0x00	; 0
+  c8:	0e 94 9f 01 	call	0x33e	; 0x33e <EXI_u8INTSetCallBack>
+	EXI_u8EnablePIE( EXI_U8_INT0, EXI_U8_SENSE_FALLING_EDGE );
+  cc:	62 e0       	ldi	r22, 0x02	; 2
+  ce:	80 e0       	ldi	r24, 0x00	; 0
+  d0:	0e 94 1e 01 	call	0x23c	; 0x23c <EXI_u8EnablePIE>
+	EXI_u8INTSetCallBack( EXI_U8_INT1, &APP_vdChangeBlinkMode );
+  d4:	63 e5       	ldi	r22, 0x53	; 83
+  d6:	70 e0       	ldi	r23, 0x00	; 0
+  d8:	81 e0       	ldi	r24, 0x01	; 1
+  da:	0e 94 9f 01 	call	0x33e	; 0x33e <EXI_u8INTSetCallBack>
+	EXI_u8EnablePIE( EXI_U8_INT1, EXI_U8_SENSE_FALLING_EDGE );
+  de:	62 e0       	ldi	r22, 0x02	; 2
+  e0:	81 e0       	ldi	r24, 0x01	; 1
+  e2:	0e 94 1e 01 	call	0x23c	; 0x23c <EXI_u8EnablePIE>
+
+	TMR_vdTMR0Initialization();
+  e6:	0e 94 31 02 	call	0x462	; 0x462 <TMR_vdTMR0Initialization>
+  ea:	08 95       	ret
+
+000000ec <APP_vdStartProgram>:
+ Input: void
+ Output: void
+ Description: Function to start the program.
+*/
+vd APP_vdStartProgram      ( void )
+{	
+  ec:	cf 93       	push	r28
+  ee:	df 93       	push	r29
+  f0:	cd b7       	in	r28, 0x3d	; 61
+  f2:	de b7       	in	r29, 0x3e	; 62
+  f4:	6c 97       	sbiw	r28, 0x1c	; 28
+  f6:	0f b6       	in	r0, 0x3f	; 63
+  f8:	f8 94       	cli
+  fa:	de bf       	out	0x3e, r29	; 62
+  fc:	0f be       	out	0x3f, r0	; 63
+  fe:	cd bf       	out	0x3d, r28	; 61
+	u8 Loc_Au8LEDsSequence[8] = { APP_U8_PRESS_0_SEQ, APP_U8_PRESS_1_SEQ, APP_U8_PRESS_2_SEQ, APP_U8_PRESS_3_SEQ, APP_U8_PRESS_4_SEQ, APP_U8_PRESS_5_SEQ, APP_U8_PRESS_6_SEQ, APP_U8_PRESS_7_SEQ };
+ 100:	88 e0       	ldi	r24, 0x08	; 8
+ 102:	e0 e6       	ldi	r30, 0x60	; 96
+ 104:	f0 e0       	ldi	r31, 0x00	; 0
+ 106:	de 01       	movw	r26, r28
+ 108:	11 96       	adiw	r26, 0x01	; 1
+ 10a:	01 90       	ld	r0, Z+
+ 10c:	0d 92       	st	X+, r0
+ 10e:	8a 95       	dec	r24
+ 110:	e1 f7       	brne	.-8      	; 0x10a <APP_vdStartProgram+0x1e>
+		
+	const u16 Loc_Au16OnPeriods[5]  = { 100, 200, 300, 500, 800 };	
+ 112:	8a e0       	ldi	r24, 0x0A	; 10
+ 114:	e8 e6       	ldi	r30, 0x68	; 104
+ 116:	f0 e0       	ldi	r31, 0x00	; 0
+ 118:	de 01       	movw	r26, r28
+ 11a:	19 96       	adiw	r26, 0x09	; 9
+ 11c:	01 90       	ld	r0, Z+
+ 11e:	0d 92       	st	X+, r0
+ 120:	8a 95       	dec	r24
+ 122:	e1 f7       	brne	.-8      	; 0x11c <APP_vdStartProgram+0x30>
+	const u16 Loc_Au16OffPeriods[5] = { 900, 800, 700, 500, 200 };	
+ 124:	8a e0       	ldi	r24, 0x0A	; 10
+ 126:	e2 e7       	ldi	r30, 0x72	; 114
+ 128:	f0 e0       	ldi	r31, 0x00	; 0
+ 12a:	de 01       	movw	r26, r28
+ 12c:	53 96       	adiw	r26, 0x13	; 19
+ 12e:	01 90       	ld	r0, Z+
+ 130:	0d 92       	st	X+, r0
+ 132:	8a 95       	dec	r24
+ 134:	e1 f7       	brne	.-8      	; 0x12e <APP_vdStartProgram+0x42>
+	
+	/* Toggle forever */
+	while (1)
+	{
+		LED_u8SetLEDPort( Loc_Au8LEDsSequence[Glb_u8NumberOfBTN0Ticks], LED_U8_ON );
+ 136:	80 91 7d 00 	lds	r24, 0x007D	; 0x80007d <Glb_u8NumberOfBTN0Ticks>
+ 13a:	e1 e0       	ldi	r30, 0x01	; 1
+ 13c:	f0 e0       	ldi	r31, 0x00	; 0
+ 13e:	ec 0f       	add	r30, r28
+ 140:	fd 1f       	adc	r31, r29
+ 142:	e8 0f       	add	r30, r24
+ 144:	f1 1d       	adc	r31, r1
+ 146:	60 e0       	ldi	r22, 0x00	; 0
+ 148:	80 81       	ld	r24, Z
+ 14a:	0e 94 db 00 	call	0x1b6	; 0x1b6 <LED_u8SetLEDPort>
+		/* Delay OnPeriod */
+		TMR_u8DelayMS( TMR_U8_TMR0, Loc_Au16OnPeriods[Glb_u8NumberOfBTN1Ticks] );
+ 14e:	e0 91 7c 00 	lds	r30, 0x007C	; 0x80007c <__data_end>
+ 152:	f0 e0       	ldi	r31, 0x00	; 0
+ 154:	ee 0f       	add	r30, r30
+ 156:	ff 1f       	adc	r31, r31
+ 158:	81 e0       	ldi	r24, 0x01	; 1
+ 15a:	90 e0       	ldi	r25, 0x00	; 0
+ 15c:	8c 0f       	add	r24, r28
+ 15e:	9d 1f       	adc	r25, r29
+ 160:	e8 0f       	add	r30, r24
+ 162:	f9 1f       	adc	r31, r25
+ 164:	40 85       	ldd	r20, Z+8	; 0x08
+ 166:	51 85       	ldd	r21, Z+9	; 0x09
+ 168:	60 e0       	ldi	r22, 0x00	; 0
+ 16a:	70 e0       	ldi	r23, 0x00	; 0
+ 16c:	80 e0       	ldi	r24, 0x00	; 0
+ 16e:	0e 94 28 03 	call	0x650	; 0x650 <TMR_u8DelayMS>
+		
+		LED_u8SetLEDPort( Loc_Au8LEDsSequence[Glb_u8NumberOfBTN0Ticks], LED_U8_OFF );
+ 172:	80 91 7d 00 	lds	r24, 0x007D	; 0x80007d <Glb_u8NumberOfBTN0Ticks>
+ 176:	e1 e0       	ldi	r30, 0x01	; 1
+ 178:	f0 e0       	ldi	r31, 0x00	; 0
+ 17a:	ec 0f       	add	r30, r28
+ 17c:	fd 1f       	adc	r31, r29
+ 17e:	e8 0f       	add	r30, r24
+ 180:	f1 1d       	adc	r31, r1
+ 182:	61 e0       	ldi	r22, 0x01	; 1
+ 184:	80 81       	ld	r24, Z
+ 186:	0e 94 db 00 	call	0x1b6	; 0x1b6 <LED_u8SetLEDPort>
+		/* Delay OffPeriod */
+		TMR_u8DelayMS( TMR_U8_TMR0, Loc_Au16OffPeriods[Glb_u8NumberOfBTN1Ticks] );			
+ 18a:	e0 91 7c 00 	lds	r30, 0x007C	; 0x80007c <__data_end>
+ 18e:	f0 e0       	ldi	r31, 0x00	; 0
+ 190:	ee 0f       	add	r30, r30
+ 192:	ff 1f       	adc	r31, r31
+ 194:	81 e0       	ldi	r24, 0x01	; 1
+ 196:	90 e0       	ldi	r25, 0x00	; 0
+ 198:	8c 0f       	add	r24, r28
+ 19a:	9d 1f       	adc	r25, r29
+ 19c:	e8 0f       	add	r30, r24
+ 19e:	f9 1f       	adc	r31, r25
+ 1a0:	42 89       	ldd	r20, Z+18	; 0x12
+ 1a2:	53 89       	ldd	r21, Z+19	; 0x13
+ 1a4:	60 e0       	ldi	r22, 0x00	; 0
+ 1a6:	70 e0       	ldi	r23, 0x00	; 0
+ 1a8:	80 e0       	ldi	r24, 0x00	; 0
+ 1aa:	0e 94 28 03 	call	0x650	; 0x650 <TMR_u8DelayMS>
+ 1ae:	c3 cf       	rjmp	.-122    	; 0x136 <APP_vdStartProgram+0x4a>
+
+000001b0 <LED_vdInitialization>:
+		/* Update error state = NOK, wrong LEDId or Operation! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+	}
+		
+	return Loc_u8ErrorState;
+}
+ 1b0:	0e 94 f9 00 	call	0x1f2	; 0x1f2 <DIO_vdInitialization>
+ 1b4:	08 95       	ret
+
+000001b6 <LED_u8SetLEDPort>:
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+		
+	/* Check 1: Operation is in the valid range */
+	if ( Cpy_u8Operation <= LED_U8_OFF )
+ 1b6:	62 30       	cpi	r22, 0x02	; 2
+ 1b8:	88 f4       	brcc	.+34     	; 0x1dc <LED_u8SetLEDPort+0x26>
+	{
+		/* Check 1.1: Required Operation */
+		switch ( Cpy_u8Operation )
+ 1ba:	66 23       	and	r22, r22
+ 1bc:	19 f0       	breq	.+6      	; 0x1c4 <LED_u8SetLEDPort+0xe>
+ 1be:	61 30       	cpi	r22, 0x01	; 1
+ 1c0:	39 f0       	breq	.+14     	; 0x1d0 <LED_u8SetLEDPort+0x1a>
+ 1c2:	0e c0       	rjmp	.+28     	; 0x1e0 <LED_u8SetLEDPort+0x2a>
+		{
+			case LED_U8_ON : DIO_u8SetPortValue( LED_U8_PORT, Cpy_u8LEDPortValue  ); break;
+ 1c4:	68 2f       	mov	r22, r24
+ 1c6:	80 e0       	ldi	r24, 0x00	; 0
+ 1c8:	0e 94 04 01 	call	0x208	; 0x208 <DIO_u8SetPortValue>
+ Description: Function to switch LEDs on or off.
+*/
+u8 LED_u8SetLEDPort    ( u8 Cpy_u8LEDPortValue, u8 Cpy_u8Operation )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 1cc:	81 e0       	ldi	r24, 0x01	; 1
+	if ( Cpy_u8Operation <= LED_U8_OFF )
+	{
+		/* Check 1.1: Required Operation */
+		switch ( Cpy_u8Operation )
+		{
+			case LED_U8_ON : DIO_u8SetPortValue( LED_U8_PORT, Cpy_u8LEDPortValue  ); break;
+ 1ce:	08 95       	ret
+			case LED_U8_OFF: DIO_u8SetPortValue( LED_U8_PORT, 0 ); break;
+ 1d0:	60 e0       	ldi	r22, 0x00	; 0
+ 1d2:	80 e0       	ldi	r24, 0x00	; 0
+ 1d4:	0e 94 04 01 	call	0x208	; 0x208 <DIO_u8SetPortValue>
+ Description: Function to switch LEDs on or off.
+*/
+u8 LED_u8SetLEDPort    ( u8 Cpy_u8LEDPortValue, u8 Cpy_u8Operation )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 1d8:	81 e0       	ldi	r24, 0x01	; 1
+	{
+		/* Check 1.1: Required Operation */
+		switch ( Cpy_u8Operation )
+		{
+			case LED_U8_ON : DIO_u8SetPortValue( LED_U8_PORT, Cpy_u8LEDPortValue  ); break;
+			case LED_U8_OFF: DIO_u8SetPortValue( LED_U8_PORT, 0 ); break;
+ 1da:	08 95       	ret
+	}
+	/* Check 2: Operation is not in the valid range */
+	else
+	{
+		/* Update error state = NOK, wrong Operation! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+ 1dc:	80 e0       	ldi	r24, 0x00	; 0
+ 1de:	08 95       	ret
+ Description: Function to switch LEDs on or off.
+*/
+u8 LED_u8SetLEDPort    ( u8 Cpy_u8LEDPortValue, u8 Cpy_u8Operation )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 1e0:	81 e0       	ldi	r24, 0x01	; 1
+		/* Update error state = NOK, wrong Operation! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+	}
+		
+	return Loc_u8ErrorState;
+}
+ 1e2:	08 95       	ret
+
+000001e4 <main>:
+/* APP */
+#include "APP/APP_Interface.h"
+
+int main(void)
+{
+	APP_vdInitialization();
+ 1e4:	0e 94 5d 00 	call	0xba	; 0xba <APP_vdInitialization>
+	APP_vdStartProgram();
+ 1e8:	0e 94 76 00 	call	0xec	; 0xec <APP_vdStartProgram>
+ 1ec:	80 e0       	ldi	r24, 0x00	; 0
+ 1ee:	90 e0       	ldi	r25, 0x00	; 0
+ 1f0:	08 95       	ret
+
+000001f2 <DIO_vdInitialization>:
+		/* Update error state = NOK, wrong PortId! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+	}
+	
+	return Loc_u8ErrorState;
+}
+ 1f2:	8f e0       	ldi	r24, 0x0F	; 15
+ 1f4:	8a bb       	out	0x1a, r24	; 26
+ 1f6:	17 ba       	out	0x17, r1	; 23
+ 1f8:	14 ba       	out	0x14, r1	; 20
+ 1fa:	11 ba       	out	0x11, r1	; 17
+ 1fc:	1b ba       	out	0x1b, r1	; 27
+ 1fe:	18 ba       	out	0x18, r1	; 24
+ 200:	15 ba       	out	0x15, r1	; 21
+ 202:	8c e0       	ldi	r24, 0x0C	; 12
+ 204:	82 bb       	out	0x12, r24	; 18
+ 206:	08 95       	ret
+
+00000208 <DIO_u8SetPortValue>:
+{
+	/* Define Local Variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+	
+	/* Check 1: PortId is in the valid range */
+	if( Cpy_u8PortId <= DIO_U8_PORTD )
+ 208:	84 30       	cpi	r24, 0x04	; 4
+ 20a:	a0 f4       	brcc	.+40     	; 0x234 <DIO_u8SetPortValue+0x2c>
+	{
+		/* Check 1.1: Required PortId */
+		switch( Cpy_u8PortId )
+ 20c:	81 30       	cpi	r24, 0x01	; 1
+ 20e:	49 f0       	breq	.+18     	; 0x222 <DIO_u8SetPortValue+0x1a>
+ 210:	28 f0       	brcs	.+10     	; 0x21c <DIO_u8SetPortValue+0x14>
+ 212:	82 30       	cpi	r24, 0x02	; 2
+ 214:	49 f0       	breq	.+18     	; 0x228 <DIO_u8SetPortValue+0x20>
+ 216:	83 30       	cpi	r24, 0x03	; 3
+ 218:	51 f0       	breq	.+20     	; 0x22e <DIO_u8SetPortValue+0x26>
+ 21a:	0e c0       	rjmp	.+28     	; 0x238 <DIO_u8SetPortValue+0x30>
+		{
+			case DIO_U8_PORTA: DIO_U8_PORTA_REG = Cpy_u8PortValue; break;
+ 21c:	6b bb       	out	0x1b, r22	; 27
+ Description: Function to set Port value.
+*/
+u8 DIO_u8SetPortValue	 ( u8 Cpy_u8PortId, u8 Cpy_u8PortValue )
+{
+	/* Define Local Variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 21e:	81 e0       	ldi	r24, 0x01	; 1
+	if( Cpy_u8PortId <= DIO_U8_PORTD )
+	{
+		/* Check 1.1: Required PortId */
+		switch( Cpy_u8PortId )
+		{
+			case DIO_U8_PORTA: DIO_U8_PORTA_REG = Cpy_u8PortValue; break;
+ 220:	08 95       	ret
+			case DIO_U8_PORTB: DIO_U8_PORTB_REG = Cpy_u8PortValue; break;
+ 222:	68 bb       	out	0x18, r22	; 24
+ Description: Function to set Port value.
+*/
+u8 DIO_u8SetPortValue	 ( u8 Cpy_u8PortId, u8 Cpy_u8PortValue )
+{
+	/* Define Local Variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 224:	81 e0       	ldi	r24, 0x01	; 1
+	{
+		/* Check 1.1: Required PortId */
+		switch( Cpy_u8PortId )
+		{
+			case DIO_U8_PORTA: DIO_U8_PORTA_REG = Cpy_u8PortValue; break;
+			case DIO_U8_PORTB: DIO_U8_PORTB_REG = Cpy_u8PortValue; break;
+ 226:	08 95       	ret
+			case DIO_U8_PORTC: DIO_U8_PORTC_REG = Cpy_u8PortValue; break;
+ 228:	65 bb       	out	0x15, r22	; 21
+ Description: Function to set Port value.
+*/
+u8 DIO_u8SetPortValue	 ( u8 Cpy_u8PortId, u8 Cpy_u8PortValue )
+{
+	/* Define Local Variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 22a:	81 e0       	ldi	r24, 0x01	; 1
+		/* Check 1.1: Required PortId */
+		switch( Cpy_u8PortId )
+		{
+			case DIO_U8_PORTA: DIO_U8_PORTA_REG = Cpy_u8PortValue; break;
+			case DIO_U8_PORTB: DIO_U8_PORTB_REG = Cpy_u8PortValue; break;
+			case DIO_U8_PORTC: DIO_U8_PORTC_REG = Cpy_u8PortValue; break;
+ 22c:	08 95       	ret
+			case DIO_U8_PORTD: DIO_U8_PORTD_REG = Cpy_u8PortValue; break;
+ 22e:	62 bb       	out	0x12, r22	; 18
+ Description: Function to set Port value.
+*/
+u8 DIO_u8SetPortValue	 ( u8 Cpy_u8PortId, u8 Cpy_u8PortValue )
+{
+	/* Define Local Variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 230:	81 e0       	ldi	r24, 0x01	; 1
+		switch( Cpy_u8PortId )
+		{
+			case DIO_U8_PORTA: DIO_U8_PORTA_REG = Cpy_u8PortValue; break;
+			case DIO_U8_PORTB: DIO_U8_PORTB_REG = Cpy_u8PortValue; break;
+			case DIO_U8_PORTC: DIO_U8_PORTC_REG = Cpy_u8PortValue; break;
+			case DIO_U8_PORTD: DIO_U8_PORTD_REG = Cpy_u8PortValue; break;
+ 232:	08 95       	ret
+	}
+	/* Check 2: PortId is not in the valid range */
+	else
+	{
+		/* Update error state = NOK, wrong PortId! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+ 234:	80 e0       	ldi	r24, 0x00	; 0
+ 236:	08 95       	ret
+ Description: Function to set Port value.
+*/
+u8 DIO_u8SetPortValue	 ( u8 Cpy_u8PortId, u8 Cpy_u8PortValue )
+{
+	/* Define Local Variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 238:	81 e0       	ldi	r24, 0x01	; 1
+		/* Update error state = NOK, wrong PortId! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+	}
+	
+	return Loc_u8ErrorState;
+}
+ 23a:	08 95       	ret
+
+0000023c <EXI_u8EnablePIE>:
+		/* Update error state = NOK, wrong InterruptId! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+	}
+	
+	return Loc_u8ErrorState;
+}
+ 23c:	83 30       	cpi	r24, 0x03	; 3
+ 23e:	08 f0       	brcs	.+2      	; 0x242 <EXI_u8EnablePIE+0x6>
+ 240:	72 c0       	rjmp	.+228    	; 0x326 <EXI_u8EnablePIE+0xea>
+ 242:	64 30       	cpi	r22, 0x04	; 4
+ 244:	08 f0       	brcs	.+2      	; 0x248 <EXI_u8EnablePIE+0xc>
+ 246:	71 c0       	rjmp	.+226    	; 0x32a <EXI_u8EnablePIE+0xee>
+ 248:	81 30       	cpi	r24, 0x01	; 1
+ 24a:	81 f1       	breq	.+96     	; 0x2ac <EXI_u8EnablePIE+0x70>
+ 24c:	20 f0       	brcs	.+8      	; 0x256 <EXI_u8EnablePIE+0x1a>
+ 24e:	82 30       	cpi	r24, 0x02	; 2
+ 250:	09 f4       	brne	.+2      	; 0x254 <EXI_u8EnablePIE+0x18>
+ 252:	57 c0       	rjmp	.+174    	; 0x302 <EXI_u8EnablePIE+0xc6>
+ 254:	6c c0       	rjmp	.+216    	; 0x32e <EXI_u8EnablePIE+0xf2>
+ 256:	8b b7       	in	r24, 0x3b	; 59
+ 258:	80 64       	ori	r24, 0x40	; 64
+ 25a:	8b bf       	out	0x3b, r24	; 59
+ 25c:	61 30       	cpi	r22, 0x01	; 1
+ 25e:	71 f0       	breq	.+28     	; 0x27c <EXI_u8EnablePIE+0x40>
+ 260:	28 f0       	brcs	.+10     	; 0x26c <EXI_u8EnablePIE+0x30>
+ 262:	62 30       	cpi	r22, 0x02	; 2
+ 264:	99 f0       	breq	.+38     	; 0x28c <EXI_u8EnablePIE+0x50>
+ 266:	63 30       	cpi	r22, 0x03	; 3
+ 268:	c9 f0       	breq	.+50     	; 0x29c <EXI_u8EnablePIE+0x60>
+ 26a:	63 c0       	rjmp	.+198    	; 0x332 <EXI_u8EnablePIE+0xf6>
+ 26c:	85 b7       	in	r24, 0x35	; 53
+ 26e:	8e 7f       	andi	r24, 0xFE	; 254
+ 270:	85 bf       	out	0x35, r24	; 53
+ 272:	85 b7       	in	r24, 0x35	; 53
+ 274:	8d 7f       	andi	r24, 0xFD	; 253
+ 276:	85 bf       	out	0x35, r24	; 53
+ 278:	81 e0       	ldi	r24, 0x01	; 1
+ 27a:	08 95       	ret
+ 27c:	85 b7       	in	r24, 0x35	; 53
+ 27e:	81 60       	ori	r24, 0x01	; 1
+ 280:	85 bf       	out	0x35, r24	; 53
+ 282:	85 b7       	in	r24, 0x35	; 53
+ 284:	8d 7f       	andi	r24, 0xFD	; 253
+ 286:	85 bf       	out	0x35, r24	; 53
+ 288:	81 e0       	ldi	r24, 0x01	; 1
+ 28a:	08 95       	ret
+ 28c:	85 b7       	in	r24, 0x35	; 53
+ 28e:	8e 7f       	andi	r24, 0xFE	; 254
+ 290:	85 bf       	out	0x35, r24	; 53
+ 292:	85 b7       	in	r24, 0x35	; 53
+ 294:	82 60       	ori	r24, 0x02	; 2
+ 296:	85 bf       	out	0x35, r24	; 53
+ 298:	81 e0       	ldi	r24, 0x01	; 1
+ 29a:	08 95       	ret
+ 29c:	85 b7       	in	r24, 0x35	; 53
+ 29e:	81 60       	ori	r24, 0x01	; 1
+ 2a0:	85 bf       	out	0x35, r24	; 53
+ 2a2:	85 b7       	in	r24, 0x35	; 53
+ 2a4:	82 60       	ori	r24, 0x02	; 2
+ 2a6:	85 bf       	out	0x35, r24	; 53
+ 2a8:	81 e0       	ldi	r24, 0x01	; 1
+ 2aa:	08 95       	ret
+ 2ac:	8b b7       	in	r24, 0x3b	; 59
+ 2ae:	80 68       	ori	r24, 0x80	; 128
+ 2b0:	8b bf       	out	0x3b, r24	; 59
+ 2b2:	61 30       	cpi	r22, 0x01	; 1
+ 2b4:	71 f0       	breq	.+28     	; 0x2d2 <EXI_u8EnablePIE+0x96>
+ 2b6:	28 f0       	brcs	.+10     	; 0x2c2 <EXI_u8EnablePIE+0x86>
+ 2b8:	62 30       	cpi	r22, 0x02	; 2
+ 2ba:	99 f0       	breq	.+38     	; 0x2e2 <EXI_u8EnablePIE+0xa6>
+ 2bc:	63 30       	cpi	r22, 0x03	; 3
+ 2be:	c9 f0       	breq	.+50     	; 0x2f2 <EXI_u8EnablePIE+0xb6>
+ 2c0:	3a c0       	rjmp	.+116    	; 0x336 <EXI_u8EnablePIE+0xfa>
+ 2c2:	85 b7       	in	r24, 0x35	; 53
+ 2c4:	8b 7f       	andi	r24, 0xFB	; 251
+ 2c6:	85 bf       	out	0x35, r24	; 53
+ 2c8:	85 b7       	in	r24, 0x35	; 53
+ 2ca:	87 7f       	andi	r24, 0xF7	; 247
+ 2cc:	85 bf       	out	0x35, r24	; 53
+ 2ce:	81 e0       	ldi	r24, 0x01	; 1
+ 2d0:	08 95       	ret
+ 2d2:	85 b7       	in	r24, 0x35	; 53
+ 2d4:	84 60       	ori	r24, 0x04	; 4
+ 2d6:	85 bf       	out	0x35, r24	; 53
+ 2d8:	85 b7       	in	r24, 0x35	; 53
+ 2da:	87 7f       	andi	r24, 0xF7	; 247
+ 2dc:	85 bf       	out	0x35, r24	; 53
+ 2de:	81 e0       	ldi	r24, 0x01	; 1
+ 2e0:	08 95       	ret
+ 2e2:	85 b7       	in	r24, 0x35	; 53
+ 2e4:	8b 7f       	andi	r24, 0xFB	; 251
+ 2e6:	85 bf       	out	0x35, r24	; 53
+ 2e8:	85 b7       	in	r24, 0x35	; 53
+ 2ea:	88 60       	ori	r24, 0x08	; 8
+ 2ec:	85 bf       	out	0x35, r24	; 53
+ 2ee:	81 e0       	ldi	r24, 0x01	; 1
+ 2f0:	08 95       	ret
+ 2f2:	85 b7       	in	r24, 0x35	; 53
+ 2f4:	84 60       	ori	r24, 0x04	; 4
+ 2f6:	85 bf       	out	0x35, r24	; 53
+ 2f8:	85 b7       	in	r24, 0x35	; 53
+ 2fa:	88 60       	ori	r24, 0x08	; 8
+ 2fc:	85 bf       	out	0x35, r24	; 53
+ 2fe:	81 e0       	ldi	r24, 0x01	; 1
+ 300:	08 95       	ret
+ 302:	8b b7       	in	r24, 0x3b	; 59
+ 304:	80 62       	ori	r24, 0x20	; 32
+ 306:	8b bf       	out	0x3b, r24	; 59
+ 308:	62 30       	cpi	r22, 0x02	; 2
+ 30a:	19 f0       	breq	.+6      	; 0x312 <EXI_u8EnablePIE+0xd6>
+ 30c:	63 30       	cpi	r22, 0x03	; 3
+ 30e:	31 f0       	breq	.+12     	; 0x31c <EXI_u8EnablePIE+0xe0>
+ 310:	14 c0       	rjmp	.+40     	; 0x33a <EXI_u8EnablePIE+0xfe>
+ 312:	84 b7       	in	r24, 0x34	; 52
+ 314:	8f 7b       	andi	r24, 0xBF	; 191
+ 316:	84 bf       	out	0x34, r24	; 52
+ 318:	81 e0       	ldi	r24, 0x01	; 1
+ 31a:	08 95       	ret
+ 31c:	84 b7       	in	r24, 0x34	; 52
+ 31e:	80 64       	ori	r24, 0x40	; 64
+ 320:	84 bf       	out	0x34, r24	; 52
+ 322:	81 e0       	ldi	r24, 0x01	; 1
+ 324:	08 95       	ret
+ 326:	80 e0       	ldi	r24, 0x00	; 0
+ 328:	08 95       	ret
+ 32a:	80 e0       	ldi	r24, 0x00	; 0
+ 32c:	08 95       	ret
+ 32e:	81 e0       	ldi	r24, 0x01	; 1
+ 330:	08 95       	ret
+ 332:	81 e0       	ldi	r24, 0x01	; 1
+ 334:	08 95       	ret
+ 336:	81 e0       	ldi	r24, 0x01	; 1
+ 338:	08 95       	ret
+ 33a:	81 e0       	ldi	r24, 0x01	; 1
+ 33c:	08 95       	ret
+
+0000033e <EXI_u8INTSetCallBack>:
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+
+	/* Check 1: InterruptId is in the valid range, and Pointer to Function is not equal to NULL */
+	if( ( Cpy_u8InterruptId <= EXI_U8_INT2 ) && ( Cpy_pfINTInterruptAction != NULL ) )
+ 33e:	83 30       	cpi	r24, 0x03	; 3
+ 340:	68 f4       	brcc	.+26     	; 0x35c <EXI_u8INTSetCallBack+0x1e>
+ 342:	61 15       	cp	r22, r1
+ 344:	71 05       	cpc	r23, r1
+ 346:	61 f0       	breq	.+24     	; 0x360 <EXI_u8INTSetCallBack+0x22>
+	{
+		/* Store the passed address of function ( in APP Layer ) through pointer to function ( INTInterruptAction ) into Global Array of Pointers to Functions ( INTInterruptsAction ) in the passed index ( InterruptId ). */
+		Glb_ApfINTInterrupstAction[Cpy_u8InterruptId] = Cpy_pfINTInterruptAction;
+ 348:	e8 2f       	mov	r30, r24
+ 34a:	f0 e0       	ldi	r31, 0x00	; 0
+ 34c:	ee 0f       	add	r30, r30
+ 34e:	ff 1f       	adc	r31, r31
+ 350:	e2 58       	subi	r30, 0x82	; 130
+ 352:	ff 4f       	sbci	r31, 0xFF	; 255
+ 354:	71 83       	std	Z+1, r23	; 0x01
+ 356:	60 83       	st	Z, r22
+ 	 	 	  the address is passed through a pointer to function ( INTInterruptAction ), and then pass this address to ISR function.
+*/
+u8 EXI_u8INTSetCallBack( u8 Cpy_u8InterruptId, void ( *Cpy_pfINTInterruptAction ) ( void ) )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 358:	81 e0       	ldi	r24, 0x01	; 1
+
+	/* Check 1: InterruptId is in the valid range, and Pointer to Function is not equal to NULL */
+	if( ( Cpy_u8InterruptId <= EXI_U8_INT2 ) && ( Cpy_pfINTInterruptAction != NULL ) )
+	{
+		/* Store the passed address of function ( in APP Layer ) through pointer to function ( INTInterruptAction ) into Global Array of Pointers to Functions ( INTInterruptsAction ) in the passed index ( InterruptId ). */
+		Glb_ApfINTInterrupstAction[Cpy_u8InterruptId] = Cpy_pfINTInterruptAction;
+ 35a:	08 95       	ret
+	}
+	/* Check 2: InterruptId is not in the valid range, or Pointer to Function is equal to NULL */
+	else
+	{
+		/* Update error state = NOK, wrong InterruptId, or Pointer to Function is NULL! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+ 35c:	80 e0       	ldi	r24, 0x00	; 0
+ 35e:	08 95       	ret
+ 360:	80 e0       	ldi	r24, 0x00	; 0
+	}
+	
+	return Loc_u8ErrorState;
+}
+ 362:	08 95       	ret
+
+00000364 <__vector_1>:
+
+/*******************************************************************************************************************************************************************/
+
+/* ISR function implementation of INT0 */
+void __vector_1( void )
+{
+ 364:	1f 92       	push	r1
+ 366:	0f 92       	push	r0
+ 368:	0f b6       	in	r0, 0x3f	; 63
+ 36a:	0f 92       	push	r0
+ 36c:	11 24       	eor	r1, r1
+ 36e:	2f 93       	push	r18
+ 370:	3f 93       	push	r19
+ 372:	4f 93       	push	r20
+ 374:	5f 93       	push	r21
+ 376:	6f 93       	push	r22
+ 378:	7f 93       	push	r23
+ 37a:	8f 93       	push	r24
+ 37c:	9f 93       	push	r25
+ 37e:	af 93       	push	r26
+ 380:	bf 93       	push	r27
+ 382:	ef 93       	push	r30
+ 384:	ff 93       	push	r31
+	/* Check: INT0 index of the Global Array is not equal to NULL */
+	if ( Glb_ApfINTInterrupstAction[EXI_U8_INT0] != NULL )
+ 386:	e0 91 7e 00 	lds	r30, 0x007E	; 0x80007e <Glb_ApfINTInterrupstAction>
+ 38a:	f0 91 7f 00 	lds	r31, 0x007F	; 0x80007f <Glb_ApfINTInterrupstAction+0x1>
+ 38e:	30 97       	sbiw	r30, 0x00	; 0
+ 390:	09 f0       	breq	.+2      	; 0x394 <__vector_1+0x30>
+	{
+		/* Call Back the function ( in APP Layer ), which its address is stored in the Global Array of Pointers to Functions ( INTInterruptsAction ) */
+		Glb_ApfINTInterrupstAction[EXI_U8_INT0]();
+ 392:	09 95       	icall
+	}	
+}
+ 394:	ff 91       	pop	r31
+ 396:	ef 91       	pop	r30
+ 398:	bf 91       	pop	r27
+ 39a:	af 91       	pop	r26
+ 39c:	9f 91       	pop	r25
+ 39e:	8f 91       	pop	r24
+ 3a0:	7f 91       	pop	r23
+ 3a2:	6f 91       	pop	r22
+ 3a4:	5f 91       	pop	r21
+ 3a6:	4f 91       	pop	r20
+ 3a8:	3f 91       	pop	r19
+ 3aa:	2f 91       	pop	r18
+ 3ac:	0f 90       	pop	r0
+ 3ae:	0f be       	out	0x3f, r0	; 63
+ 3b0:	0f 90       	pop	r0
+ 3b2:	1f 90       	pop	r1
+ 3b4:	18 95       	reti
+
+000003b6 <__vector_2>:
+
+/*******************************************************************************************************************************************************************/
+
+/* ISR function implementation of INT1 */
+void __vector_2( void )
+{
+ 3b6:	1f 92       	push	r1
+ 3b8:	0f 92       	push	r0
+ 3ba:	0f b6       	in	r0, 0x3f	; 63
+ 3bc:	0f 92       	push	r0
+ 3be:	11 24       	eor	r1, r1
+ 3c0:	2f 93       	push	r18
+ 3c2:	3f 93       	push	r19
+ 3c4:	4f 93       	push	r20
+ 3c6:	5f 93       	push	r21
+ 3c8:	6f 93       	push	r22
+ 3ca:	7f 93       	push	r23
+ 3cc:	8f 93       	push	r24
+ 3ce:	9f 93       	push	r25
+ 3d0:	af 93       	push	r26
+ 3d2:	bf 93       	push	r27
+ 3d4:	ef 93       	push	r30
+ 3d6:	ff 93       	push	r31
+	/* Check: INT1 index of the Global Array is not equal to NULL */
+	if( Glb_ApfINTInterrupstAction[EXI_U8_INT1] != NULL )
+ 3d8:	e0 91 80 00 	lds	r30, 0x0080	; 0x800080 <Glb_ApfINTInterrupstAction+0x2>
+ 3dc:	f0 91 81 00 	lds	r31, 0x0081	; 0x800081 <Glb_ApfINTInterrupstAction+0x3>
+ 3e0:	30 97       	sbiw	r30, 0x00	; 0
+ 3e2:	09 f0       	breq	.+2      	; 0x3e6 <__vector_2+0x30>
+	{
+		/* Call Back the function ( in APP Layer ), which its address is stored in the Global Array of Pointers to Functions ( INTInterruptsAction ) */
+		Glb_ApfINTInterrupstAction[EXI_U8_INT1]();
+ 3e4:	09 95       	icall
+	}	
+}
+ 3e6:	ff 91       	pop	r31
+ 3e8:	ef 91       	pop	r30
+ 3ea:	bf 91       	pop	r27
+ 3ec:	af 91       	pop	r26
+ 3ee:	9f 91       	pop	r25
+ 3f0:	8f 91       	pop	r24
+ 3f2:	7f 91       	pop	r23
+ 3f4:	6f 91       	pop	r22
+ 3f6:	5f 91       	pop	r21
+ 3f8:	4f 91       	pop	r20
+ 3fa:	3f 91       	pop	r19
+ 3fc:	2f 91       	pop	r18
+ 3fe:	0f 90       	pop	r0
+ 400:	0f be       	out	0x3f, r0	; 63
+ 402:	0f 90       	pop	r0
+ 404:	1f 90       	pop	r1
+ 406:	18 95       	reti
+
+00000408 <__vector_3>:
+
+/*******************************************************************************************************************************************************************/
+
+/* ISR function implementation of INT2 */
+void __vector_3( void )
+{
+ 408:	1f 92       	push	r1
+ 40a:	0f 92       	push	r0
+ 40c:	0f b6       	in	r0, 0x3f	; 63
+ 40e:	0f 92       	push	r0
+ 410:	11 24       	eor	r1, r1
+ 412:	2f 93       	push	r18
+ 414:	3f 93       	push	r19
+ 416:	4f 93       	push	r20
+ 418:	5f 93       	push	r21
+ 41a:	6f 93       	push	r22
+ 41c:	7f 93       	push	r23
+ 41e:	8f 93       	push	r24
+ 420:	9f 93       	push	r25
+ 422:	af 93       	push	r26
+ 424:	bf 93       	push	r27
+ 426:	ef 93       	push	r30
+ 428:	ff 93       	push	r31
+	/* Check: INT2 index of the Global Array is not equal to NULL */
+	if( Glb_ApfINTInterrupstAction[EXI_U8_INT2] != NULL )
+ 42a:	e0 91 82 00 	lds	r30, 0x0082	; 0x800082 <Glb_ApfINTInterrupstAction+0x4>
+ 42e:	f0 91 83 00 	lds	r31, 0x0083	; 0x800083 <Glb_ApfINTInterrupstAction+0x5>
+ 432:	30 97       	sbiw	r30, 0x00	; 0
+ 434:	09 f0       	breq	.+2      	; 0x438 <__vector_3+0x30>
+	{
+		/* Call Back the function ( in APP Layer ), which its address is stored in the Global Array of Pointers to Functions ( INTInterruptsAction ) */
+		Glb_ApfINTInterrupstAction[EXI_U8_INT2]();
+ 436:	09 95       	icall
+	}	
+}
+ 438:	ff 91       	pop	r31
+ 43a:	ef 91       	pop	r30
+ 43c:	bf 91       	pop	r27
+ 43e:	af 91       	pop	r26
+ 440:	9f 91       	pop	r25
+ 442:	8f 91       	pop	r24
+ 444:	7f 91       	pop	r23
+ 446:	6f 91       	pop	r22
+ 448:	5f 91       	pop	r21
+ 44a:	4f 91       	pop	r20
+ 44c:	3f 91       	pop	r19
+ 44e:	2f 91       	pop	r18
+ 450:	0f 90       	pop	r0
+ 452:	0f be       	out	0x3f, r0	; 63
+ 454:	0f 90       	pop	r0
+ 456:	1f 90       	pop	r1
+ 458:	18 95       	reti
+
+0000045a <GLI_vdEnableGIE>:
+ Output: void
+ Description: Function to set I bit in SREG, to enable the Global Interrupt Enable (GIE).
+*/
+vd GLI_vdEnableGIE ( void )
+{
+	SET_BIT( GLI_U8_SREG_REG, GLI_U8_I_BIT );
+ 45a:	8f b7       	in	r24, 0x3f	; 63
+ 45c:	80 68       	ori	r24, 0x80	; 128
+ 45e:	8f bf       	out	0x3f, r24	; 63
+ 460:	08 95       	ret
+
+00000462 <TMR_vdTMR0Initialization>:
+{
+	/* Step 1: Select Waveform Generation Mode */
+	switch ( TMR_U8_TMR_0_MODE_SELECT )
+	{
+		/* Case 1: Waveform Generation Mode = Normal Mode */
+		case TMR_U8_TMR_0_NORMAL_MODE			: CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_WGM00_BIT ); CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_WGM01_BIT ); break;
+ 462:	83 b7       	in	r24, 0x33	; 51
+ 464:	8f 7b       	andi	r24, 0xBF	; 191
+ 466:	83 bf       	out	0x33, r24	; 51
+ 468:	83 b7       	in	r24, 0x33	; 51
+ 46a:	87 7f       	andi	r24, 0xF7	; 247
+ 46c:	83 bf       	out	0x33, r24	; 51
+
+	/* Step 2: Select Compare Match Output Mode */
+	switch ( TMR_U8_TMR_0_COMP_OUTPUT_MODE )
+	{
+		/* Case 1: Waveform Generation Mode = Normal Mode */
+		case TMR_U8_TMR_0_DISCONNECT_OC0_PIN: CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_COM00_BIT ); CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_COM01_BIT ); break;
+ 46e:	83 b7       	in	r24, 0x33	; 51
+ 470:	8f 7e       	andi	r24, 0xEF	; 239
+ 472:	83 bf       	out	0x33, r24	; 51
+ 474:	83 b7       	in	r24, 0x33	; 51
+ 476:	8f 7d       	andi	r24, 0xDF	; 223
+ 478:	83 bf       	out	0x33, r24	; 51
+
+	/* Step 3: Select Interrupt Source */
+	switch ( TMR_U8_TMR_0_INTERRUPT_SELECT )
+	{
+		/* Case 1: Interrupt Source = No Interrupt ( i.e.: Interrupts are disabled, as in PWM two modes ) */
+		case TMR_U8_TMR_0_NO_INTERRUPT  : CLR_BIT( TMR_U8_TIMSK_REG, TMR_U8_OCIE0_BIT ); CLR_BIT( TMR_U8_TIMSK_REG, TMR_U8_TOIE0_BIT );	break;
+ 47a:	89 b7       	in	r24, 0x39	; 57
+ 47c:	8d 7f       	andi	r24, 0xFD	; 253
+ 47e:	89 bf       	out	0x39, r24	; 57
+ 480:	89 b7       	in	r24, 0x39	; 57
+ 482:	8e 7f       	andi	r24, 0xFE	; 254
+ 484:	89 bf       	out	0x39, r24	; 57
+		case TMR_U8_TMR_0_OVF_INTERRUPT : SET_BIT( TMR_U8_TIMSK_REG, TMR_U8_TOIE0_BIT ); break;
+	}
+
+	/* Step 4: Set Compare Value and Preload Value */
+	/* Compare Value */
+	TMR_U8_OCR0_REG  = TMR_U8_TMR_0_COMPARE_VALUE;
+ 486:	1c be       	out	0x3c, r1	; 60
+	/* Preload value */
+	TMR_U8_TCNT0_REG = TMR_U8_TMR_0_PRELOAD_VALUE;
+ 488:	12 be       	out	0x32, r1	; 50
+	{
+		/* Case 1: Clock Source = No Clock Source (Timer/Counter0 stopped) */
+		case TMR_U8_TMR_0_NO_CLOCK_SOURCE				 : CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS00_BIT ); CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS01_BIT );
+		CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS02_BIT ); break;
+		/* Case 2: Clock Source =  No Prescaler */
+		case TMR_U8_TMR_0_NO_PRESCALER					 : SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS00_BIT ); CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS01_BIT );
+ 48a:	83 b7       	in	r24, 0x33	; 51
+ 48c:	81 60       	ori	r24, 0x01	; 1
+ 48e:	83 bf       	out	0x33, r24	; 51
+ 490:	83 b7       	in	r24, 0x33	; 51
+ 492:	8d 7f       	andi	r24, 0xFD	; 253
+ 494:	83 bf       	out	0x33, r24	; 51
+		CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS02_BIT ); break;
+ 496:	83 b7       	in	r24, 0x33	; 51
+ 498:	8b 7f       	andi	r24, 0xFB	; 251
+ 49a:	83 bf       	out	0x33, r24	; 51
+ 49c:	08 95       	ret
+
+0000049e <TMR_u8EnableTMR>:
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+
+	/* Check 1: TimertId is in the valid range */
+	if ( Cpy_u8TimerId <= TMR_U8_TMR2 )
+ 49e:	83 30       	cpi	r24, 0x03	; 3
+ 4a0:	f8 f4       	brcc	.+62     	; 0x4e0 <TMR_u8EnableTMR+0x42>
+	{
+		/* Check 1.1: Required TimerId */
+		switch ( Cpy_u8TimerId )
+ 4a2:	81 30       	cpi	r24, 0x01	; 1
+ 4a4:	79 f0       	breq	.+30     	; 0x4c4 <TMR_u8EnableTMR+0x26>
+ 4a6:	18 f0       	brcs	.+6      	; 0x4ae <TMR_u8EnableTMR+0x10>
+ 4a8:	82 30       	cpi	r24, 0x02	; 2
+ 4aa:	b1 f0       	breq	.+44     	; 0x4d8 <TMR_u8EnableTMR+0x3a>
+ 4ac:	1b c0       	rjmp	.+54     	; 0x4e4 <TMR_u8EnableTMR+0x46>
+
+			/* Step 2: Select Clock Source ( i.e.: Start Counting ) */
+			switch ( TMR_U8_TMR_0_CLOCK_SELECT )
+			{
+				/* Case 1: Clock Source =  No Prescaler */
+				case TMR_U8_TMR_0_NO_PRESCALER					 : SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS00_BIT ); CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS01_BIT );
+ 4ae:	83 b7       	in	r24, 0x33	; 51
+ 4b0:	81 60       	ori	r24, 0x01	; 1
+ 4b2:	83 bf       	out	0x33, r24	; 51
+ 4b4:	83 b7       	in	r24, 0x33	; 51
+ 4b6:	8d 7f       	andi	r24, 0xFD	; 253
+ 4b8:	83 bf       	out	0x33, r24	; 51
+				CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS02_BIT ); break;
+ 4ba:	83 b7       	in	r24, 0x33	; 51
+ 4bc:	8b 7f       	andi	r24, 0xFB	; 251
+ 4be:	83 bf       	out	0x33, r24	; 51
+Description: Function to Enable TMR peripheral.
+*/
+u8 TMR_u8EnableTMR		     ( u8 Cpy_u8TimerId )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 4c0:	81 e0       	ldi	r24, 0x01	; 1
+				SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS02_BIT ); break;
+				/* Case 7: Clock Source = External Clock Source with Rising Edge, on Pin TO */
+				case TMR_U8_TMR_0_EXTERNAL_CLOCK_SOURCE_RISE_EDGE: SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS00_BIT ); SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS01_BIT );
+				SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS02_BIT ); break;
+			}
+			break;
+ 4c2:	08 95       	ret
+
+			case TMR_U8_TMR1:
+
+			/* Step 1: Set Compare Value in both Channels, Input Capture Value, and Preload Value  */
+			/* Compare Value A */
+			TMR_U16_OCR1A_REG = TMR_U16_TMR_1_COMPARE_VALUE_A;
+ 4c4:	1b bc       	out	0x2b, r1	; 43
+ 4c6:	1a bc       	out	0x2a, r1	; 42
+			/* Compare Value B */
+			TMR_U16_OCR1B_REG = TMR_U16_TMR_1_COMPARE_VALUE_B;
+ 4c8:	19 bc       	out	0x29, r1	; 41
+ 4ca:	18 bc       	out	0x28, r1	; 40
+			/* Input Capture Value */
+			TMR_U16_ICR1_REG  = TMR_U16_TMR_1_INPUT_CAPTURE_VALUE;
+ 4cc:	17 bc       	out	0x27, r1	; 39
+ 4ce:	16 bc       	out	0x26, r1	; 38
+			/* Preload value */
+			TMR_U16_TCNT1_REG = TMR_U16_TMR_1_PRELOAD_VALUE;
+ 4d0:	1d bc       	out	0x2d, r1	; 45
+ 4d2:	1c bc       	out	0x2c, r1	; 44
+Description: Function to Enable TMR peripheral.
+*/
+u8 TMR_u8EnableTMR		     ( u8 Cpy_u8TimerId )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 4d4:	81 e0       	ldi	r24, 0x01	; 1
+				SET_BIT( TMR_U8_TCCR1B_REG, TMR_U8_CS12_BIT ); break;
+				/* Case 7: Clock Source = External Clock Source with Rising Edge, on Pin T1 */
+				case TMR_U8_TMR_1_EXTERNAL_CLOCK_SOURCE_RISE_EDGE: SET_BIT( TMR_U8_TCCR1B_REG, TMR_U8_CS10_BIT ); SET_BIT( TMR_U8_TCCR1B_REG, TMR_U8_CS11_BIT );
+				SET_BIT( TMR_U8_TCCR1B_REG, TMR_U8_CS12_BIT ); break;
+			}
+			break;
+ 4d6:	08 95       	ret
+
+			case TMR_U8_TMR2:
+
+			/* Step 1: Set Compare Value and Preload Value */
+			/* Compare Value */
+			TMR_U8_OCR2_REG  = TMR_U8_TMR_2_COMPARE_VALUE;
+ 4d8:	13 bc       	out	0x23, r1	; 35
+			/* Set Preload value */
+			TMR_U8_TCNT2_REG = TMR_U8_TMR_2_PRELOAD_VALUE;
+ 4da:	14 bc       	out	0x24, r1	; 36
+Description: Function to Enable TMR peripheral.
+*/
+u8 TMR_u8EnableTMR		     ( u8 Cpy_u8TimerId )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 4dc:	81 e0       	ldi	r24, 0x01	; 1
+				SET_BIT( TMR_U8_TCCR2_REG, TMR_U8_CS22_BIT ); break;
+				/* Case 7: Clock Source = 1024 Prescaler */
+				case TMR_U8_TMR_2_1024_PRESCALER : SET_BIT( TMR_U8_TCCR2_REG, TMR_U8_CS20_BIT ); SET_BIT( TMR_U8_TCCR2_REG, TMR_U8_CS21_BIT );
+				SET_BIT( TMR_U8_TCCR2_REG, TMR_U8_CS22_BIT ); break;
+			}
+			break;
+ 4de:	08 95       	ret
+	}
+	/* Check 2: TimertId is not in the valid range */
+	else
+	{
+		/* Update error state = NOK, wrong TimertId! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+ 4e0:	80 e0       	ldi	r24, 0x00	; 0
+ 4e2:	08 95       	ret
+Description: Function to Enable TMR peripheral.
+*/
+u8 TMR_u8EnableTMR		     ( u8 Cpy_u8TimerId )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 4e4:	81 e0       	ldi	r24, 0x01	; 1
+		/* Update error state = NOK, wrong TimertId! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+	}
+
+	return Loc_u8ErrorState;
+}
+ 4e6:	08 95       	ret
+
+000004e8 <TMR_u8DisableTMR>:
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+
+	/* Check 1: TimertId is in the valid range */
+	if ( Cpy_u8TimerId <= TMR_U8_TMR2 )
+ 4e8:	83 30       	cpi	r24, 0x03	; 3
+ 4ea:	08 f0       	brcs	.+2      	; 0x4ee <TMR_u8DisableTMR+0x6>
+ 4ec:	61 c0       	rjmp	.+194    	; 0x5b0 <TMR_u8DisableTMR+0xc8>
+	{
+		/* Check 1.1: Required TimerId */
+		switch ( Cpy_u8TimerId )
+ 4ee:	81 30       	cpi	r24, 0x01	; 1
+ 4f0:	f9 f0       	breq	.+62     	; 0x530 <TMR_u8DisableTMR+0x48>
+ 4f2:	20 f0       	brcs	.+8      	; 0x4fc <TMR_u8DisableTMR+0x14>
+ 4f4:	82 30       	cpi	r24, 0x02	; 2
+ 4f6:	09 f4       	brne	.+2      	; 0x4fa <TMR_u8DisableTMR+0x12>
+ 4f8:	41 c0       	rjmp	.+130    	; 0x57c <TMR_u8DisableTMR+0x94>
+ 4fa:	5c c0       	rjmp	.+184    	; 0x5b4 <TMR_u8DisableTMR+0xcc>
+		{
+			case TMR_U8_TMR0:
+			
+			/* Step 1: Disconnect COMP ( OC0 ) Pin */
+			CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_COM00_BIT ); CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_COM01_BIT );
+ 4fc:	83 b7       	in	r24, 0x33	; 51
+ 4fe:	8f 7e       	andi	r24, 0xEF	; 239
+ 500:	83 bf       	out	0x33, r24	; 51
+ 502:	83 b7       	in	r24, 0x33	; 51
+ 504:	8f 7d       	andi	r24, 0xDF	; 223
+ 506:	83 bf       	out	0x33, r24	; 51
+			
+			/* Step 2: Clock Source = No Clock Source ( Timer/Counter0 stopped ) */
+			CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS00_BIT ); CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS01_BIT );	CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS02_BIT );
+ 508:	83 b7       	in	r24, 0x33	; 51
+ 50a:	8e 7f       	andi	r24, 0xFE	; 254
+ 50c:	83 bf       	out	0x33, r24	; 51
+ 50e:	83 b7       	in	r24, 0x33	; 51
+ 510:	8d 7f       	andi	r24, 0xFD	; 253
+ 512:	83 bf       	out	0x33, r24	; 51
+ 514:	83 b7       	in	r24, 0x33	; 51
+ 516:	8b 7f       	andi	r24, 0xFB	; 251
+ 518:	83 bf       	out	0x33, r24	; 51
+
+			/* Step 3: Clear Timer/Counter0 OVF Flag */
+			SET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV0_BIT );
+ 51a:	88 b7       	in	r24, 0x38	; 56
+ 51c:	81 60       	ori	r24, 0x01	; 1
+ 51e:	88 bf       	out	0x38, r24	; 56
+
+			/* Step 4: Clear Compare Value and Preload Value */
+			/* Compare Value */
+			TMR_U8_OCR0_REG  = 0x00;
+ 520:	1c be       	out	0x3c, r1	; 60
+			/* Clear TMR0 */
+			TMR_U8_TCNT0_REG = 0x00;
+ 522:	12 be       	out	0x32, r1	; 50
+
+			/* Step 5: Reset the OVF Counter of Timer/Counter0 to 0 */
+			Glb_Au16OVFCounters[TMR_U8_TMR0] = 0;
+ 524:	10 92 8d 00 	sts	0x008D, r1	; 0x80008d <Glb_Au16OVFCounters+0x1>
+ 528:	10 92 8c 00 	sts	0x008C, r1	; 0x80008c <Glb_Au16OVFCounters>
+Description: Function to Disable TMR peripheral.
+*/
+u8 TMR_u8DisableTMR		     ( u8 Cpy_u8TimerId )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 52c:	81 e0       	ldi	r24, 0x01	; 1
+			TMR_U8_TCNT0_REG = 0x00;
+
+			/* Step 5: Reset the OVF Counter of Timer/Counter0 to 0 */
+			Glb_Au16OVFCounters[TMR_U8_TMR0] = 0;
+
+			break;
+ 52e:	08 95       	ret
+
+			case TMR_U8_TMR1:
+			
+			/* Step 1: Disconnect COMP ( OC1A and OC1B ) Pins */
+			CLR_BIT( TMR_U8_TCCR1A_REG, TMR_U8_COM1A0_BIT ); CLR_BIT( TMR_U8_TCCR1A_REG, TMR_U8_COM1A1_BIT );
+ 530:	8f b5       	in	r24, 0x2f	; 47
+ 532:	8f 7b       	andi	r24, 0xBF	; 191
+ 534:	8f bd       	out	0x2f, r24	; 47
+ 536:	8f b5       	in	r24, 0x2f	; 47
+ 538:	8f 77       	andi	r24, 0x7F	; 127
+ 53a:	8f bd       	out	0x2f, r24	; 47
+			CLR_BIT( TMR_U8_TCCR1A_REG, TMR_U8_COM1B0_BIT ); CLR_BIT( TMR_U8_TCCR1A_REG, TMR_U8_COM1B1_BIT );
+ 53c:	8f b5       	in	r24, 0x2f	; 47
+ 53e:	8f 7e       	andi	r24, 0xEF	; 239
+ 540:	8f bd       	out	0x2f, r24	; 47
+ 542:	8f b5       	in	r24, 0x2f	; 47
+ 544:	8f 7d       	andi	r24, 0xDF	; 223
+ 546:	8f bd       	out	0x2f, r24	; 47
+
+			/* Step 1: Clock Source = No Clock Source ( Timer/Counter1 stopped ) */
+			CLR_BIT( TMR_U8_TCCR1B_REG, TMR_U8_CS10_BIT ); CLR_BIT( TMR_U8_TCCR1B_REG, TMR_U8_CS11_BIT ); CLR_BIT( TMR_U8_TCCR1B_REG, TMR_U8_CS12_BIT );
+ 548:	8e b5       	in	r24, 0x2e	; 46
+ 54a:	8e 7f       	andi	r24, 0xFE	; 254
+ 54c:	8e bd       	out	0x2e, r24	; 46
+ 54e:	8e b5       	in	r24, 0x2e	; 46
+ 550:	8d 7f       	andi	r24, 0xFD	; 253
+ 552:	8e bd       	out	0x2e, r24	; 46
+ 554:	8e b5       	in	r24, 0x2e	; 46
+ 556:	8b 7f       	andi	r24, 0xFB	; 251
+ 558:	8e bd       	out	0x2e, r24	; 46
+
+			/* Step 2: Clear Timer/Counter1 OVF Flag */
+			SET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV1_BIT );
+ 55a:	88 b7       	in	r24, 0x38	; 56
+ 55c:	84 60       	ori	r24, 0x04	; 4
+ 55e:	88 bf       	out	0x38, r24	; 56
+
+			/* Step 3: Clear Compare Values in both Channels, Input Capture Value, and Preload Value  */
+			/* Input Capture Value */
+			TMR_U16_ICR1_REG  = 0x0000;
+ 560:	17 bc       	out	0x27, r1	; 39
+ 562:	16 bc       	out	0x26, r1	; 38
+			/* Compare Value A */
+			TMR_U16_OCR1A_REG = 0x0000;
+ 564:	1b bc       	out	0x2b, r1	; 43
+ 566:	1a bc       	out	0x2a, r1	; 42
+			/* Compare Value B */
+			TMR_U16_OCR1B_REG = 0x0000;
+ 568:	19 bc       	out	0x29, r1	; 41
+ 56a:	18 bc       	out	0x28, r1	; 40
+			/* Clear TMR1 */
+			TMR_U16_TCNT1_REG = 0x0000;
+ 56c:	1d bc       	out	0x2d, r1	; 45
+ 56e:	1c bc       	out	0x2c, r1	; 44
+
+			/* Step 4: Reset the OVF Counter of Timer/Counter1 to 0 */
+			Glb_Au16OVFCounters[TMR_U8_TMR1] = 0;
+ 570:	10 92 8f 00 	sts	0x008F, r1	; 0x80008f <Glb_Au16OVFCounters+0x3>
+ 574:	10 92 8e 00 	sts	0x008E, r1	; 0x80008e <Glb_Au16OVFCounters+0x2>
+Description: Function to Disable TMR peripheral.
+*/
+u8 TMR_u8DisableTMR		     ( u8 Cpy_u8TimerId )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 578:	81 e0       	ldi	r24, 0x01	; 1
+			TMR_U16_TCNT1_REG = 0x0000;
+
+			/* Step 4: Reset the OVF Counter of Timer/Counter1 to 0 */
+			Glb_Au16OVFCounters[TMR_U8_TMR1] = 0;
+
+			break;
+ 57a:	08 95       	ret
+
+			case TMR_U8_TMR2:
+			
+			/* Step 1: Disconnect COMP ( OC2 ) Pin */
+			CLR_BIT( TMR_U8_TCCR2_REG, TMR_U8_COM20_BIT ); CLR_BIT( TMR_U8_TCCR2_REG, TMR_U8_COM21_BIT );
+ 57c:	85 b5       	in	r24, 0x25	; 37
+ 57e:	8f 7e       	andi	r24, 0xEF	; 239
+ 580:	85 bd       	out	0x25, r24	; 37
+ 582:	85 b5       	in	r24, 0x25	; 37
+ 584:	8f 7d       	andi	r24, 0xDF	; 223
+ 586:	85 bd       	out	0x25, r24	; 37
+
+			/* Step 2: Clock Source = No Clock Source ( Timer/Counter2 stopped ) */
+			CLR_BIT( TMR_U8_TCCR2_REG, TMR_U8_CS20_BIT ); CLR_BIT( TMR_U8_TCCR2_REG, TMR_U8_CS21_BIT );	CLR_BIT( TMR_U8_TCCR2_REG, TMR_U8_CS22_BIT );
+ 588:	85 b5       	in	r24, 0x25	; 37
+ 58a:	8e 7f       	andi	r24, 0xFE	; 254
+ 58c:	85 bd       	out	0x25, r24	; 37
+ 58e:	85 b5       	in	r24, 0x25	; 37
+ 590:	8d 7f       	andi	r24, 0xFD	; 253
+ 592:	85 bd       	out	0x25, r24	; 37
+ 594:	85 b5       	in	r24, 0x25	; 37
+ 596:	8b 7f       	andi	r24, 0xFB	; 251
+ 598:	85 bd       	out	0x25, r24	; 37
+
+			/* Step 3: Clear Timer/Counter2 OVF Flag */
+			SET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV2_BIT );
+ 59a:	88 b7       	in	r24, 0x38	; 56
+ 59c:	80 64       	ori	r24, 0x40	; 64
+ 59e:	88 bf       	out	0x38, r24	; 56
+
+			/* Step 4: Clear Compare Value and Preload Value */
+			/* Compare Value */
+			TMR_U8_OCR2_REG  = 0x00;
+ 5a0:	13 bc       	out	0x23, r1	; 35
+			/* Clear TMR2 */
+			TMR_U8_TCNT2_REG = 0x00;
+ 5a2:	14 bc       	out	0x24, r1	; 36
+
+			/* Step 5: Reset the OVF Counter of Timer/Counter2 to 0 */
+			Glb_Au16OVFCounters[TMR_U8_TMR2] = 0;
+ 5a4:	10 92 91 00 	sts	0x0091, r1	; 0x800091 <Glb_Au16OVFCounters+0x5>
+ 5a8:	10 92 90 00 	sts	0x0090, r1	; 0x800090 <Glb_Au16OVFCounters+0x4>
+Description: Function to Disable TMR peripheral.
+*/
+u8 TMR_u8DisableTMR		     ( u8 Cpy_u8TimerId )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 5ac:	81 e0       	ldi	r24, 0x01	; 1
+			TMR_U8_TCNT2_REG = 0x00;
+
+			/* Step 5: Reset the OVF Counter of Timer/Counter2 to 0 */
+			Glb_Au16OVFCounters[TMR_U8_TMR2] = 0;
+
+			break;
+ 5ae:	08 95       	ret
+	}
+	/* Check 2: TimertId is not in the valid range */
+	else
+	{
+		/* Update error state = NOK, wrong TimertId! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+ 5b0:	80 e0       	ldi	r24, 0x00	; 0
+ 5b2:	08 95       	ret
+Description: Function to Disable TMR peripheral.
+*/
+u8 TMR_u8DisableTMR		     ( u8 Cpy_u8TimerId )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 5b4:	81 e0       	ldi	r24, 0x01	; 1
+		/* Update error state = NOK, wrong TimertId! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+	}
+
+	return Loc_u8ErrorState;
+}
+ 5b6:	08 95       	ret
+
+000005b8 <TMR_u8GetOVFFlagStatus>:
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+
+	/* Check 1: TimertId is in the valid range, and Pointer is not equal to NULL */
+	if ( ( Cpy_u8TimerId <= TMR_U8_TMR2 ) && ( Cpy_pu8ReturnedFlagStatus != NULL ) )
+ 5b8:	83 30       	cpi	r24, 0x03	; 3
+ 5ba:	48 f5       	brcc	.+82     	; 0x60e <TMR_u8GetOVFFlagStatus+0x56>
+ 5bc:	61 15       	cp	r22, r1
+ 5be:	71 05       	cpc	r23, r1
+ 5c0:	41 f1       	breq	.+80     	; 0x612 <TMR_u8GetOVFFlagStatus+0x5a>
+	{
+		/* Check 1.1: Required TimerId */
+		switch ( Cpy_u8TimerId )
+ 5c2:	81 30       	cpi	r24, 0x01	; 1
+ 5c4:	51 f0       	breq	.+20     	; 0x5da <TMR_u8GetOVFFlagStatus+0x22>
+ 5c6:	18 f0       	brcs	.+6      	; 0x5ce <TMR_u8GetOVFFlagStatus+0x16>
+ 5c8:	82 30       	cpi	r24, 0x02	; 2
+ 5ca:	91 f0       	breq	.+36     	; 0x5f0 <TMR_u8GetOVFFlagStatus+0x38>
+ 5cc:	24 c0       	rjmp	.+72     	; 0x616 <TMR_u8GetOVFFlagStatus+0x5e>
+		{
+			case TMR_U8_TMR0: *Cpy_pu8ReturnedFlagStatus = GET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV0_BIT ); break;
+ 5ce:	88 b7       	in	r24, 0x38	; 56
+ 5d0:	81 70       	andi	r24, 0x01	; 1
+ 5d2:	fb 01       	movw	r30, r22
+ 5d4:	80 83       	st	Z, r24
+Description: Function to Get status of the OVF Flag in TMR peripheral.
+*/
+u8 TMR_u8GetOVFFlagStatus    ( u8 Cpy_u8TimerId, u8 *Cpy_pu8ReturnedFlagStatus )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 5d6:	81 e0       	ldi	r24, 0x01	; 1
+	if ( ( Cpy_u8TimerId <= TMR_U8_TMR2 ) && ( Cpy_pu8ReturnedFlagStatus != NULL ) )
+	{
+		/* Check 1.1: Required TimerId */
+		switch ( Cpy_u8TimerId )
+		{
+			case TMR_U8_TMR0: *Cpy_pu8ReturnedFlagStatus = GET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV0_BIT ); break;
+ 5d8:	08 95       	ret
+			case TMR_U8_TMR1: *Cpy_pu8ReturnedFlagStatus = GET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV1_BIT ); break;
+ 5da:	88 b7       	in	r24, 0x38	; 56
+ 5dc:	84 70       	andi	r24, 0x04	; 4
+ 5de:	90 e0       	ldi	r25, 0x00	; 0
+ 5e0:	95 95       	asr	r25
+ 5e2:	87 95       	ror	r24
+ 5e4:	95 95       	asr	r25
+ 5e6:	87 95       	ror	r24
+ 5e8:	fb 01       	movw	r30, r22
+ 5ea:	80 83       	st	Z, r24
+Description: Function to Get status of the OVF Flag in TMR peripheral.
+*/
+u8 TMR_u8GetOVFFlagStatus    ( u8 Cpy_u8TimerId, u8 *Cpy_pu8ReturnedFlagStatus )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 5ec:	81 e0       	ldi	r24, 0x01	; 1
+	{
+		/* Check 1.1: Required TimerId */
+		switch ( Cpy_u8TimerId )
+		{
+			case TMR_U8_TMR0: *Cpy_pu8ReturnedFlagStatus = GET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV0_BIT ); break;
+			case TMR_U8_TMR1: *Cpy_pu8ReturnedFlagStatus = GET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV1_BIT ); break;
+ 5ee:	08 95       	ret
+			case TMR_U8_TMR2: *Cpy_pu8ReturnedFlagStatus = GET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV2_BIT ); break;
+ 5f0:	88 b7       	in	r24, 0x38	; 56
+ 5f2:	80 74       	andi	r24, 0x40	; 64
+ 5f4:	90 e0       	ldi	r25, 0x00	; 0
+ 5f6:	08 2e       	mov	r0, r24
+ 5f8:	89 2f       	mov	r24, r25
+ 5fa:	00 0c       	add	r0, r0
+ 5fc:	88 1f       	adc	r24, r24
+ 5fe:	99 0b       	sbc	r25, r25
+ 600:	00 0c       	add	r0, r0
+ 602:	88 1f       	adc	r24, r24
+ 604:	99 1f       	adc	r25, r25
+ 606:	fb 01       	movw	r30, r22
+ 608:	80 83       	st	Z, r24
+Description: Function to Get status of the OVF Flag in TMR peripheral.
+*/
+u8 TMR_u8GetOVFFlagStatus    ( u8 Cpy_u8TimerId, u8 *Cpy_pu8ReturnedFlagStatus )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 60a:	81 e0       	ldi	r24, 0x01	; 1
+		/* Check 1.1: Required TimerId */
+		switch ( Cpy_u8TimerId )
+		{
+			case TMR_U8_TMR0: *Cpy_pu8ReturnedFlagStatus = GET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV0_BIT ); break;
+			case TMR_U8_TMR1: *Cpy_pu8ReturnedFlagStatus = GET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV1_BIT ); break;
+			case TMR_U8_TMR2: *Cpy_pu8ReturnedFlagStatus = GET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV2_BIT ); break;
+ 60c:	08 95       	ret
+	}
+	/* Check 2: TimertId is not in the valid range, or Pointer is equal to NULL */
+	else
+	{
+		/* Update error state = NOK, wrong TimertId or Pointer is NULL! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+ 60e:	80 e0       	ldi	r24, 0x00	; 0
+ 610:	08 95       	ret
+ 612:	80 e0       	ldi	r24, 0x00	; 0
+ 614:	08 95       	ret
+Description: Function to Get status of the OVF Flag in TMR peripheral.
+*/
+u8 TMR_u8GetOVFFlagStatus    ( u8 Cpy_u8TimerId, u8 *Cpy_pu8ReturnedFlagStatus )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 616:	81 e0       	ldi	r24, 0x01	; 1
+		/* Update error state = NOK, wrong TimertId or Pointer is NULL! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+	}
+
+	return Loc_u8ErrorState;
+}
+ 618:	08 95       	ret
+
+0000061a <TMR_u8ClearOVFFlag>:
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+
+	/* Check 1: TimertId is in the valid range */
+	if ( Cpy_u8TimerId <= TMR_U8_TMR2 )
+ 61a:	83 30       	cpi	r24, 0x03	; 3
+ 61c:	a8 f4       	brcc	.+42     	; 0x648 <TMR_u8ClearOVFFlag+0x2e>
+	{
+		/* Check 1.1: Required TimerId */
+		switch ( Cpy_u8TimerId )
+ 61e:	81 30       	cpi	r24, 0x01	; 1
+ 620:	49 f0       	breq	.+18     	; 0x634 <TMR_u8ClearOVFFlag+0x1a>
+ 622:	18 f0       	brcs	.+6      	; 0x62a <TMR_u8ClearOVFFlag+0x10>
+ 624:	82 30       	cpi	r24, 0x02	; 2
+ 626:	59 f0       	breq	.+22     	; 0x63e <TMR_u8ClearOVFFlag+0x24>
+ 628:	11 c0       	rjmp	.+34     	; 0x64c <TMR_u8ClearOVFFlag+0x32>
+		{
+			case TMR_U8_TMR0: SET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV0_BIT ); break;
+ 62a:	88 b7       	in	r24, 0x38	; 56
+ 62c:	81 60       	ori	r24, 0x01	; 1
+ 62e:	88 bf       	out	0x38, r24	; 56
+Description: Function to Clear the OVF Flag in TMR peripheral.
+*/
+u8 TMR_u8ClearOVFFlag	     ( u8 Cpy_u8TimerId )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 630:	81 e0       	ldi	r24, 0x01	; 1
+	if ( Cpy_u8TimerId <= TMR_U8_TMR2 )
+	{
+		/* Check 1.1: Required TimerId */
+		switch ( Cpy_u8TimerId )
+		{
+			case TMR_U8_TMR0: SET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV0_BIT ); break;
+ 632:	08 95       	ret
+			case TMR_U8_TMR1: SET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV1_BIT ); break;
+ 634:	88 b7       	in	r24, 0x38	; 56
+ 636:	84 60       	ori	r24, 0x04	; 4
+ 638:	88 bf       	out	0x38, r24	; 56
+Description: Function to Clear the OVF Flag in TMR peripheral.
+*/
+u8 TMR_u8ClearOVFFlag	     ( u8 Cpy_u8TimerId )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 63a:	81 e0       	ldi	r24, 0x01	; 1
+	{
+		/* Check 1.1: Required TimerId */
+		switch ( Cpy_u8TimerId )
+		{
+			case TMR_U8_TMR0: SET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV0_BIT ); break;
+			case TMR_U8_TMR1: SET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV1_BIT ); break;
+ 63c:	08 95       	ret
+			case TMR_U8_TMR2: SET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV2_BIT ); break;
+ 63e:	88 b7       	in	r24, 0x38	; 56
+ 640:	80 64       	ori	r24, 0x40	; 64
+ 642:	88 bf       	out	0x38, r24	; 56
+Description: Function to Clear the OVF Flag in TMR peripheral.
+*/
+u8 TMR_u8ClearOVFFlag	     ( u8 Cpy_u8TimerId )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 644:	81 e0       	ldi	r24, 0x01	; 1
+		/* Check 1.1: Required TimerId */
+		switch ( Cpy_u8TimerId )
+		{
+			case TMR_U8_TMR0: SET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV0_BIT ); break;
+			case TMR_U8_TMR1: SET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV1_BIT ); break;
+			case TMR_U8_TMR2: SET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV2_BIT ); break;
+ 646:	08 95       	ret
+	}
+	/* Check 2: TimertId is not in the valid range, or Pointer is equal to NULL */
+	else
+	{
+		/* Update error state = NOK, wrong TimertId! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+ 648:	80 e0       	ldi	r24, 0x00	; 0
+ 64a:	08 95       	ret
+Description: Function to Clear the OVF Flag in TMR peripheral.
+*/
+u8 TMR_u8ClearOVFFlag	     ( u8 Cpy_u8TimerId )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 64c:	81 e0       	ldi	r24, 0x01	; 1
+		/* Update error state = NOK, wrong TimertId! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+	}
+
+	return Loc_u8ErrorState;
+}
+ 64e:	08 95       	ret
+
+00000650 <TMR_u8DelayMS>:
+Input: u8 TimerId and u32 Delay
+Output: u8 Error or No Error
+Description: Function to use TMR peripheral as Delay in MS.
+*/
+u8 TMR_u8DelayMS			 ( u8 Cpy_u8TimerId, u32 Cpy_u32Delay )
+{
+ 650:	8f 92       	push	r8
+ 652:	9f 92       	push	r9
+ 654:	af 92       	push	r10
+ 656:	bf 92       	push	r11
+ 658:	cf 92       	push	r12
+ 65a:	df 92       	push	r13
+ 65c:	ef 92       	push	r14
+ 65e:	ff 92       	push	r15
+ 660:	1f 93       	push	r17
+ 662:	cf 93       	push	r28
+ 664:	df 93       	push	r29
+ 666:	00 d0       	rcall	.+0      	; 0x668 <TMR_u8DelayMS+0x18>
+ 668:	00 d0       	rcall	.+0      	; 0x66a <TMR_u8DelayMS+0x1a>
+ 66a:	cd b7       	in	r28, 0x3d	; 61
+ 66c:	de b7       	in	r29, 0x3e	; 62
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+
+	/* Check 1: TimertId is in the valid range */
+	if ( Cpy_u8TimerId <= TMR_U8_TMR2 )
+ 66e:	83 30       	cpi	r24, 0x03	; 3
+ 670:	08 f0       	brcs	.+2      	; 0x674 <TMR_u8DelayMS+0x24>
+ 672:	90 c0       	rjmp	.+288    	; 0x794 <TMR_u8DelayMS+0x144>
+ 674:	6a 01       	movw	r12, r20
+ 676:	7b 01       	movw	r14, r22
+ 678:	18 2f       	mov	r17, r24
+	{
+		u32 Loc_u32NumberOfOVFs = 0, Loc_u32Counter = 0;
+		
+		/* Step 1: Disable Timer */
+		TMR_u8DisableTMR( Cpy_u8TimerId );
+ 67a:	0e 94 74 02 	call	0x4e8	; 0x4e8 <TMR_u8DisableTMR>
+		
+		/* Check 1.1: Required TimerId */
+		switch ( Cpy_u8TimerId )
+ 67e:	11 11       	cpse	r17, r1
+ 680:	5e c0       	rjmp	.+188    	; 0x73e <TMR_u8DelayMS+0xee>
+				/* Example: TickTime = 0.001 msec, TimerResolution = 8 */
+				/* Answer : TimerMaxDelay = 0.001 * 256 = 0.256 msec */
+				f32 Loc_f32TimerMaxDelay = Loc_f32TickTime * pow( 2, TMR_U8_TMR0_RESOLUTION );
+				
+				/* Check 1.1.1: TimerMaxDelay > Delay */
+				if ( Loc_f32TimerMaxDelay > Cpy_u32Delay )
+ 682:	c7 01       	movw	r24, r14
+ 684:	b6 01       	movw	r22, r12
+ 686:	0e 94 cd 05 	call	0xb9a	; 0xb9a <__floatunsisf>
+ 68a:	6b 01       	movw	r12, r22
+ 68c:	7c 01       	movw	r14, r24
+ 68e:	2f e6       	ldi	r18, 0x6F	; 111
+ 690:	32 e1       	ldi	r19, 0x12	; 18
+ 692:	43 e8       	ldi	r20, 0x83	; 131
+ 694:	5e e3       	ldi	r21, 0x3E	; 62
+ 696:	0e 94 27 05 	call	0xa4e	; 0xa4e <__cmpsf2>
+ 69a:	88 23       	and	r24, r24
+ 69c:	ac f4       	brge	.+42     	; 0x6c8 <TMR_u8DelayMS+0x78>
+				{
+					/* Step 3.1: Calculate TimerPreloadValue = ( TimerMaxDelay - Delay ) / TickTime */
+					/* Example: TimerMaxDelay = 0.256 msec => 256 usec, Delay = 0.200 msec => 200 usec, TickTime = 0.001 msec */
+					/* Answer : TimerPreloadValue = ( 0.256 - 0.200 ) / 0.001 = 56 */
+					TMR_U8_TCNT0_REG = ( u8 ) ( ( Loc_f32TimerMaxDelay - Cpy_u32Delay ) / Loc_f32TickTime );
+ 69e:	a7 01       	movw	r20, r14
+ 6a0:	96 01       	movw	r18, r12
+ 6a2:	6f e6       	ldi	r22, 0x6F	; 111
+ 6a4:	72 e1       	ldi	r23, 0x12	; 18
+ 6a6:	83 e8       	ldi	r24, 0x83	; 131
+ 6a8:	9e e3       	ldi	r25, 0x3E	; 62
+ 6aa:	0e 94 ba 04 	call	0x974	; 0x974 <__subsf3>
+ 6ae:	2f e6       	ldi	r18, 0x6F	; 111
+ 6b0:	32 e1       	ldi	r19, 0x12	; 18
+ 6b2:	43 e8       	ldi	r20, 0x83	; 131
+ 6b4:	5a e3       	ldi	r21, 0x3A	; 58
+ 6b6:	0e 94 2c 05 	call	0xa58	; 0xa58 <__divsf3>
+ 6ba:	0e 94 9e 05 	call	0xb3c	; 0xb3c <__fixunssfsi>
+ 6be:	62 bf       	out	0x32, r22	; 50
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+
+	/* Check 1: TimertId is in the valid range */
+	if ( Cpy_u8TimerId <= TMR_U8_TMR2 )
+	{
+		u32 Loc_u32NumberOfOVFs = 0, Loc_u32Counter = 0;
+ 6c0:	81 2c       	mov	r8, r1
+ 6c2:	91 2c       	mov	r9, r1
+ 6c4:	54 01       	movw	r10, r8
+ 6c6:	42 c0       	rjmp	.+132    	; 0x74c <TMR_u8DelayMS+0xfc>
+					/* Example: TimerMaxDelay = 0.256 msec => 256 usec, Delay = 0.200 msec => 200 usec, TickTime = 0.001 msec */
+					/* Answer : TimerPreloadValue = ( 0.256 - 0.200 ) / 0.001 = 56 */
+					TMR_U8_TCNT0_REG = ( u8 ) ( ( Loc_f32TimerMaxDelay - Cpy_u32Delay ) / Loc_f32TickTime );
+				}
+				/* Check 1.1.2: TimerMaxDelay <= Delay */
+				else if ( Loc_f32TimerMaxDelay <= Cpy_u32Delay )
+ 6c8:	2f e6       	ldi	r18, 0x6F	; 111
+ 6ca:	32 e1       	ldi	r19, 0x12	; 18
+ 6cc:	43 e8       	ldi	r20, 0x83	; 131
+ 6ce:	5e e3       	ldi	r21, 0x3E	; 62
+ 6d0:	c7 01       	movw	r24, r14
+ 6d2:	b6 01       	movw	r22, r12
+ 6d4:	0e 94 7f 06 	call	0xcfe	; 0xcfe <__gesf2>
+ 6d8:	88 23       	and	r24, r24
+ 6da:	ac f1       	brlt	.+106    	; 0x746 <TMR_u8DelayMS+0xf6>
+					/* Example: TimerMaxDelay = 0.256 msec, Delay = 100 msec */
+					/* Answer : 100 / 0.256 = 390.625
+					*			NumberOfOVFs = 390 + 1 = 391
+					*			TimerPreloadValue = ( 2 ^ 8 ) - ( 0.625 * ( 2 ^ 8 ) ) = 96
+					*/
+					f32 Loc_f32Result = ( f32 ) ( Cpy_u32Delay / Loc_f32TimerMaxDelay );
+ 6dc:	2f e6       	ldi	r18, 0x6F	; 111
+ 6de:	32 e1       	ldi	r19, 0x12	; 18
+ 6e0:	43 e8       	ldi	r20, 0x83	; 131
+ 6e2:	5e e3       	ldi	r21, 0x3E	; 62
+ 6e4:	c7 01       	movw	r24, r14
+ 6e6:	b6 01       	movw	r22, r12
+ 6e8:	0e 94 2c 05 	call	0xa58	; 0xa58 <__divsf3>
+					f32 Loc_f32Number;
+					f32 Loc_f32Fraction = modff( Loc_f32Result, &Loc_f32Number );
+ 6ec:	ae 01       	movw	r20, r28
+ 6ee:	4f 5f       	subi	r20, 0xFF	; 255
+ 6f0:	5f 4f       	sbci	r21, 0xFF	; 255
+ 6f2:	0e 94 84 06 	call	0xd08	; 0xd08 <modf>
+ 6f6:	6b 01       	movw	r12, r22
+ 6f8:	7c 01       	movw	r14, r24
+					Loc_u32NumberOfOVFs = ( u32 ) ( Loc_f32Number + 1 );
+ 6fa:	20 e0       	ldi	r18, 0x00	; 0
+ 6fc:	30 e0       	ldi	r19, 0x00	; 0
+ 6fe:	40 e8       	ldi	r20, 0x80	; 128
+ 700:	5f e3       	ldi	r21, 0x3F	; 63
+ 702:	69 81       	ldd	r22, Y+1	; 0x01
+ 704:	7a 81       	ldd	r23, Y+2	; 0x02
+ 706:	8b 81       	ldd	r24, Y+3	; 0x03
+ 708:	9c 81       	ldd	r25, Y+4	; 0x04
+ 70a:	0e 94 bb 04 	call	0x976	; 0x976 <__addsf3>
+ 70e:	0e 94 9e 05 	call	0xb3c	; 0xb3c <__fixunssfsi>
+ 712:	4b 01       	movw	r8, r22
+ 714:	5c 01       	movw	r10, r24
+					TMR_U8_TCNT0_REG = ( u8 ) ( pow( 2, TMR_U8_TMR0_RESOLUTION ) - ( Loc_f32Fraction * pow( 2, TMR_U8_TMR0_RESOLUTION ) ) );
+ 716:	20 e0       	ldi	r18, 0x00	; 0
+ 718:	30 e0       	ldi	r19, 0x00	; 0
+ 71a:	40 e8       	ldi	r20, 0x80	; 128
+ 71c:	53 e4       	ldi	r21, 0x43	; 67
+ 71e:	c7 01       	movw	r24, r14
+ 720:	b6 01       	movw	r22, r12
+ 722:	0e 94 b8 06 	call	0xd70	; 0xd70 <__mulsf3>
+ 726:	9b 01       	movw	r18, r22
+ 728:	ac 01       	movw	r20, r24
+ 72a:	60 e0       	ldi	r22, 0x00	; 0
+ 72c:	70 e0       	ldi	r23, 0x00	; 0
+ 72e:	80 e8       	ldi	r24, 0x80	; 128
+ 730:	93 e4       	ldi	r25, 0x43	; 67
+ 732:	0e 94 ba 04 	call	0x974	; 0x974 <__subsf3>
+ 736:	0e 94 9e 05 	call	0xb3c	; 0xb3c <__fixunssfsi>
+ 73a:	62 bf       	out	0x32, r22	; 50
+ 73c:	07 c0       	rjmp	.+14     	; 0x74c <TMR_u8DelayMS+0xfc>
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+
+	/* Check 1: TimertId is in the valid range */
+	if ( Cpy_u8TimerId <= TMR_U8_TMR2 )
+	{
+		u32 Loc_u32NumberOfOVFs = 0, Loc_u32Counter = 0;
+ 73e:	81 2c       	mov	r8, r1
+ 740:	91 2c       	mov	r9, r1
+ 742:	54 01       	movw	r10, r8
+ 744:	03 c0       	rjmp	.+6      	; 0x74c <TMR_u8DelayMS+0xfc>
+ 746:	81 2c       	mov	r8, r1
+ 748:	91 2c       	mov	r9, r1
+ 74a:	54 01       	movw	r10, r8
+			case TMR_U8_TMR1: /* Future Improvements ?? ??? ???? */ break;
+			case TMR_U8_TMR2: /* Future Improvements ?? ??? ???? */ break;
+		}
+
+		/* Step 4: Enable Timer */
+		TMR_u8EnableTMR( Cpy_u8TimerId );
+ 74c:	81 2f       	mov	r24, r17
+ 74e:	0e 94 4f 02 	call	0x49e	; 0x49e <TMR_u8EnableTMR>
+		
+		u8 Loc_u8OVFFlagStatus = TMR_U8_FLAG_DOWN;
+ 752:	19 82       	std	Y+1, r1	; 0x01
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+
+	/* Check 1: TimertId is in the valid range */
+	if ( Cpy_u8TimerId <= TMR_U8_TMR2 )
+	{
+		u32 Loc_u32NumberOfOVFs = 0, Loc_u32Counter = 0;
+ 754:	c1 2c       	mov	r12, r1
+ 756:	d1 2c       	mov	r13, r1
+ 758:	76 01       	movw	r14, r12
+		TMR_u8EnableTMR( Cpy_u8TimerId );
+		
+		u8 Loc_u8OVFFlagStatus = TMR_U8_FLAG_DOWN;
+		
+		/* Loop: Until Counter = NumberOfOVFs */
+		while ( Loc_u32NumberOfOVFs > Loc_u32Counter )
+ 75a:	12 c0       	rjmp	.+36     	; 0x780 <TMR_u8DelayMS+0x130>
+		{
+			/* Loop: Until OVFFlagStatus is set ( i.e.: Timer overflow occurs ) */
+			while ( Loc_u8OVFFlagStatus == TMR_U8_FLAG_DOWN )
+			{
+				/* Step 5: Get OVFFlagStatus */
+				TMR_u8GetOVFFlagStatus( Cpy_u8TimerId, &Loc_u8OVFFlagStatus );
+ 75c:	be 01       	movw	r22, r28
+ 75e:	6f 5f       	subi	r22, 0xFF	; 255
+ 760:	7f 4f       	sbci	r23, 0xFF	; 255
+ 762:	81 2f       	mov	r24, r17
+ 764:	0e 94 dc 02 	call	0x5b8	; 0x5b8 <TMR_u8GetOVFFlagStatus>
+		
+		/* Loop: Until Counter = NumberOfOVFs */
+		while ( Loc_u32NumberOfOVFs > Loc_u32Counter )
+		{
+			/* Loop: Until OVFFlagStatus is set ( i.e.: Timer overflow occurs ) */
+			while ( Loc_u8OVFFlagStatus == TMR_U8_FLAG_DOWN )
+ 768:	99 81       	ldd	r25, Y+1	; 0x01
+ 76a:	99 23       	and	r25, r25
+ 76c:	b9 f3       	breq	.-18     	; 0x75c <TMR_u8DelayMS+0x10c>
+				/* Step 5: Get OVFFlagStatus */
+				TMR_u8GetOVFFlagStatus( Cpy_u8TimerId, &Loc_u8OVFFlagStatus );
+			}
+			
+			/* Step 6: Reset OVFFlagStatus value */
+			Loc_u8OVFFlagStatus = TMR_U8_FLAG_DOWN;
+ 76e:	19 82       	std	Y+1, r1	; 0x01
+			/* Step 7: Increment Counter */
+			Loc_u32Counter++;
+ 770:	8f ef       	ldi	r24, 0xFF	; 255
+ 772:	c8 1a       	sub	r12, r24
+ 774:	d8 0a       	sbc	r13, r24
+ 776:	e8 0a       	sbc	r14, r24
+ 778:	f8 0a       	sbc	r15, r24
+			/* Step 8: Clear OVFFlag ( i.e.: TOVn bit in TIFR register ) */
+			TMR_u8ClearOVFFlag( Cpy_u8TimerId );
+ 77a:	81 2f       	mov	r24, r17
+ 77c:	0e 94 0d 03 	call	0x61a	; 0x61a <TMR_u8ClearOVFFlag>
+		TMR_u8EnableTMR( Cpy_u8TimerId );
+		
+		u8 Loc_u8OVFFlagStatus = TMR_U8_FLAG_DOWN;
+		
+		/* Loop: Until Counter = NumberOfOVFs */
+		while ( Loc_u32NumberOfOVFs > Loc_u32Counter )
+ 780:	c8 14       	cp	r12, r8
+ 782:	d9 04       	cpc	r13, r9
+ 784:	ea 04       	cpc	r14, r10
+ 786:	fb 04       	cpc	r15, r11
+ 788:	78 f3       	brcs	.-34     	; 0x768 <TMR_u8DelayMS+0x118>
+			/* Step 8: Clear OVFFlag ( i.e.: TOVn bit in TIFR register ) */
+			TMR_u8ClearOVFFlag( Cpy_u8TimerId );
+		}
+		
+		/* Step 9: Disable Timer */
+		TMR_u8DisableTMR( Cpy_u8TimerId );
+ 78a:	81 2f       	mov	r24, r17
+ 78c:	0e 94 74 02 	call	0x4e8	; 0x4e8 <TMR_u8DisableTMR>
+Description: Function to use TMR peripheral as Delay in MS.
+*/
+u8 TMR_u8DelayMS			 ( u8 Cpy_u8TimerId, u32 Cpy_u32Delay )
+{
+	/* Define local variable to set the error state = OK */
+	u8 Loc_u8ErrorState = STD_TYPES_OK;
+ 790:	81 e0       	ldi	r24, 0x01	; 1
+ 792:	01 c0       	rjmp	.+2      	; 0x796 <TMR_u8DelayMS+0x146>
+	}
+	/* Check 2: TimertId is not in the valid range */
+	else
+	{
+		/* Update error state = NOK, wrong TimertId! */
+		Loc_u8ErrorState = STD_TYPES_NOK;
+ 794:	80 e0       	ldi	r24, 0x00	; 0
+	}
+
+	return Loc_u8ErrorState;
+}
+ 796:	0f 90       	pop	r0
+ 798:	0f 90       	pop	r0
+ 79a:	0f 90       	pop	r0
+ 79c:	0f 90       	pop	r0
+ 79e:	df 91       	pop	r29
+ 7a0:	cf 91       	pop	r28
+ 7a2:	1f 91       	pop	r17
+ 7a4:	ff 90       	pop	r15
+ 7a6:	ef 90       	pop	r14
+ 7a8:	df 90       	pop	r13
+ 7aa:	cf 90       	pop	r12
+ 7ac:	bf 90       	pop	r11
+ 7ae:	af 90       	pop	r10
+ 7b0:	9f 90       	pop	r9
+ 7b2:	8f 90       	pop	r8
+ 7b4:	08 95       	ret
+
+000007b6 <__vector_4>:
+
+/*******************************************************************************************************************************************************************/
+
+/* ISR function implementation of TMR2 COMP */
+void __vector_4( void )
+{
+ 7b6:	1f 92       	push	r1
+ 7b8:	0f 92       	push	r0
+ 7ba:	0f b6       	in	r0, 0x3f	; 63
+ 7bc:	0f 92       	push	r0
+ 7be:	11 24       	eor	r1, r1
+ 7c0:	8f 93       	push	r24
+ 7c2:	9f 93       	push	r25
+	/* Static Counter, in case the desired time to be counted; is more than Timer2 counting register ( TCNT2 = 8 bits ), i.e.: to count the number of Overflows */
+	static u16 Loc_u16CounterCOMP = 0;
+
+	/* Increment the COMP Counter after every Overflow in Timer2 counting register */
+	Loc_u16CounterCOMP++;
+ 7c4:	80 91 8a 00 	lds	r24, 0x008A	; 0x80008a <Loc_u16CounterCOMP.1878>
+ 7c8:	90 91 8b 00 	lds	r25, 0x008B	; 0x80008b <Loc_u16CounterCOMP.1878+0x1>
+ 7cc:	01 96       	adiw	r24, 0x01	; 1
+ 7ce:	90 93 8b 00 	sts	0x008B, r25	; 0x80008b <Loc_u16CounterCOMP.1878+0x1>
+ 7d2:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <Loc_u16CounterCOMP.1878>
+
+	/* Check 1: The COMP Counter reached the desired number of Overflows */
+	if ( Loc_u16CounterCOMP >= TMR_U16_TMR_2_NUM_OF_OVERFLOWS )
+ 7d6:	89 2b       	or	r24, r25
+ 7d8:	21 f0       	breq	.+8      	; 0x7e2 <__vector_4+0x2c>
+	{
+		/* Reset the COMP Counter to 0 */
+		Loc_u16CounterCOMP = 0;
+ 7da:	10 92 8b 00 	sts	0x008B, r1	; 0x80008b <Loc_u16CounterCOMP.1878+0x1>
+ 7de:	10 92 8a 00 	sts	0x008A, r1	; 0x80008a <Loc_u16CounterCOMP.1878>
+		{
+			/* Call Back the function ( in APP Layer ), which its address is stored in the Global Array of Pointers to Functions ( COMPInterruptsAction ) */
+			Glb_ApfCOMPInterruptsAction[TMR_U8_TMR2]();
+		}
+	}
+}
+ 7e2:	9f 91       	pop	r25
+ 7e4:	8f 91       	pop	r24
+ 7e6:	0f 90       	pop	r0
+ 7e8:	0f be       	out	0x3f, r0	; 63
+ 7ea:	0f 90       	pop	r0
+ 7ec:	1f 90       	pop	r1
+ 7ee:	18 95       	reti
+
+000007f0 <__vector_5>:
+
+/*******************************************************************************************************************************************************************/
+
+/* ISR function implementation of TMR2 OVF */
+void __vector_5( void )
+{
+ 7f0:	1f 92       	push	r1
+ 7f2:	0f 92       	push	r0
+ 7f4:	0f b6       	in	r0, 0x3f	; 63
+ 7f6:	0f 92       	push	r0
+ 7f8:	11 24       	eor	r1, r1
+ 7fa:	8f 93       	push	r24
+ 7fc:	9f 93       	push	r25
+ 7fe:	ef 93       	push	r30
+ 800:	ff 93       	push	r31
+	/* Increment the OVF Counter after every Overflow in Timer2 counting register */
+	Glb_Au16OVFCounters[TMR_U8_TMR2]++;
+ 802:	ec e8       	ldi	r30, 0x8C	; 140
+ 804:	f0 e0       	ldi	r31, 0x00	; 0
+ 806:	84 81       	ldd	r24, Z+4	; 0x04
+ 808:	95 81       	ldd	r25, Z+5	; 0x05
+ 80a:	01 96       	adiw	r24, 0x01	; 1
+ 80c:	95 83       	std	Z+5, r25	; 0x05
+ 80e:	84 83       	std	Z+4, r24	; 0x04
+
+	/* Check 1: The OVF Counter reached the desired number of Overflows */
+	if ( Glb_Au16OVFCounters[TMR_U8_TMR2] >= TMR_U16_TMR_2_NUM_OF_OVERFLOWS )
+ 810:	89 2b       	or	r24, r25
+ 812:	29 f0       	breq	.+10     	; 0x81e <__DATA_REGION_LENGTH__+0x1e>
+	{
+		/* Reset Preload Value */
+		TMR_U8_TCNT2_REG = TMR_U8_TMR_2_PRELOAD_VALUE;
+ 814:	14 bc       	out	0x24, r1	; 36
+
+		/* Reset the OVF Counter to 0 */
+		Glb_Au16OVFCounters[TMR_U8_TMR2] = 0;
+ 816:	10 92 91 00 	sts	0x0091, r1	; 0x800091 <Glb_Au16OVFCounters+0x5>
+ 81a:	10 92 90 00 	sts	0x0090, r1	; 0x800090 <Glb_Au16OVFCounters+0x4>
+		{
+			/* Call Back the function ( in APP Layer ), which its address is stored in the Global Array of Pointers to Functions ( OVFInterruptsAction ) */
+			Glb_ApfOVFInterruptsAction[TMR_U8_TMR2]();
+		}
+	}
+}
+ 81e:	ff 91       	pop	r31
+ 820:	ef 91       	pop	r30
+ 822:	9f 91       	pop	r25
+ 824:	8f 91       	pop	r24
+ 826:	0f 90       	pop	r0
+ 828:	0f be       	out	0x3f, r0	; 63
+ 82a:	0f 90       	pop	r0
+ 82c:	1f 90       	pop	r1
+ 82e:	18 95       	reti
+
+00000830 <__vector_6>:
+
+/*******************************************************************************************************************************************************************/
+
+/* ISR function implementation of TMR1 CAPT */
+void __vector_6( void )
+{
+ 830:	1f 92       	push	r1
+ 832:	0f 92       	push	r0
+ 834:	0f b6       	in	r0, 0x3f	; 63
+ 836:	0f 92       	push	r0
+ 838:	11 24       	eor	r1, r1
+
+}
+ 83a:	0f 90       	pop	r0
+ 83c:	0f be       	out	0x3f, r0	; 63
+ 83e:	0f 90       	pop	r0
+ 840:	1f 90       	pop	r1
+ 842:	18 95       	reti
+
+00000844 <__vector_7>:
+
+/*******************************************************************************************************************************************************************/
+
+/* ISR function implementation of TMR1 COMPA */
+void __vector_7( void )
+{
+ 844:	1f 92       	push	r1
+ 846:	0f 92       	push	r0
+ 848:	0f b6       	in	r0, 0x3f	; 63
+ 84a:	0f 92       	push	r0
+ 84c:	11 24       	eor	r1, r1
+ 84e:	8f 93       	push	r24
+ 850:	9f 93       	push	r25
+	/* Static Counter, in case the desired time to be counted; is more than Timer1 counting register ( TCNT1 = 16 bits ), i.e.: to count the number of Overflows */
+	static u16 Loc_u16CounterCOMP = 0;
+
+	/* Increment the COMP Counter after every Overflow in Timer1 counting register */
+	Loc_u16CounterCOMP++;
+ 852:	80 91 88 00 	lds	r24, 0x0088	; 0x800088 <Loc_u16CounterCOMP.1896>
+ 856:	90 91 89 00 	lds	r25, 0x0089	; 0x800089 <Loc_u16CounterCOMP.1896+0x1>
+ 85a:	01 96       	adiw	r24, 0x01	; 1
+ 85c:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <Loc_u16CounterCOMP.1896+0x1>
+ 860:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <Loc_u16CounterCOMP.1896>
+
+	/* Check 1: The COMP Counter reached the desired number of Overflows */
+	if ( Loc_u16CounterCOMP >= TMR_U16_TMR_1_NUM_OF_OVERFLOWS )
+ 864:	89 2b       	or	r24, r25
+ 866:	21 f0       	breq	.+8      	; 0x870 <__stack+0x11>
+	{
+		/* Reset the COMP Counter to 0 */
+		Loc_u16CounterCOMP = 0;
+ 868:	10 92 89 00 	sts	0x0089, r1	; 0x800089 <Loc_u16CounterCOMP.1896+0x1>
+ 86c:	10 92 88 00 	sts	0x0088, r1	; 0x800088 <Loc_u16CounterCOMP.1896>
+
+			/* Call Back the function ( in APP Layer ), which its address is stored in the Global Array of Pointers to Functions ( COMPInterruptsAction ) */
+			Glb_ApfCOMPInterruptsAction[TMR_U8_TMR1]();
+		}
+	}
+}
+ 870:	9f 91       	pop	r25
+ 872:	8f 91       	pop	r24
+ 874:	0f 90       	pop	r0
+ 876:	0f be       	out	0x3f, r0	; 63
+ 878:	0f 90       	pop	r0
+ 87a:	1f 90       	pop	r1
+ 87c:	18 95       	reti
+
+0000087e <__vector_8>:
+
+/*******************************************************************************************************************************************************************/
+
+/* ISR function implementation of TMR1 COMPB */
+void __vector_8( void )
+{
+ 87e:	1f 92       	push	r1
+ 880:	0f 92       	push	r0
+ 882:	0f b6       	in	r0, 0x3f	; 63
+ 884:	0f 92       	push	r0
+ 886:	11 24       	eor	r1, r1
+ 888:	8f 93       	push	r24
+ 88a:	9f 93       	push	r25
+	/* Static Counter, in case the desired time to be counted; is more than Timer1 counting register ( TCNT1 = 16 bits ), i.e.: to count the number of Overflows */
+	static u16 Loc_u16CounterCOMP = 0;
+
+	/* Increment the COMP Counter after every Overflow in Timer1 counting register */
+	Loc_u16CounterCOMP++;
+ 88c:	80 91 86 00 	lds	r24, 0x0086	; 0x800086 <Loc_u16CounterCOMP.1900>
+ 890:	90 91 87 00 	lds	r25, 0x0087	; 0x800087 <Loc_u16CounterCOMP.1900+0x1>
+ 894:	01 96       	adiw	r24, 0x01	; 1
+ 896:	90 93 87 00 	sts	0x0087, r25	; 0x800087 <Loc_u16CounterCOMP.1900+0x1>
+ 89a:	80 93 86 00 	sts	0x0086, r24	; 0x800086 <Loc_u16CounterCOMP.1900>
+
+	/* Check 1: The COMP Counter reached the desired number of Overflows */
+	if ( Loc_u16CounterCOMP >= TMR_U16_TMR_1_NUM_OF_OVERFLOWS )
+ 89e:	89 2b       	or	r24, r25
+ 8a0:	21 f0       	breq	.+8      	; 0x8aa <__vector_8+0x2c>
+	{
+		/* Reset the COMP Counter to 0 */
+		Loc_u16CounterCOMP = 0;
+ 8a2:	10 92 87 00 	sts	0x0087, r1	; 0x800087 <Loc_u16CounterCOMP.1900+0x1>
+ 8a6:	10 92 86 00 	sts	0x0086, r1	; 0x800086 <Loc_u16CounterCOMP.1900>
+
+			/* Call Back the function ( in APP Layer ), which its address is stored in the Global Array of Pointers to Functions ( COMPInterruptsAction ) */
+			Glb_ApfCOMPInterruptsAction[TMR_U8_TMR1]();
+		}
+	}
+}
+ 8aa:	9f 91       	pop	r25
+ 8ac:	8f 91       	pop	r24
+ 8ae:	0f 90       	pop	r0
+ 8b0:	0f be       	out	0x3f, r0	; 63
+ 8b2:	0f 90       	pop	r0
+ 8b4:	1f 90       	pop	r1
+ 8b6:	18 95       	reti
+
+000008b8 <__vector_9>:
+
+/*******************************************************************************************************************************************************************/
+
+/* ISR function implementation of TMR1 OVF */
+void __vector_9( void )
+{
+ 8b8:	1f 92       	push	r1
+ 8ba:	0f 92       	push	r0
+ 8bc:	0f b6       	in	r0, 0x3f	; 63
+ 8be:	0f 92       	push	r0
+ 8c0:	11 24       	eor	r1, r1
+ 8c2:	8f 93       	push	r24
+ 8c4:	9f 93       	push	r25
+ 8c6:	ef 93       	push	r30
+ 8c8:	ff 93       	push	r31
+	/* Increment the OVF Counter after every Overflow in Timer1 counting register */
+	Glb_Au16OVFCounters[TMR_U8_TMR1]++;
+ 8ca:	ec e8       	ldi	r30, 0x8C	; 140
+ 8cc:	f0 e0       	ldi	r31, 0x00	; 0
+ 8ce:	82 81       	ldd	r24, Z+2	; 0x02
+ 8d0:	93 81       	ldd	r25, Z+3	; 0x03
+ 8d2:	01 96       	adiw	r24, 0x01	; 1
+ 8d4:	93 83       	std	Z+3, r25	; 0x03
+ 8d6:	82 83       	std	Z+2, r24	; 0x02
+
+	/* Check 1: The OVF Counter reached the desired number of Overflows */
+	if ( Glb_Au16OVFCounters[TMR_U8_TMR1] >= TMR_U16_TMR_1_NUM_OF_OVERFLOWS )
+ 8d8:	89 2b       	or	r24, r25
+ 8da:	31 f0       	breq	.+12     	; 0x8e8 <__vector_9+0x30>
+	{
+		/* Reset Preload Value */
+		TMR_U16_TCNT1_REG = TMR_U16_TMR_1_PRELOAD_VALUE;
+ 8dc:	1d bc       	out	0x2d, r1	; 45
+ 8de:	1c bc       	out	0x2c, r1	; 44
+
+		/* Reset the OVF Counter to 0 */
+		Glb_Au16OVFCounters[TMR_U8_TMR1] = 0;
+ 8e0:	10 92 8f 00 	sts	0x008F, r1	; 0x80008f <Glb_Au16OVFCounters+0x3>
+ 8e4:	10 92 8e 00 	sts	0x008E, r1	; 0x80008e <Glb_Au16OVFCounters+0x2>
+		{
+			/* Call Back the function ( in APP Layer ), which its address is stored in the Global Array of Pointers to Functions ( OVFInterruptsAction ) */
+			Glb_ApfOVFInterruptsAction[TMR_U8_TMR1]();
+		}
+	}
+}
+ 8e8:	ff 91       	pop	r31
+ 8ea:	ef 91       	pop	r30
+ 8ec:	9f 91       	pop	r25
+ 8ee:	8f 91       	pop	r24
+ 8f0:	0f 90       	pop	r0
+ 8f2:	0f be       	out	0x3f, r0	; 63
+ 8f4:	0f 90       	pop	r0
+ 8f6:	1f 90       	pop	r1
+ 8f8:	18 95       	reti
+
+000008fa <__vector_10>:
+
+/*******************************************************************************************************************************************************************/
+
+/* ISR function implementation of TMR0 COMP */
+void __vector_10( void )
+{
+ 8fa:	1f 92       	push	r1
+ 8fc:	0f 92       	push	r0
+ 8fe:	0f b6       	in	r0, 0x3f	; 63
+ 900:	0f 92       	push	r0
+ 902:	11 24       	eor	r1, r1
+ 904:	8f 93       	push	r24
+ 906:	9f 93       	push	r25
+	/* Static Counter, in case the desired time to be counted; is more than Timer0 counting register ( TCNT0 = 8 bits ), i.e.: to count the number of Overflows */
+	static u16 Loc_u16CounterCOMP = 0;
+
+	/* Increment the COMP Counter after every Overflow in Timer0 counting register */
+	Loc_u16CounterCOMP++;
+ 908:	80 91 84 00 	lds	r24, 0x0084	; 0x800084 <Loc_u16CounterCOMP.1911>
+ 90c:	90 91 85 00 	lds	r25, 0x0085	; 0x800085 <Loc_u16CounterCOMP.1911+0x1>
+ 910:	01 96       	adiw	r24, 0x01	; 1
+ 912:	90 93 85 00 	sts	0x0085, r25	; 0x800085 <Loc_u16CounterCOMP.1911+0x1>
+ 916:	80 93 84 00 	sts	0x0084, r24	; 0x800084 <Loc_u16CounterCOMP.1911>
+
+	/* Check 1: The COMP Counter reached the desired number of Overflows */
+	if ( Loc_u16CounterCOMP >= TMR_U16_TMR_0_NUM_OF_OVERFLOWS )
+ 91a:	89 2b       	or	r24, r25
+ 91c:	21 f0       	breq	.+8      	; 0x926 <__vector_10+0x2c>
+	{
+		/* Reset the COMP Counter to 0 */
+		Loc_u16CounterCOMP = 0;
+ 91e:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <Loc_u16CounterCOMP.1911+0x1>
+ 922:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <Loc_u16CounterCOMP.1911>
+		{
+			/* Call Back the function ( in APP Layer ), which its address is stored in the Global Array of Pointers to Functions ( COMPInterruptsAction ) */
+			Glb_ApfCOMPInterruptsAction[TMR_U8_TMR0]();
+		}
+	}
+}
+ 926:	9f 91       	pop	r25
+ 928:	8f 91       	pop	r24
+ 92a:	0f 90       	pop	r0
+ 92c:	0f be       	out	0x3f, r0	; 63
+ 92e:	0f 90       	pop	r0
+ 930:	1f 90       	pop	r1
+ 932:	18 95       	reti
+
+00000934 <__vector_11>:
+
+/*******************************************************************************************************************************************************************/
+
+/* ISR function implementation of TMR0 OVF */
+void __vector_11( void )
+{
+ 934:	1f 92       	push	r1
+ 936:	0f 92       	push	r0
+ 938:	0f b6       	in	r0, 0x3f	; 63
+ 93a:	0f 92       	push	r0
+ 93c:	11 24       	eor	r1, r1
+ 93e:	8f 93       	push	r24
+ 940:	9f 93       	push	r25
+ 942:	ef 93       	push	r30
+ 944:	ff 93       	push	r31
+	/* Increment the OVF Counter after every Overflow in Timer0 counting register */
+	Glb_Au16OVFCounters[TMR_U8_TMR0]++;
+ 946:	ec e8       	ldi	r30, 0x8C	; 140
+ 948:	f0 e0       	ldi	r31, 0x00	; 0
+ 94a:	80 81       	ld	r24, Z
+ 94c:	91 81       	ldd	r25, Z+1	; 0x01
+ 94e:	01 96       	adiw	r24, 0x01	; 1
+ 950:	91 83       	std	Z+1, r25	; 0x01
+ 952:	80 83       	st	Z, r24
+
+	/* Check 1: The OVF Counter reached the desired number of Overflows */
+	if ( Glb_Au16OVFCounters[TMR_U8_TMR0] >= TMR_U16_TMR_0_NUM_OF_OVERFLOWS )
+ 954:	89 2b       	or	r24, r25
+ 956:	29 f0       	breq	.+10     	; 0x962 <__vector_11+0x2e>
+	{
+		/* Reset Preload Value */
+		TMR_U8_TCNT0_REG = TMR_U8_TMR_0_PRELOAD_VALUE;
+ 958:	12 be       	out	0x32, r1	; 50
+
+		/* Reset the OVF Counter to 0 */
+		Glb_Au16OVFCounters[TMR_U8_TMR0] = 0;
+ 95a:	10 92 8d 00 	sts	0x008D, r1	; 0x80008d <Glb_Au16OVFCounters+0x1>
+ 95e:	10 92 8c 00 	sts	0x008C, r1	; 0x80008c <Glb_Au16OVFCounters>
+		{
+			/* Call Back the function ( in APP Layer ), which its address is stored in the Global Array of Pointers to Functions ( OVFInterruptsAction ) */
+			Glb_ApfOVFInterruptsAction[TMR_U8_TMR0]();
+		}
+	}
+}
+ 962:	ff 91       	pop	r31
+ 964:	ef 91       	pop	r30
+ 966:	9f 91       	pop	r25
+ 968:	8f 91       	pop	r24
+ 96a:	0f 90       	pop	r0
+ 96c:	0f be       	out	0x3f, r0	; 63
+ 96e:	0f 90       	pop	r0
+ 970:	1f 90       	pop	r1
+ 972:	18 95       	reti
+
+00000974 <__subsf3>:
+ 974:	50 58       	subi	r21, 0x80	; 128
+
+00000976 <__addsf3>:
+ 976:	bb 27       	eor	r27, r27
+ 978:	aa 27       	eor	r26, r26
+ 97a:	0e 94 d2 04 	call	0x9a4	; 0x9a4 <__addsf3x>
+ 97e:	0c 94 45 06 	jmp	0xc8a	; 0xc8a <__fp_round>
+ 982:	0e 94 37 06 	call	0xc6e	; 0xc6e <__fp_pscA>
+ 986:	38 f0       	brcs	.+14     	; 0x996 <__addsf3+0x20>
+ 988:	0e 94 3e 06 	call	0xc7c	; 0xc7c <__fp_pscB>
+ 98c:	20 f0       	brcs	.+8      	; 0x996 <__addsf3+0x20>
+ 98e:	39 f4       	brne	.+14     	; 0x99e <__addsf3+0x28>
+ 990:	9f 3f       	cpi	r25, 0xFF	; 255
+ 992:	19 f4       	brne	.+6      	; 0x99a <__addsf3+0x24>
+ 994:	26 f4       	brtc	.+8      	; 0x99e <__addsf3+0x28>
+ 996:	0c 94 34 06 	jmp	0xc68	; 0xc68 <__fp_nan>
+ 99a:	0e f4       	brtc	.+2      	; 0x99e <__addsf3+0x28>
+ 99c:	e0 95       	com	r30
+ 99e:	e7 fb       	bst	r30, 7
+ 9a0:	0c 94 2e 06 	jmp	0xc5c	; 0xc5c <__fp_inf>
+
+000009a4 <__addsf3x>:
+ 9a4:	e9 2f       	mov	r30, r25
+ 9a6:	0e 94 56 06 	call	0xcac	; 0xcac <__fp_split3>
+ 9aa:	58 f3       	brcs	.-42     	; 0x982 <__addsf3+0xc>
+ 9ac:	ba 17       	cp	r27, r26
+ 9ae:	62 07       	cpc	r22, r18
+ 9b0:	73 07       	cpc	r23, r19
+ 9b2:	84 07       	cpc	r24, r20
+ 9b4:	95 07       	cpc	r25, r21
+ 9b6:	20 f0       	brcs	.+8      	; 0x9c0 <__addsf3x+0x1c>
+ 9b8:	79 f4       	brne	.+30     	; 0x9d8 <__addsf3x+0x34>
+ 9ba:	a6 f5       	brtc	.+104    	; 0xa24 <__addsf3x+0x80>
+ 9bc:	0c 94 78 06 	jmp	0xcf0	; 0xcf0 <__fp_zero>
+ 9c0:	0e f4       	brtc	.+2      	; 0x9c4 <__addsf3x+0x20>
+ 9c2:	e0 95       	com	r30
+ 9c4:	0b 2e       	mov	r0, r27
+ 9c6:	ba 2f       	mov	r27, r26
+ 9c8:	a0 2d       	mov	r26, r0
+ 9ca:	0b 01       	movw	r0, r22
+ 9cc:	b9 01       	movw	r22, r18
+ 9ce:	90 01       	movw	r18, r0
+ 9d0:	0c 01       	movw	r0, r24
+ 9d2:	ca 01       	movw	r24, r20
+ 9d4:	a0 01       	movw	r20, r0
+ 9d6:	11 24       	eor	r1, r1
+ 9d8:	ff 27       	eor	r31, r31
+ 9da:	59 1b       	sub	r21, r25
+ 9dc:	99 f0       	breq	.+38     	; 0xa04 <__addsf3x+0x60>
+ 9de:	59 3f       	cpi	r21, 0xF9	; 249
+ 9e0:	50 f4       	brcc	.+20     	; 0x9f6 <__addsf3x+0x52>
+ 9e2:	50 3e       	cpi	r21, 0xE0	; 224
+ 9e4:	68 f1       	brcs	.+90     	; 0xa40 <__addsf3x+0x9c>
+ 9e6:	1a 16       	cp	r1, r26
+ 9e8:	f0 40       	sbci	r31, 0x00	; 0
+ 9ea:	a2 2f       	mov	r26, r18
+ 9ec:	23 2f       	mov	r18, r19
+ 9ee:	34 2f       	mov	r19, r20
+ 9f0:	44 27       	eor	r20, r20
+ 9f2:	58 5f       	subi	r21, 0xF8	; 248
+ 9f4:	f3 cf       	rjmp	.-26     	; 0x9dc <__addsf3x+0x38>
+ 9f6:	46 95       	lsr	r20
+ 9f8:	37 95       	ror	r19
+ 9fa:	27 95       	ror	r18
+ 9fc:	a7 95       	ror	r26
+ 9fe:	f0 40       	sbci	r31, 0x00	; 0
+ a00:	53 95       	inc	r21
+ a02:	c9 f7       	brne	.-14     	; 0x9f6 <__addsf3x+0x52>
+ a04:	7e f4       	brtc	.+30     	; 0xa24 <__addsf3x+0x80>
+ a06:	1f 16       	cp	r1, r31
+ a08:	ba 0b       	sbc	r27, r26
+ a0a:	62 0b       	sbc	r22, r18
+ a0c:	73 0b       	sbc	r23, r19
+ a0e:	84 0b       	sbc	r24, r20
+ a10:	ba f0       	brmi	.+46     	; 0xa40 <__addsf3x+0x9c>
+ a12:	91 50       	subi	r25, 0x01	; 1
+ a14:	a1 f0       	breq	.+40     	; 0xa3e <__addsf3x+0x9a>
+ a16:	ff 0f       	add	r31, r31
+ a18:	bb 1f       	adc	r27, r27
+ a1a:	66 1f       	adc	r22, r22
+ a1c:	77 1f       	adc	r23, r23
+ a1e:	88 1f       	adc	r24, r24
+ a20:	c2 f7       	brpl	.-16     	; 0xa12 <__addsf3x+0x6e>
+ a22:	0e c0       	rjmp	.+28     	; 0xa40 <__addsf3x+0x9c>
+ a24:	ba 0f       	add	r27, r26
+ a26:	62 1f       	adc	r22, r18
+ a28:	73 1f       	adc	r23, r19
+ a2a:	84 1f       	adc	r24, r20
+ a2c:	48 f4       	brcc	.+18     	; 0xa40 <__addsf3x+0x9c>
+ a2e:	87 95       	ror	r24
+ a30:	77 95       	ror	r23
+ a32:	67 95       	ror	r22
+ a34:	b7 95       	ror	r27
+ a36:	f7 95       	ror	r31
+ a38:	9e 3f       	cpi	r25, 0xFE	; 254
+ a3a:	08 f0       	brcs	.+2      	; 0xa3e <__addsf3x+0x9a>
+ a3c:	b0 cf       	rjmp	.-160    	; 0x99e <__addsf3+0x28>
+ a3e:	93 95       	inc	r25
+ a40:	88 0f       	add	r24, r24
+ a42:	08 f0       	brcs	.+2      	; 0xa46 <__addsf3x+0xa2>
+ a44:	99 27       	eor	r25, r25
+ a46:	ee 0f       	add	r30, r30
+ a48:	97 95       	ror	r25
+ a4a:	87 95       	ror	r24
+ a4c:	08 95       	ret
+
+00000a4e <__cmpsf2>:
+ a4e:	0e 94 0a 06 	call	0xc14	; 0xc14 <__fp_cmp>
+ a52:	08 f4       	brcc	.+2      	; 0xa56 <__cmpsf2+0x8>
+ a54:	81 e0       	ldi	r24, 0x01	; 1
+ a56:	08 95       	ret
+
+00000a58 <__divsf3>:
+ a58:	0e 94 40 05 	call	0xa80	; 0xa80 <__divsf3x>
+ a5c:	0c 94 45 06 	jmp	0xc8a	; 0xc8a <__fp_round>
+ a60:	0e 94 3e 06 	call	0xc7c	; 0xc7c <__fp_pscB>
+ a64:	58 f0       	brcs	.+22     	; 0xa7c <__divsf3+0x24>
+ a66:	0e 94 37 06 	call	0xc6e	; 0xc6e <__fp_pscA>
+ a6a:	40 f0       	brcs	.+16     	; 0xa7c <__divsf3+0x24>
+ a6c:	29 f4       	brne	.+10     	; 0xa78 <__divsf3+0x20>
+ a6e:	5f 3f       	cpi	r21, 0xFF	; 255
+ a70:	29 f0       	breq	.+10     	; 0xa7c <__divsf3+0x24>
+ a72:	0c 94 2e 06 	jmp	0xc5c	; 0xc5c <__fp_inf>
+ a76:	51 11       	cpse	r21, r1
+ a78:	0c 94 79 06 	jmp	0xcf2	; 0xcf2 <__fp_szero>
+ a7c:	0c 94 34 06 	jmp	0xc68	; 0xc68 <__fp_nan>
+
+00000a80 <__divsf3x>:
+ a80:	0e 94 56 06 	call	0xcac	; 0xcac <__fp_split3>
+ a84:	68 f3       	brcs	.-38     	; 0xa60 <__divsf3+0x8>
+
+00000a86 <__divsf3_pse>:
+ a86:	99 23       	and	r25, r25
+ a88:	b1 f3       	breq	.-20     	; 0xa76 <__divsf3+0x1e>
+ a8a:	55 23       	and	r21, r21
+ a8c:	91 f3       	breq	.-28     	; 0xa72 <__divsf3+0x1a>
+ a8e:	95 1b       	sub	r25, r21
+ a90:	55 0b       	sbc	r21, r21
+ a92:	bb 27       	eor	r27, r27
+ a94:	aa 27       	eor	r26, r26
+ a96:	62 17       	cp	r22, r18
+ a98:	73 07       	cpc	r23, r19
+ a9a:	84 07       	cpc	r24, r20
+ a9c:	38 f0       	brcs	.+14     	; 0xaac <__divsf3_pse+0x26>
+ a9e:	9f 5f       	subi	r25, 0xFF	; 255
+ aa0:	5f 4f       	sbci	r21, 0xFF	; 255
+ aa2:	22 0f       	add	r18, r18
+ aa4:	33 1f       	adc	r19, r19
+ aa6:	44 1f       	adc	r20, r20
+ aa8:	aa 1f       	adc	r26, r26
+ aaa:	a9 f3       	breq	.-22     	; 0xa96 <__divsf3_pse+0x10>
+ aac:	35 d0       	rcall	.+106    	; 0xb18 <__divsf3_pse+0x92>
+ aae:	0e 2e       	mov	r0, r30
+ ab0:	3a f0       	brmi	.+14     	; 0xac0 <__divsf3_pse+0x3a>
+ ab2:	e0 e8       	ldi	r30, 0x80	; 128
+ ab4:	32 d0       	rcall	.+100    	; 0xb1a <__divsf3_pse+0x94>
+ ab6:	91 50       	subi	r25, 0x01	; 1
+ ab8:	50 40       	sbci	r21, 0x00	; 0
+ aba:	e6 95       	lsr	r30
+ abc:	00 1c       	adc	r0, r0
+ abe:	ca f7       	brpl	.-14     	; 0xab2 <__divsf3_pse+0x2c>
+ ac0:	2b d0       	rcall	.+86     	; 0xb18 <__divsf3_pse+0x92>
+ ac2:	fe 2f       	mov	r31, r30
+ ac4:	29 d0       	rcall	.+82     	; 0xb18 <__divsf3_pse+0x92>
+ ac6:	66 0f       	add	r22, r22
+ ac8:	77 1f       	adc	r23, r23
+ aca:	88 1f       	adc	r24, r24
+ acc:	bb 1f       	adc	r27, r27
+ ace:	26 17       	cp	r18, r22
+ ad0:	37 07       	cpc	r19, r23
+ ad2:	48 07       	cpc	r20, r24
+ ad4:	ab 07       	cpc	r26, r27
+ ad6:	b0 e8       	ldi	r27, 0x80	; 128
+ ad8:	09 f0       	breq	.+2      	; 0xadc <__divsf3_pse+0x56>
+ ada:	bb 0b       	sbc	r27, r27
+ adc:	80 2d       	mov	r24, r0
+ ade:	bf 01       	movw	r22, r30
+ ae0:	ff 27       	eor	r31, r31
+ ae2:	93 58       	subi	r25, 0x83	; 131
+ ae4:	5f 4f       	sbci	r21, 0xFF	; 255
+ ae6:	3a f0       	brmi	.+14     	; 0xaf6 <__divsf3_pse+0x70>
+ ae8:	9e 3f       	cpi	r25, 0xFE	; 254
+ aea:	51 05       	cpc	r21, r1
+ aec:	78 f0       	brcs	.+30     	; 0xb0c <__divsf3_pse+0x86>
+ aee:	0c 94 2e 06 	jmp	0xc5c	; 0xc5c <__fp_inf>
+ af2:	0c 94 79 06 	jmp	0xcf2	; 0xcf2 <__fp_szero>
+ af6:	5f 3f       	cpi	r21, 0xFF	; 255
+ af8:	e4 f3       	brlt	.-8      	; 0xaf2 <__divsf3_pse+0x6c>
+ afa:	98 3e       	cpi	r25, 0xE8	; 232
+ afc:	d4 f3       	brlt	.-12     	; 0xaf2 <__divsf3_pse+0x6c>
+ afe:	86 95       	lsr	r24
+ b00:	77 95       	ror	r23
+ b02:	67 95       	ror	r22
+ b04:	b7 95       	ror	r27
+ b06:	f7 95       	ror	r31
+ b08:	9f 5f       	subi	r25, 0xFF	; 255
+ b0a:	c9 f7       	brne	.-14     	; 0xafe <__divsf3_pse+0x78>
+ b0c:	88 0f       	add	r24, r24
+ b0e:	91 1d       	adc	r25, r1
+ b10:	96 95       	lsr	r25
+ b12:	87 95       	ror	r24
+ b14:	97 f9       	bld	r25, 7
+ b16:	08 95       	ret
+ b18:	e1 e0       	ldi	r30, 0x01	; 1
+ b1a:	66 0f       	add	r22, r22
+ b1c:	77 1f       	adc	r23, r23
+ b1e:	88 1f       	adc	r24, r24
+ b20:	bb 1f       	adc	r27, r27
+ b22:	62 17       	cp	r22, r18
+ b24:	73 07       	cpc	r23, r19
+ b26:	84 07       	cpc	r24, r20
+ b28:	ba 07       	cpc	r27, r26
+ b2a:	20 f0       	brcs	.+8      	; 0xb34 <__divsf3_pse+0xae>
+ b2c:	62 1b       	sub	r22, r18
+ b2e:	73 0b       	sbc	r23, r19
+ b30:	84 0b       	sbc	r24, r20
+ b32:	ba 0b       	sbc	r27, r26
+ b34:	ee 1f       	adc	r30, r30
+ b36:	88 f7       	brcc	.-30     	; 0xb1a <__divsf3_pse+0x94>
+ b38:	e0 95       	com	r30
+ b3a:	08 95       	ret
+
+00000b3c <__fixunssfsi>:
+ b3c:	0e 94 5e 06 	call	0xcbc	; 0xcbc <__fp_splitA>
+ b40:	88 f0       	brcs	.+34     	; 0xb64 <__fixunssfsi+0x28>
+ b42:	9f 57       	subi	r25, 0x7F	; 127
+ b44:	98 f0       	brcs	.+38     	; 0xb6c <__fixunssfsi+0x30>
+ b46:	b9 2f       	mov	r27, r25
+ b48:	99 27       	eor	r25, r25
+ b4a:	b7 51       	subi	r27, 0x17	; 23
+ b4c:	b0 f0       	brcs	.+44     	; 0xb7a <__fixunssfsi+0x3e>
+ b4e:	e1 f0       	breq	.+56     	; 0xb88 <__fixunssfsi+0x4c>
+ b50:	66 0f       	add	r22, r22
+ b52:	77 1f       	adc	r23, r23
+ b54:	88 1f       	adc	r24, r24
+ b56:	99 1f       	adc	r25, r25
+ b58:	1a f0       	brmi	.+6      	; 0xb60 <__fixunssfsi+0x24>
+ b5a:	ba 95       	dec	r27
+ b5c:	c9 f7       	brne	.-14     	; 0xb50 <__fixunssfsi+0x14>
+ b5e:	14 c0       	rjmp	.+40     	; 0xb88 <__fixunssfsi+0x4c>
+ b60:	b1 30       	cpi	r27, 0x01	; 1
+ b62:	91 f0       	breq	.+36     	; 0xb88 <__fixunssfsi+0x4c>
+ b64:	0e 94 78 06 	call	0xcf0	; 0xcf0 <__fp_zero>
+ b68:	b1 e0       	ldi	r27, 0x01	; 1
+ b6a:	08 95       	ret
+ b6c:	0c 94 78 06 	jmp	0xcf0	; 0xcf0 <__fp_zero>
+ b70:	67 2f       	mov	r22, r23
+ b72:	78 2f       	mov	r23, r24
+ b74:	88 27       	eor	r24, r24
+ b76:	b8 5f       	subi	r27, 0xF8	; 248
+ b78:	39 f0       	breq	.+14     	; 0xb88 <__fixunssfsi+0x4c>
+ b7a:	b9 3f       	cpi	r27, 0xF9	; 249
+ b7c:	cc f3       	brlt	.-14     	; 0xb70 <__fixunssfsi+0x34>
+ b7e:	86 95       	lsr	r24
+ b80:	77 95       	ror	r23
+ b82:	67 95       	ror	r22
+ b84:	b3 95       	inc	r27
+ b86:	d9 f7       	brne	.-10     	; 0xb7e <__fixunssfsi+0x42>
+ b88:	3e f4       	brtc	.+14     	; 0xb98 <__fixunssfsi+0x5c>
+ b8a:	90 95       	com	r25
+ b8c:	80 95       	com	r24
+ b8e:	70 95       	com	r23
+ b90:	61 95       	neg	r22
+ b92:	7f 4f       	sbci	r23, 0xFF	; 255
+ b94:	8f 4f       	sbci	r24, 0xFF	; 255
+ b96:	9f 4f       	sbci	r25, 0xFF	; 255
+ b98:	08 95       	ret
+
+00000b9a <__floatunsisf>:
+ b9a:	e8 94       	clt
+ b9c:	09 c0       	rjmp	.+18     	; 0xbb0 <__floatsisf+0x12>
+
+00000b9e <__floatsisf>:
+ b9e:	97 fb       	bst	r25, 7
+ ba0:	3e f4       	brtc	.+14     	; 0xbb0 <__floatsisf+0x12>
+ ba2:	90 95       	com	r25
+ ba4:	80 95       	com	r24
+ ba6:	70 95       	com	r23
+ ba8:	61 95       	neg	r22
+ baa:	7f 4f       	sbci	r23, 0xFF	; 255
+ bac:	8f 4f       	sbci	r24, 0xFF	; 255
+ bae:	9f 4f       	sbci	r25, 0xFF	; 255
+ bb0:	99 23       	and	r25, r25
+ bb2:	a9 f0       	breq	.+42     	; 0xbde <__floatsisf+0x40>
+ bb4:	f9 2f       	mov	r31, r25
+ bb6:	96 e9       	ldi	r25, 0x96	; 150
+ bb8:	bb 27       	eor	r27, r27
+ bba:	93 95       	inc	r25
+ bbc:	f6 95       	lsr	r31
+ bbe:	87 95       	ror	r24
+ bc0:	77 95       	ror	r23
+ bc2:	67 95       	ror	r22
+ bc4:	b7 95       	ror	r27
+ bc6:	f1 11       	cpse	r31, r1
+ bc8:	f8 cf       	rjmp	.-16     	; 0xbba <__floatsisf+0x1c>
+ bca:	fa f4       	brpl	.+62     	; 0xc0a <__floatsisf+0x6c>
+ bcc:	bb 0f       	add	r27, r27
+ bce:	11 f4       	brne	.+4      	; 0xbd4 <__floatsisf+0x36>
+ bd0:	60 ff       	sbrs	r22, 0
+ bd2:	1b c0       	rjmp	.+54     	; 0xc0a <__floatsisf+0x6c>
+ bd4:	6f 5f       	subi	r22, 0xFF	; 255
+ bd6:	7f 4f       	sbci	r23, 0xFF	; 255
+ bd8:	8f 4f       	sbci	r24, 0xFF	; 255
+ bda:	9f 4f       	sbci	r25, 0xFF	; 255
+ bdc:	16 c0       	rjmp	.+44     	; 0xc0a <__floatsisf+0x6c>
+ bde:	88 23       	and	r24, r24
+ be0:	11 f0       	breq	.+4      	; 0xbe6 <__floatsisf+0x48>
+ be2:	96 e9       	ldi	r25, 0x96	; 150
+ be4:	11 c0       	rjmp	.+34     	; 0xc08 <__floatsisf+0x6a>
+ be6:	77 23       	and	r23, r23
+ be8:	21 f0       	breq	.+8      	; 0xbf2 <__floatsisf+0x54>
+ bea:	9e e8       	ldi	r25, 0x8E	; 142
+ bec:	87 2f       	mov	r24, r23
+ bee:	76 2f       	mov	r23, r22
+ bf0:	05 c0       	rjmp	.+10     	; 0xbfc <__floatsisf+0x5e>
+ bf2:	66 23       	and	r22, r22
+ bf4:	71 f0       	breq	.+28     	; 0xc12 <__floatsisf+0x74>
+ bf6:	96 e8       	ldi	r25, 0x86	; 134
+ bf8:	86 2f       	mov	r24, r22
+ bfa:	70 e0       	ldi	r23, 0x00	; 0
+ bfc:	60 e0       	ldi	r22, 0x00	; 0
+ bfe:	2a f0       	brmi	.+10     	; 0xc0a <__floatsisf+0x6c>
+ c00:	9a 95       	dec	r25
+ c02:	66 0f       	add	r22, r22
+ c04:	77 1f       	adc	r23, r23
+ c06:	88 1f       	adc	r24, r24
+ c08:	da f7       	brpl	.-10     	; 0xc00 <__floatsisf+0x62>
+ c0a:	88 0f       	add	r24, r24
+ c0c:	96 95       	lsr	r25
+ c0e:	87 95       	ror	r24
+ c10:	97 f9       	bld	r25, 7
+ c12:	08 95       	ret
+
+00000c14 <__fp_cmp>:
+ c14:	99 0f       	add	r25, r25
+ c16:	00 08       	sbc	r0, r0
+ c18:	55 0f       	add	r21, r21
+ c1a:	aa 0b       	sbc	r26, r26
+ c1c:	e0 e8       	ldi	r30, 0x80	; 128
+ c1e:	fe ef       	ldi	r31, 0xFE	; 254
+ c20:	16 16       	cp	r1, r22
+ c22:	17 06       	cpc	r1, r23
+ c24:	e8 07       	cpc	r30, r24
+ c26:	f9 07       	cpc	r31, r25
+ c28:	c0 f0       	brcs	.+48     	; 0xc5a <__fp_cmp+0x46>
+ c2a:	12 16       	cp	r1, r18
+ c2c:	13 06       	cpc	r1, r19
+ c2e:	e4 07       	cpc	r30, r20
+ c30:	f5 07       	cpc	r31, r21
+ c32:	98 f0       	brcs	.+38     	; 0xc5a <__fp_cmp+0x46>
+ c34:	62 1b       	sub	r22, r18
+ c36:	73 0b       	sbc	r23, r19
+ c38:	84 0b       	sbc	r24, r20
+ c3a:	95 0b       	sbc	r25, r21
+ c3c:	39 f4       	brne	.+14     	; 0xc4c <__fp_cmp+0x38>
+ c3e:	0a 26       	eor	r0, r26
+ c40:	61 f0       	breq	.+24     	; 0xc5a <__fp_cmp+0x46>
+ c42:	23 2b       	or	r18, r19
+ c44:	24 2b       	or	r18, r20
+ c46:	25 2b       	or	r18, r21
+ c48:	21 f4       	brne	.+8      	; 0xc52 <__fp_cmp+0x3e>
+ c4a:	08 95       	ret
+ c4c:	0a 26       	eor	r0, r26
+ c4e:	09 f4       	brne	.+2      	; 0xc52 <__fp_cmp+0x3e>
+ c50:	a1 40       	sbci	r26, 0x01	; 1
+ c52:	a6 95       	lsr	r26
+ c54:	8f ef       	ldi	r24, 0xFF	; 255
+ c56:	81 1d       	adc	r24, r1
+ c58:	81 1d       	adc	r24, r1
+ c5a:	08 95       	ret
+
+00000c5c <__fp_inf>:
+ c5c:	97 f9       	bld	r25, 7
+ c5e:	9f 67       	ori	r25, 0x7F	; 127
+ c60:	80 e8       	ldi	r24, 0x80	; 128
+ c62:	70 e0       	ldi	r23, 0x00	; 0
+ c64:	60 e0       	ldi	r22, 0x00	; 0
+ c66:	08 95       	ret
+
+00000c68 <__fp_nan>:
+ c68:	9f ef       	ldi	r25, 0xFF	; 255
+ c6a:	80 ec       	ldi	r24, 0xC0	; 192
+ c6c:	08 95       	ret
+
+00000c6e <__fp_pscA>:
+ c6e:	00 24       	eor	r0, r0
+ c70:	0a 94       	dec	r0
+ c72:	16 16       	cp	r1, r22
+ c74:	17 06       	cpc	r1, r23
+ c76:	18 06       	cpc	r1, r24
+ c78:	09 06       	cpc	r0, r25
+ c7a:	08 95       	ret
+
+00000c7c <__fp_pscB>:
+ c7c:	00 24       	eor	r0, r0
+ c7e:	0a 94       	dec	r0
+ c80:	12 16       	cp	r1, r18
+ c82:	13 06       	cpc	r1, r19
+ c84:	14 06       	cpc	r1, r20
+ c86:	05 06       	cpc	r0, r21
+ c88:	08 95       	ret
+
+00000c8a <__fp_round>:
+ c8a:	09 2e       	mov	r0, r25
+ c8c:	03 94       	inc	r0
+ c8e:	00 0c       	add	r0, r0
+ c90:	11 f4       	brne	.+4      	; 0xc96 <__fp_round+0xc>
+ c92:	88 23       	and	r24, r24
+ c94:	52 f0       	brmi	.+20     	; 0xcaa <__fp_round+0x20>
+ c96:	bb 0f       	add	r27, r27
+ c98:	40 f4       	brcc	.+16     	; 0xcaa <__fp_round+0x20>
+ c9a:	bf 2b       	or	r27, r31
+ c9c:	11 f4       	brne	.+4      	; 0xca2 <__fp_round+0x18>
+ c9e:	60 ff       	sbrs	r22, 0
+ ca0:	04 c0       	rjmp	.+8      	; 0xcaa <__fp_round+0x20>
+ ca2:	6f 5f       	subi	r22, 0xFF	; 255
+ ca4:	7f 4f       	sbci	r23, 0xFF	; 255
+ ca6:	8f 4f       	sbci	r24, 0xFF	; 255
+ ca8:	9f 4f       	sbci	r25, 0xFF	; 255
+ caa:	08 95       	ret
+
+00000cac <__fp_split3>:
+ cac:	57 fd       	sbrc	r21, 7
+ cae:	90 58       	subi	r25, 0x80	; 128
+ cb0:	44 0f       	add	r20, r20
+ cb2:	55 1f       	adc	r21, r21
+ cb4:	59 f0       	breq	.+22     	; 0xccc <__fp_splitA+0x10>
+ cb6:	5f 3f       	cpi	r21, 0xFF	; 255
+ cb8:	71 f0       	breq	.+28     	; 0xcd6 <__fp_splitA+0x1a>
+ cba:	47 95       	ror	r20
+
+00000cbc <__fp_splitA>:
+ cbc:	88 0f       	add	r24, r24
+ cbe:	97 fb       	bst	r25, 7
+ cc0:	99 1f       	adc	r25, r25
+ cc2:	61 f0       	breq	.+24     	; 0xcdc <__fp_splitA+0x20>
+ cc4:	9f 3f       	cpi	r25, 0xFF	; 255
+ cc6:	79 f0       	breq	.+30     	; 0xce6 <__fp_splitA+0x2a>
+ cc8:	87 95       	ror	r24
+ cca:	08 95       	ret
+ ccc:	12 16       	cp	r1, r18
+ cce:	13 06       	cpc	r1, r19
+ cd0:	14 06       	cpc	r1, r20
+ cd2:	55 1f       	adc	r21, r21
+ cd4:	f2 cf       	rjmp	.-28     	; 0xcba <__fp_split3+0xe>
+ cd6:	46 95       	lsr	r20
+ cd8:	f1 df       	rcall	.-30     	; 0xcbc <__fp_splitA>
+ cda:	08 c0       	rjmp	.+16     	; 0xcec <__fp_splitA+0x30>
+ cdc:	16 16       	cp	r1, r22
+ cde:	17 06       	cpc	r1, r23
+ ce0:	18 06       	cpc	r1, r24
+ ce2:	99 1f       	adc	r25, r25
+ ce4:	f1 cf       	rjmp	.-30     	; 0xcc8 <__fp_splitA+0xc>
+ ce6:	86 95       	lsr	r24
+ ce8:	71 05       	cpc	r23, r1
+ cea:	61 05       	cpc	r22, r1
+ cec:	08 94       	sec
+ cee:	08 95       	ret
+
+00000cf0 <__fp_zero>:
+ cf0:	e8 94       	clt
+
+00000cf2 <__fp_szero>:
+ cf2:	bb 27       	eor	r27, r27
+ cf4:	66 27       	eor	r22, r22
+ cf6:	77 27       	eor	r23, r23
+ cf8:	cb 01       	movw	r24, r22
+ cfa:	97 f9       	bld	r25, 7
+ cfc:	08 95       	ret
+
+00000cfe <__gesf2>:
+ cfe:	0e 94 0a 06 	call	0xc14	; 0xc14 <__fp_cmp>
+ d02:	08 f4       	brcc	.+2      	; 0xd06 <__gesf2+0x8>
+ d04:	8f ef       	ldi	r24, 0xFF	; 255
+ d06:	08 95       	ret
+
+00000d08 <modf>:
+ d08:	fa 01       	movw	r30, r20
+ d0a:	dc 01       	movw	r26, r24
+ d0c:	aa 0f       	add	r26, r26
+ d0e:	bb 1f       	adc	r27, r27
+ d10:	9b 01       	movw	r18, r22
+ d12:	ac 01       	movw	r20, r24
+ d14:	bf 57       	subi	r27, 0x7F	; 127
+ d16:	28 f4       	brcc	.+10     	; 0xd22 <modf+0x1a>
+ d18:	22 27       	eor	r18, r18
+ d1a:	33 27       	eor	r19, r19
+ d1c:	44 27       	eor	r20, r20
+ d1e:	50 78       	andi	r21, 0x80	; 128
+ d20:	20 c0       	rjmp	.+64     	; 0xd62 <modf+0x5a>
+ d22:	b7 51       	subi	r27, 0x17	; 23
+ d24:	90 f4       	brcc	.+36     	; 0xd4a <modf+0x42>
+ d26:	ab 2f       	mov	r26, r27
+ d28:	00 24       	eor	r0, r0
+ d2a:	46 95       	lsr	r20
+ d2c:	37 95       	ror	r19
+ d2e:	27 95       	ror	r18
+ d30:	01 1c       	adc	r0, r1
+ d32:	a3 95       	inc	r26
+ d34:	d2 f3       	brmi	.-12     	; 0xd2a <modf+0x22>
+ d36:	00 20       	and	r0, r0
+ d38:	71 f0       	breq	.+28     	; 0xd56 <modf+0x4e>
+ d3a:	22 0f       	add	r18, r18
+ d3c:	33 1f       	adc	r19, r19
+ d3e:	44 1f       	adc	r20, r20
+ d40:	b3 95       	inc	r27
+ d42:	da f3       	brmi	.-10     	; 0xd3a <modf+0x32>
+ d44:	0e d0       	rcall	.+28     	; 0xd62 <modf+0x5a>
+ d46:	0c 94 ba 04 	jmp	0x974	; 0x974 <__subsf3>
+ d4a:	61 30       	cpi	r22, 0x01	; 1
+ d4c:	71 05       	cpc	r23, r1
+ d4e:	a0 e8       	ldi	r26, 0x80	; 128
+ d50:	8a 07       	cpc	r24, r26
+ d52:	b9 46       	sbci	r27, 0x69	; 105
+ d54:	30 f4       	brcc	.+12     	; 0xd62 <modf+0x5a>
+ d56:	9b 01       	movw	r18, r22
+ d58:	ac 01       	movw	r20, r24
+ d5a:	66 27       	eor	r22, r22
+ d5c:	77 27       	eor	r23, r23
+ d5e:	88 27       	eor	r24, r24
+ d60:	90 78       	andi	r25, 0x80	; 128
+ d62:	30 96       	adiw	r30, 0x00	; 0
+ d64:	21 f0       	breq	.+8      	; 0xd6e <modf+0x66>
+ d66:	20 83       	st	Z, r18
+ d68:	31 83       	std	Z+1, r19	; 0x01
+ d6a:	42 83       	std	Z+2, r20	; 0x02
+ d6c:	53 83       	std	Z+3, r21	; 0x03
+ d6e:	08 95       	ret
+
+00000d70 <__mulsf3>:
+ d70:	0e 94 cb 06 	call	0xd96	; 0xd96 <__mulsf3x>
+ d74:	0c 94 45 06 	jmp	0xc8a	; 0xc8a <__fp_round>
+ d78:	0e 94 37 06 	call	0xc6e	; 0xc6e <__fp_pscA>
+ d7c:	38 f0       	brcs	.+14     	; 0xd8c <__mulsf3+0x1c>
+ d7e:	0e 94 3e 06 	call	0xc7c	; 0xc7c <__fp_pscB>
+ d82:	20 f0       	brcs	.+8      	; 0xd8c <__mulsf3+0x1c>
+ d84:	95 23       	and	r25, r21
+ d86:	11 f0       	breq	.+4      	; 0xd8c <__mulsf3+0x1c>
+ d88:	0c 94 2e 06 	jmp	0xc5c	; 0xc5c <__fp_inf>
+ d8c:	0c 94 34 06 	jmp	0xc68	; 0xc68 <__fp_nan>
+ d90:	11 24       	eor	r1, r1
+ d92:	0c 94 79 06 	jmp	0xcf2	; 0xcf2 <__fp_szero>
+
+00000d96 <__mulsf3x>:
+ d96:	0e 94 56 06 	call	0xcac	; 0xcac <__fp_split3>
+ d9a:	70 f3       	brcs	.-36     	; 0xd78 <__mulsf3+0x8>
+
+00000d9c <__mulsf3_pse>:
+ d9c:	95 9f       	mul	r25, r21
+ d9e:	c1 f3       	breq	.-16     	; 0xd90 <__mulsf3+0x20>
+ da0:	95 0f       	add	r25, r21
+ da2:	50 e0       	ldi	r21, 0x00	; 0
+ da4:	55 1f       	adc	r21, r21
+ da6:	62 9f       	mul	r22, r18
+ da8:	f0 01       	movw	r30, r0
+ daa:	72 9f       	mul	r23, r18
+ dac:	bb 27       	eor	r27, r27
+ dae:	f0 0d       	add	r31, r0
+ db0:	b1 1d       	adc	r27, r1
+ db2:	63 9f       	mul	r22, r19
+ db4:	aa 27       	eor	r26, r26
+ db6:	f0 0d       	add	r31, r0
+ db8:	b1 1d       	adc	r27, r1
+ dba:	aa 1f       	adc	r26, r26
+ dbc:	64 9f       	mul	r22, r20
+ dbe:	66 27       	eor	r22, r22
+ dc0:	b0 0d       	add	r27, r0
+ dc2:	a1 1d       	adc	r26, r1
+ dc4:	66 1f       	adc	r22, r22
+ dc6:	82 9f       	mul	r24, r18
+ dc8:	22 27       	eor	r18, r18
+ dca:	b0 0d       	add	r27, r0
+ dcc:	a1 1d       	adc	r26, r1
+ dce:	62 1f       	adc	r22, r18
+ dd0:	73 9f       	mul	r23, r19
+ dd2:	b0 0d       	add	r27, r0
+ dd4:	a1 1d       	adc	r26, r1
+ dd6:	62 1f       	adc	r22, r18
+ dd8:	83 9f       	mul	r24, r19
+ dda:	a0 0d       	add	r26, r0
+ ddc:	61 1d       	adc	r22, r1
+ dde:	22 1f       	adc	r18, r18
+ de0:	74 9f       	mul	r23, r20
+ de2:	33 27       	eor	r19, r19
+ de4:	a0 0d       	add	r26, r0
+ de6:	61 1d       	adc	r22, r1
+ de8:	23 1f       	adc	r18, r19
+ dea:	84 9f       	mul	r24, r20
+ dec:	60 0d       	add	r22, r0
+ dee:	21 1d       	adc	r18, r1
+ df0:	82 2f       	mov	r24, r18
+ df2:	76 2f       	mov	r23, r22
+ df4:	6a 2f       	mov	r22, r26
+ df6:	11 24       	eor	r1, r1
+ df8:	9f 57       	subi	r25, 0x7F	; 127
+ dfa:	50 40       	sbci	r21, 0x00	; 0
+ dfc:	9a f0       	brmi	.+38     	; 0xe24 <__mulsf3_pse+0x88>
+ dfe:	f1 f0       	breq	.+60     	; 0xe3c <__mulsf3_pse+0xa0>
+ e00:	88 23       	and	r24, r24
+ e02:	4a f0       	brmi	.+18     	; 0xe16 <__mulsf3_pse+0x7a>
+ e04:	ee 0f       	add	r30, r30
+ e06:	ff 1f       	adc	r31, r31
+ e08:	bb 1f       	adc	r27, r27
+ e0a:	66 1f       	adc	r22, r22
+ e0c:	77 1f       	adc	r23, r23
+ e0e:	88 1f       	adc	r24, r24
+ e10:	91 50       	subi	r25, 0x01	; 1
+ e12:	50 40       	sbci	r21, 0x00	; 0
+ e14:	a9 f7       	brne	.-22     	; 0xe00 <__mulsf3_pse+0x64>
+ e16:	9e 3f       	cpi	r25, 0xFE	; 254
+ e18:	51 05       	cpc	r21, r1
+ e1a:	80 f0       	brcs	.+32     	; 0xe3c <__mulsf3_pse+0xa0>
+ e1c:	0c 94 2e 06 	jmp	0xc5c	; 0xc5c <__fp_inf>
+ e20:	0c 94 79 06 	jmp	0xcf2	; 0xcf2 <__fp_szero>
+ e24:	5f 3f       	cpi	r21, 0xFF	; 255
+ e26:	e4 f3       	brlt	.-8      	; 0xe20 <__mulsf3_pse+0x84>
+ e28:	98 3e       	cpi	r25, 0xE8	; 232
+ e2a:	d4 f3       	brlt	.-12     	; 0xe20 <__mulsf3_pse+0x84>
+ e2c:	86 95       	lsr	r24
+ e2e:	77 95       	ror	r23
+ e30:	67 95       	ror	r22
+ e32:	b7 95       	ror	r27
+ e34:	f7 95       	ror	r31
+ e36:	e7 95       	ror	r30
+ e38:	9f 5f       	subi	r25, 0xFF	; 255
+ e3a:	c1 f7       	brne	.-16     	; 0xe2c <__mulsf3_pse+0x90>
+ e3c:	fe 2b       	or	r31, r30
+ e3e:	88 0f       	add	r24, r24
+ e40:	91 1d       	adc	r25, r1
+ e42:	96 95       	lsr	r25
+ e44:	87 95       	ror	r24
+ e46:	97 f9       	bld	r25, 7
+ e48:	08 95       	ret
+
+00000e4a <_exit>:
+ e4a:	f8 94       	cli
+
+00000e4c <__stop_program>:
+ e4c:	ff cf       	rjmp	.-2      	; 0xe4c <__stop_program>
