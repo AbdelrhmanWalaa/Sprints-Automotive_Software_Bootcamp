@@ -1,11 +1,11 @@
 /*
-* TMR_Program.c
-*
-*     Created on: Jul 27, 2021
-*         Author: Abdelrhman Walaa - https://github.com/AbdelrhmanWalaa
-*    Description: This file contains all Timers (TMR) functions' implementation, and ISR functions' prototypes and implementation.
-*  MCU Datasheet: AVR ATmega32 - https://ww1.microchip.com/downloads/en/DeviceDoc/Atmega32A-DataSheet-Complete-DS40002072A.pdf
-*/
+ * TMR_Program.c
+ *
+ *     Created on: Jul 27, 2021
+ *         Author: Abdelrhman Walaa - https://github.com/AbdelrhmanWalaa
+ *    Description: This file contains all Timers (TMR) functions' implementation, and ISR functions' prototypes and implementation.
+ *  MCU Datasheet: AVR ATmega32 - https://ww1.microchip.com/downloads/en/DeviceDoc/Atmega32A-DataSheet-Complete-DS40002072A.pdf
+ */
 
 /* MCAL */
 #include "TMR_Private.h"
@@ -29,7 +29,7 @@ static u16 Glb_Au16OVFCounters[3] = { 0, 0, 0 };
  Output: void
  Description: Function to Initialize TMR0 peripheral.
 */
-vd TMR_vdTMR0Initialization  ( void )
+vd TMR_vdTMR0Initialization ( void )
 {
 	/* Step 1: Select Waveform Generation Mode */
 	switch ( TMR_U8_TMR_0_MODE_SELECT )
@@ -42,6 +42,8 @@ vd TMR_vdTMR0Initialization  ( void )
 		case TMR_U8_TMR_0_CTC_MODE				: CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_WGM00_BIT ); SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_WGM01_BIT ); break;
 		/* Case 4: Waveform Generation Mode = Fast PWM Mode */
 		case TMR_U8_TMR_0_FAST_PWM_MODE			: SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_WGM00_BIT ); SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_WGM01_BIT ); break;
+		
+		default:														/* Do Nothing */														break;
 	}
 
 	/* Step 2: Select Compare Match Output Mode */
@@ -55,6 +57,8 @@ vd TMR_vdTMR0Initialization  ( void )
 		case TMR_U8_TMR_0_CLR_OC0_PIN		: CLR_BIT( TMR_U8_TCCR0_REG, TMR_U8_COM00_BIT ); SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_COM01_BIT ); break;
 		/* Case 4: Set OC0 on compare match ( PWM -> Inverting Mode ) */
 		case TMR_U8_TMR_0_SET_OC0_PIN		: SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_COM00_BIT ); SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_COM01_BIT ); break;
+		
+		default:													/* Do Nothing */														break;
 	}
 
 	/* Step 3: Select Interrupt Source */
@@ -66,6 +70,8 @@ vd TMR_vdTMR0Initialization  ( void )
 		case TMR_U8_TMR_0_COMP_INTERRUPT: SET_BIT( TMR_U8_TIMSK_REG, TMR_U8_OCIE0_BIT ); break;
 		/* Case 3: Interrupt Source = Overflow Interrupt */
 		case TMR_U8_TMR_0_OVF_INTERRUPT : SET_BIT( TMR_U8_TIMSK_REG, TMR_U8_TOIE0_BIT ); break;
+		
+		default:						/* Do Nothing */								 break;
 	}
 
 	/* Step 4: Set Compare Value and Preload Value */
@@ -102,7 +108,7 @@ vd TMR_vdTMR0Initialization  ( void )
 		case TMR_U8_TMR_0_EXTERNAL_CLOCK_SOURCE_RISE_EDGE: SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS00_BIT ); SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS01_BIT );
 														   SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS02_BIT ); break;
 		
-		default:		 /*   Do Nothing   */		  break;
+		default:								 /* Do Nothing */										 break;
 	}
 }
 
@@ -157,7 +163,7 @@ u8 TMR_u8EnableTMR		     ( u8 Cpy_u8TimerId )
 					case TMR_U8_TMR_0_EXTERNAL_CLOCK_SOURCE_RISE_EDGE: SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS00_BIT ); SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS01_BIT );
 																	   SET_BIT( TMR_U8_TCCR0_REG, TMR_U8_CS02_BIT ); break;
 																	   
-					default:								/*   Do Nothing   */								     break;
+					default:									/* Do Nothing */								     break;
 				}
 				break;
 			}
@@ -171,6 +177,12 @@ u8 TMR_u8EnableTMR		     ( u8 Cpy_u8TimerId )
 			case TMR_U8_TMR2:
 			{
 				/* Future Improvements ?? ??? ???? */
+				break;
+			}
+						
+			default:
+			{
+				/* Do Nothing */
 				break;
 			}
 		}
@@ -240,7 +252,7 @@ u8 TMR_u8DisableTMR		     ( u8 Cpy_u8TimerId )
 			
 			default:
 			{
-				/*   Do Nothing   */				
+				/* Do Nothing */				
 				break;
 			}
 		}
@@ -331,22 +343,25 @@ u8 TMR_u8DelayMS			 ( u8 Cpy_u8TimerId, u32 Cpy_u32Delay )
 					
 					TMR_U8_TCNT0_REG = ( u8 ) ( pow( 2, TMR_U8_TMR0_RESOLUTION ) - ( Loc_f32Fraction * pow( 2, TMR_U8_TMR0_RESOLUTION ) ) );
 				}
-				
+								
 				break;
-			}			
+			}
+			
 			case TMR_U8_TMR1: 
 			{
 				/* Future Improvements ?? ??? ???? */
 				break;
-			}				
+			}
+			
 			case TMR_U8_TMR2:
 			{
 				/* Future Improvements ?? ??? ???? */
 				break;
-			}			
+			}
+			
 			default:
 			{
-				/*   Do Nothing   */
+				/* Do Nothing */
 				break;
 			}
 		}
@@ -406,7 +421,7 @@ u8 TMR_u8GetOVFFlagStatus    ( u8 Cpy_u8TimerId, u8 *Cpy_pu8ReturnedFlagStatus )
 			case TMR_U8_TMR0: *Cpy_pu8ReturnedFlagStatus = GET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV0_BIT ); break;
 			case TMR_U8_TMR1: *Cpy_pu8ReturnedFlagStatus = GET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV1_BIT ); break;
 			case TMR_U8_TMR2: *Cpy_pu8ReturnedFlagStatus = GET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV2_BIT ); break;
-			default:								/*   Do Nothing   */							    break;
+			default:								/* Do Nothing */								    break;
 		}
 	}
 	/* Check 2: TimertId is not in the valid range, or Pointer is equal to NULL */
@@ -440,7 +455,7 @@ u8 TMR_u8ClearOVFFlag	     ( u8 Cpy_u8TimerId )
 			case TMR_U8_TMR0: SET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV0_BIT ); break;
 			case TMR_U8_TMR1: SET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV1_BIT ); break;
 			case TMR_U8_TMR2: SET_BIT( TMR_U8_TIFR_REG, TMR_U8_TOV2_BIT ); break;
-			default:				 /*   Do Nothing   */				   break;
+			default:				 /* Do Nothing */					   break;
 		}
 	}
 	/* Check 2: TimertId is not in the valid range, or Pointer is equal to NULL */
