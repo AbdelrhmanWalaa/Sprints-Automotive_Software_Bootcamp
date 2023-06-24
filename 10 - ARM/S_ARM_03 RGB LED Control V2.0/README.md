@@ -7,4 +7,4 @@ the versatility of the RGB LED, and the added delay feature, this project offers
 experience.
 
 ## Video Link
-> [RGB LED Control V2.0]()
+> [RGB LED Control V2.0](https://drive.google.com/file/d/1h2TQ8Yu2JskwJdpywz2WhRW6NTgTMVLa/view?usp=sharing)
