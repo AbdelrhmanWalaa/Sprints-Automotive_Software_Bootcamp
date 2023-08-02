@@ -1,0 +1,42 @@
+Test Cases Scenarios:
+
+01. PAN > 19
+>> Expected Output:
+"Wrong PAN [Not in valid range]"
+
+02. PAN < 16
+>> Expected Output:
+"Wrong PAN [Not in valid range]"
+
+03. PAN with alpha chars
+>> Expected Output:
+"Wrong PAN [Non Numeric]"
+
+04. Correct PAN
+>> Expected Output:
+"PAN is saved successfully"
+
+05. PIN < 4
+>> Expected Output:
+"Wrong PIN [Not 4 Digits]"
+
+06. PIN > 4
+>> Expected Output:
+"Wrong PIN [Not 4 Digits]"
+
+07. PIN with alpha chars
+>> Expected Output:
+"Wrong PIN [Non Numeric]"
+
+08. Different Confirmation PIN
+>> Expected Output:
+"Wrong PIN [Non Identical]"
+
+09. Correct PIN
+>> Expected Output:
+Will ask for the confirmation PIN
+
+10. Correct Confirmation PIN
+>> Expected Output:
+"PIN is saved successfully"
+

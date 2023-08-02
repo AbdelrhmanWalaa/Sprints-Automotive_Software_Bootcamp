@@ -1,0 +1,61 @@
+Card -> PIN verification, PAN
+ATM  -> PIN user has entered (to be checked)
+
+====================================
+0x30 -> 0x39 (ASCII 0 -> 9) Reserved
+====================================
+Legened:
+	ATM > CARD
+	ATM < CARD
+
+-------------------------------------------------------
+ATM Send PIN Flow: 
+------------------
+
+0xC1 > APP_CMD_PIN_READY
+
+PIN: 1234
+
+0xC2 > Asking for next command
+     < 0xA0 (A)sk ASCII number in INDEX 0
+
+IX-0 >
+     < 0xA1 (A)sk ASCII number in INDEX 1
+
+IX-1 >
+     < 0xA2 (A)sk ASCII number in INDEX 2
+
+IX-2 >
+     < 0xA3 (A)sk for ASCII number in INDEX 3
+
+IX-3 >
+
+0xC2 > Asking for next command
+     < 0xF3 WAIT
+0xC2 > Asking for next command
+     < 0xF0 PIN OK
+     < 0xF5 PIN WRONG
+
+-------------------------------------------------------
+ATM Receive PAN Flow:
+---------------------
+
+0xC4 > APP_CMD_PAN_REQ
+
+PIN: 1234
+
+0xC2 < APP_CMD_ACK
+
+0xC5 > APP_CMD_PAN_LEN_REQ
+     < PAN_LEN (16 -> 19)
+   
+0xA0 >
+     < IX-0
+     .
+     .
+     .
+0xAn >
+     < IX-n
+
+0xF0 > APP_PAN_OK
+0xC2 < APP_CMD_ACK (reset flow)
