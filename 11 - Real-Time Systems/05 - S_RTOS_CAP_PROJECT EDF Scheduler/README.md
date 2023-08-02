@@ -13,6 +13,7 @@ The project involves the scheduling of six tasks using the EDF algorithm. The fi
 To simulate a heavier workload, two additional tasks, Load_1_Simulation and Load_2_Simulation, are included. These tasks are implemented as empty loops that need to be executed a specific number of times to achieve the desired execution time. Adjusting the loop iterations allows for the simulation of varying workload scenarios, impacting the system's overall performance.
 
 ## Project Goals
+
 - Implement the EDF scheduling algorithm for a real-time system.
 - Schedule tasks based on their deadlines and adjust priorities dynamically.
 - Monitor the rising and falling edges of buttons and transmit periodic strings.
@@ -20,6 +21,7 @@ To simulate a heavier workload, two additional tasks, Load_1_Simulation and Load
 - Simulate heavier loads using empty loops executed with specific loop iterations.
 
 ## Expected Outcomes
+
 - Successful implementation of the EDF scheduling algorithm.
 - Task execution prioritization based on deadlines.
 - Proper monitoring of button events and transmission of periodic strings.
@@ -28,6 +30,7 @@ To simulate a heavier workload, two additional tasks, Load_1_Simulation and Load
 - Efficient task execution while maintaining system responsiveness and meeting timing requirements.
 
 ## Contributors
+
 > [Abdelrhman Walaa](https://github.com/AbdelrhmanWalaa) |
 > [Amr El-Abd](https://github.com/AmrElAbd09) |
 > [Mohamed Abdelsalam](https://github.com/m3adel) |
