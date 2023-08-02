@@ -1,6 +1,8 @@
 # FreeRTOS EDF Scheduler
 
-![FreeRTOS](https://github.com/AbdelrhmanWalaa/Sprints-Automotive_Software_Bootcamp/assets/44446382/fcdfba0f-1c6e-4731-b4d0-baf0bd9ad97b)
+<p align="center">
+  <img src="https://github.com/AbdelrhmanWalaa/Sprints-Automotive_Software_Bootcamp/assets/44446382/fcdfba0f-1c6e-4731-b4d0-baf0bd9ad97b" alt="FreeRTOS">
+</p>
 
 ## Overview
 
