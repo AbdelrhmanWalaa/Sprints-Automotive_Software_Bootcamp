@@ -1,4 +1,4 @@
-# EDF Scheduling Algorithm for Real-Time Systems
+# FreeRTOS EDF Scheduler
 
 ## Overview
 This project focuses on implementing the Earliest Deadline First (EDF) scheduling algorithm for a real-time system. EDF is a dynamic priority-based preemptive scheduling policy that ensures efficient task management by prioritizing tasks based on their deadlines. The algorithm allows for the changing of task priorities during execution, and any lower periodicity task can preempt the execution of higher periodicity tasks.
