@@ -50,3 +50,64 @@ Additionally, some extra features have been included:
   <img src="https://github.com/AbdelrhmanWalaa/Sprints-Automotive_Software_Bootcamp/assets/44446382/80783184-f8e8-4d76-9d68-98e10aa26614" alt="Circuit Schematic">
 </p>
 
+## Details
+
+### LCD Display:
+
+    Allowed Temperatures:
+    Temp:     18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35  in C°
+              ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓
+    Index:    0  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 15   character index on LCD
+    Visual:   ■  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  ■   character visible on LCD
+
+    Min/Max = ■
+
+### Assumptions:
+
+- We assume that room temperature won’t go below `10 °C`, or go higher than `99 °C`
+
+### Constants:
+
+- Default temperature: 20 °C
+- Minimum temperature: 18 °C
+- Maximum temperature: 35 °C
+
+### Flow:
+
+1. Show “welcome” (1 second)
+2. Show “default temperature: 20 °C” (1 second)
+3. Goto `Adjust Screen`
+
+#### Screen Adjusting:
+
+1. Show “Please choose required temperature” (0.5 second)
+2. Show Adjust Screen model:
+ 
+        ====================
+        Min:18  20   Max: 35
+        | | 		     < progress bar to visualize temperature
+        ====================
+
+3. Wait for user input to increase/decrease temperature
+    - Use keypad button 1 for increasing (updates temp & progress bar)
+    - Use keypad button 2 for decreasing (updates temp & progress bar)
+    - Use keypad button 3 for Set and Start AC
+   
+4. Timeout after 10 seconds if no input, set desired temperature to 20 °C then goto `Running Screen`
+5. Otherwise if Set button was pressed, save the desired temperature in memory then goto `Running Screen`
+
+#### Screen Running:
+
+- Button 1,2,3 are disabled (increment/decrement/set) show an error if pressed for 0.5 second.
+- Buttons 4,5 are enabled (4: Adjust, 5: Reset)
+- Running Screen:
+
+        ==================
+        ⏰   < buzzer icon visible if current temp from sensor
+        Current Temp:           20	     is greater than desired temperature
+        ==================
+  
+- Current temp is constantly updated from temperature sensor
+  - If `current temperature > desired temperature` Show buzzer 🔔 icon on LCD and turn the buzzer on until the room temperature goes back down below the desired temperature
+  - If Button-4 `(Adjust)` was pressed, halt and go back to `Adjust Screen` to allow re-adjusting temperature.
+  - If Button-5 `(Reset)` was pressed, halt, reset desired temperature to default (20 °C, show “Reset to default temp: 20 °C” then resume back again to `Running Screen`
