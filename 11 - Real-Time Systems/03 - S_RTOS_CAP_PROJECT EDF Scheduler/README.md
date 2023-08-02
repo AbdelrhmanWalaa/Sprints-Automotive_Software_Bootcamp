@@ -32,4 +32,4 @@ To simulate a heavier workload, two additional tasks, Load_1_Simulation and Load
 > [Hazem Ashraf](https://github.com/hazemashrafali)
 
 ## Video Link
-> [EDF Scheduler](https://drive.google.com/file/d/18fT2M_iGboBTeThPvK7_me9P3f5lazBn/view?usp=drive_link)
+> [FreeRTOS EDF Scheduler](https://drive.google.com/file/d/18fT2M_iGboBTeThPvK7_me9P3f5lazBn/view?usp=drive_link)
