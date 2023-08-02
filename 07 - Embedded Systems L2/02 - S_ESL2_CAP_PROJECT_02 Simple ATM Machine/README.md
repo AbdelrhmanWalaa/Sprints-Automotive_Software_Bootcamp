@@ -35,3 +35,8 @@ The ATM ECU will handle the main transaction flows, including PIN validation, am
 ## Video
 > [Simple ATM Machine](https://drive.google.com/file/d/1Yt83rPD1v7XGVWoWsxdxXpQTE4M2Eeba/view?usp=sharing)
 
+## Circuit Schematic
+
+<p align="center">
+  <img src="https://github.com/AbdelrhmanWalaa/Sprints-Automotive_Software_Bootcamp/assets/44446382/613ae3f3-b332-4f56-a32e-861cda7d14c5" alt="Circuit Schematic">
+</p>
