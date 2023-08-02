@@ -11,6 +11,8 @@ In this task, you are required to modify an existing RTOS project to implement a
 - Create another task to toggle the LED based on the button events.
 - Implement the necessary code to handle button events and control the LED accordingly.
 
+___
+
 ## Task 2: UART String Writing
 
 ### Description:
@@ -23,6 +25,8 @@ In this task, you will extend the existing RTOS project to include two tasks res
 - The first task should have a cycle time of 100ms.
 - The second task should have a cycle time of 500ms and include a simulated heavy load by executing an empty loop 100,000 times after each string write.
 - Ensure that the UART writing tasks are not interrupted by each other.
+
+___
 
 ## Task 3: Button and UART Interaction
 
