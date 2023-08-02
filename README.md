@@ -1,6 +1,6 @@
 # Automotive Software Bootcamp
 
-Welcome to the Embedded Systems Programming Course! In this comprehensive course, you will gain hands-on experience and knowledge in various aspects of embedded systems development using the C programming language. Here's what you will learn:
+Welcome to the Automotive Software Bootcamp! In this comprehensive Bootcamp, you will gain hands-on experience and knowledge in various aspects of embedded systems development using the C programming language. Here's what you will learn:
 
 - **Master Embedded Systems Programming with C:** You will dive into the world of embedded systems and learn how to write efficient and robust code using the C programming language.
 
@@ -25,5 +25,3 @@ Welcome to the Embedded Systems Programming Course! In this comprehensive course
 - **Code Optimization and Best Coding Standards:** Learn techniques for optimizing your code and applying the best coding standards, ensuring efficient and maintainable embedded systems.
 
 - **Master Business Etiquette and Communication:** Acquire essential business etiquette and communication skills, enabling you to interact effectively with customers, peers, and seniors in a professional setting.
-
-We are excited to accompany you on this journey to become a proficient embedded systems programmer. Get ready to unlock a world of possibilities in the realm of embedded systems development!
