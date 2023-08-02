@@ -11,6 +11,8 @@ In this task, you are required to modify an existing RTOS project to create a pr
 - Implement the necessary code to control the LED and timing.
 - Ensure the task runs at a regular interval using the RTOS scheduler.
 
+___
+
 ## Task 2: Toggle 3 LEDs at Different Rates
 
 ### Description:
@@ -21,6 +23,8 @@ In this task, you will extend the existing RTOS project to include three tasks, 
 - Create three new tasks, each responsible for toggling a specific LED at the given rate.
 - Implement the necessary code to control the LEDs and timing for each task.
 - Ensure each task runs at its designated interval using the RTOS scheduler.
+
+___
 
 ## Task 3: User-Controlled LED Toggling Rate
 
