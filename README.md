@@ -1,4 +1,4 @@
-# Automotive Software Bootcamp
+# Sprints - Automotive Software Bootcamp
 
 ![image](https://github.com/AbdelrhmanWalaa/Sprints-Automotive_Software_Bootcamp/assets/44446382/f1b78684-64c9-4a37-a1f7-42c862455ad3)
 
