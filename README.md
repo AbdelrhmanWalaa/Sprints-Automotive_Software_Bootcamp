@@ -1,5 +1,7 @@
 # Automotive Software Bootcamp
 
+![image](https://github.com/AbdelrhmanWalaa/Sprints-Automotive_Software_Bootcamp/assets/44446382/f1b78684-64c9-4a37-a1f7-42c862455ad3)
+
 Welcome to the Automotive Software Bootcamp! In this comprehensive Bootcamp, you will gain hands-on experience and knowledge in various aspects of embedded systems development using the C programming language. Here's what you will learn:
 
 - **Master Embedded Systems Programming with C:** You will dive into the world of embedded systems and learn how to write efficient and robust code using the C programming language.
