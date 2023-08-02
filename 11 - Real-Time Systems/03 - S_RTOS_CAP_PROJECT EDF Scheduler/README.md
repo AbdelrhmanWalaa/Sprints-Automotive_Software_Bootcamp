@@ -1,6 +1,9 @@
 # FreeRTOS EDF Scheduler
 
 ## Overview
+
+![FreeRTOS](https://github.com/AbdelrhmanWalaa/Sprints-Automotive_Software_Bootcamp/assets/44446382/fcdfba0f-1c6e-4731-b4d0-baf0bd9ad97b)
+
 This project focuses on implementing the Earliest Deadline First (EDF) scheduling algorithm for a real-time system. EDF is a dynamic priority-based preemptive scheduling policy that ensures efficient task management by prioritizing tasks based on their deadlines. The algorithm allows for the changing of task priorities during execution, and any lower periodicity task can preempt the execution of higher periodicity tasks.
 
 The project involves the scheduling of six tasks using the EDF algorithm. The first four tasks, namely Button_1_Monitor, Button_2_Monitor, Periodic_Transmitter, and Uart_Receiver, have specific periodicities and deadlines. Button_1_Monitor and Button_2_Monitor tasks monitor button events and send them to the consumer task. Periodic_Transmitter sends periodic strings, while Uart_Receiver receives strings and writes them to the UART.
