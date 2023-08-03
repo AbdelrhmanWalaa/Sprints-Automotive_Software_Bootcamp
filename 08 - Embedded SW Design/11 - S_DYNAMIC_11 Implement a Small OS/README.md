@@ -6,23 +6,28 @@
 
 ## Overview
 
-This project involves the development of software for a car robot capable of avoiding objects in front of it. The robot will utilize an ATmega32 microcontroller along with various hardware components, such as four motors, a button to change the default direction of rotation, a keypad for start/stop commands, an ultrasonic sensor for object detection, and an LCD for displaying relevant information.
+This project involves the implementation of a small operating system, where tasks are periodic and non-preemptive. The operating system will be designed to run on an ATmega32 microcontroller and will interact with PBUTTON0 and PBUTTON1 for control. The main functionality of the system will be to toggle two LEDs periodically based on defined tasks.
 
 ## Project Goals
 
-- Develop a software system that allows the car robot to navigate safely, avoiding obstacles in its path.
-- Implement a user-friendly control mechanism using the keypad buttons to start and stop the robot.
-- Provide an interface through the LCD to set the default direction of rotation (right or left) before the robot starts moving.
-- Design the robot to move forward at various speeds based on obstacle proximity, ensuring smooth operation in different scenarios.
-- Enable the robot to respond appropriately to detected objects at different distances, adjusting its speed and performing rotations or reversals when necessary.
+- **Implement a Small Operating System:** Develop a simple operating system that allows the execution of periodic tasks without preemption.
+- **Task Management:** Design a task management system to handle two tasks:
+  
+   - Task_1: Toggle LED_0 every 300 milliseconds.
+   - Task_2: Toggle LED_1 every 500 milliseconds.
+
+- **Periodic Execution:** Ensure that the tasks occur periodically and continue indefinitely.
+- **Button Control:** Integrate PBUTTON0 and PBUTTON1 to control the operating system's behavior:
+
+   - When PBUTTON0 is pressed, the operating system (SOS) will stop executing tasks.
+   - When PBUTTON1 is pressed, the operating system (SOS) will resume executing tasks.
 
 ## Expected Outcomes
 
-- A fully functional car robot capable of autonomously avoiding obstacles in its path.
-- A user-friendly interface using the LCD for displaying relevant information and setting the default rotation direction.
-- Smooth and efficient movement of the robot at varying speeds, ensuring safe object avoidance.
-- The ability of the robot to respond accurately to objects at different distances, including stopping, rotating, and reversing as needed.
-- A comprehensive hardware-software integration, showcasing the successful collaboration of the ATmega32 microcontroller with the motors, ultrasonic sensor, buttons, and LCD.
+- A functional and efficient small operating system designed for the ATmega32 microcontroller.
+- Two tasks (Task_1 and Task_2) that accurately toggle the corresponding LEDs at defined time intervals.
+- A non-preemptive task management system ensuring periodic execution of the tasks indefinitely.
+- The system's responsiveness to PBUTTON0 and PBUTTON1, allowing users to halt and resume task execution as needed.
 
 ## Contributors
 
@@ -31,12 +36,10 @@ This project involves the development of software for a car robot capable of avo
 > [Hazem Ashraf](https://github.com/hazemashrafali)
 
 ## Video
-> [Small OS](https://drive.google.com/file/d/1VusHmFiW_P_1O4oQZRFqFkMx60ojuyCt/view?usp=sharing)
+> [Small OS](https://drive.google.com/file/d/1HBlgQlkSO54oUB3SGNeSbU-6UzoHl08a/view?usp=sharing)
 
 ## Circuit Schematic
 
 <p align="center">
-  <img src="https://github.com/AbdelrhmanWalaa/Sprints-Automotive_Software_Bootcamp/assets/44446382/72d2f488-ffa7-412d-92cd-af9d5a822f99" alt="Circuit Schematic">
+  <img src="https://github.com/AbdelrhmanWalaa/Sprints-Automotive_Software_Bootcamp/assets/44446382/30991d3d-2e58-48c4-b948-a3f7e71566a0" alt="Circuit Schematic">
 </p>
-
-
