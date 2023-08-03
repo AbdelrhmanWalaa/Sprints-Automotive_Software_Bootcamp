@@ -1,0 +1,332 @@
+<mxfile host="Electron" modified="2023-05-22T14:59:15.380Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="f-5VyV4uDpCnGf2s-Yo_" version="21.2.8" type="device">
+  <diagram name="Page-1" id="wkSTFM-xhvv9ywmYlebC">
+    <mxGraphModel dx="1275" dy="959" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-1" value="DCM_initialization" style="text;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="-122" y="-234" width="145" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-79" style="rounded=1;fontColor=#000000;fontFamily=Calibri;" parent="1" vertex="1">
+          <mxGeometry x="105" y="17" as="geometry" />
+        </mxCell>
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-81" style="edgeStyle=none;curved=1;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;fontFamily=Calibri;" parent="1" target="RaQ1Jy0vWYm-qhS4mqpq-103" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-62.5" y="-52" as="sourcePoint" />
+            <mxPoint x="-63.5" y="28" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-82" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;fontFamily=Calibri;" parent="1" source="RaQ1Jy0vWYm-qhS4mqpq-87" target="RaQ1Jy0vWYm-qhS4mqpq-91" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" y="-69.5" as="sourcePoint" />
+            <mxPoint x="110.5" y="157" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-83" value="True" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontFamily=Calibri;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="29" y="-69.99586270871987" width="39" height="17.33209647495362" as="geometry" />
+        </mxCell>
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-84" style="edgeStyle=none;curved=1;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=12;startSize=8;endSize=8;fontFamily=Calibri;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="RaQ1Jy0vWYm-qhS4mqpq-85" target="RaQ1Jy0vWYm-qhS4mqpq-87" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-61" y="-93" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;font-size: 1px&quot;&gt;&lt;font style=&quot;font-size: 11.29px; direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;Start&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="RaQ1Jy0vWYm-qhS4mqpq-85">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=30;fillColor=#dae8fc;shape=stencil(tVLREoIgEPwaHnEQxsl3s/9gEpSJwDko7e+DsEkze2l627vdu5uFRaxyHe8FosR5sCcxqMZ3iO0Rpcp0ApQPCLEasUpaEC3Yi2lS3fOojOhsr3HDmObyMtsVcYqS29Qh5FEfklwrM5OXeUa/yjkcAwfr7TDpiyTfXvjkMR+Vw2A998qaBac5tAKHU1hq3i4oNwjRr9ofvayt/+Rk+yX/4iWA159KpXWKxJx/z0Bopfyw+g4=);strokeColor=#6c8ebf;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0.5,1,0],[0.5,0,0],[0,0.5,0],[1,0.5,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" parent="1" vertex="1">
+            <mxGeometry x="-114" y="-174" width="101" height="38" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="RaQ1Jy0vWYm-qhS4mqpq-87">
+          <mxCell style="vsdxID=219;fillColor=#fff2cc;shape=stencil(UzV2Ls5ILEhVNTIoLinKz04tz0wpyVA1dlE1MsrMy0gtyiwBslSNXVWNndPyi1LTi/JL81Ig/IJEkEoQKze/DGRCBUSfAUiHkUElhGcK4bpBVOZk5iGpNEVVikeloQHZpsK0YlWLz1QgA+HFtMycHEgIIcujBwlQCBKcxq4A);strokeColor=#d6b656;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" parent="1" vertex="1">
+            <mxGeometry x="-114" y="-89" width="101" height="76" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-88" value="&lt;div style=&quot;font-size: 1px&quot;&gt;&lt;font style=&quot;font-size: 11.29px; direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;&lt;i&gt;DCMConfig&lt;/i&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 1px&quot;&gt;&lt;font style=&quot;font-size: 11.29px; direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;is Null&lt;/font&gt;&lt;/div&gt;" style="text;vsdxID=219;fillColor=none;gradientColor=none;strokeColor=none;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;verticalAlign=middle;align=center;overflow=width;;html=1;fontColor=#000000;fontFamily=Calibri;" parent="RaQ1Jy0vWYm-qhS4mqpq-87" vertex="1">
+          <mxGeometry x="8.47" y="9.42" width="84.67" height="57.15" as="geometry" />
+        </mxCell>
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-89" value="False" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontFamily=Calibri;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="-58" y="-6" width="39" height="18" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;font-size: 1px&quot;&gt;&lt;font style=&quot;font-size: 11.29px; direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;Return &lt;i&gt;STD_NOK&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="RaQ1Jy0vWYm-qhS4mqpq-91">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=55;fillColor=#f8cecc;shape=stencil(tVLREoIgEPwaHnEQxsl3s/9gEpSJwDko7e+DsEkze2l627vdu5uFRaxyHe8FosR5sCcxqMZ3iO0Rpcp0ApQPCLEasUpaEC3Yi2lS3fOojOhsr3HDmObyMtsVcYqS29Qh5FEfklwrM5OXeUa/yjkcAwfr7TDpiyTfXvjkMR+Vw2A998qaBac5tAKHU1hq3i4oNwjRr9ofvayt/+Rk+yX/4iWA159KpXWKxJx/z0Bopfyw+g4=);strokeColor=#b85450;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0.5,1,0],[0.5,0,0],[0,0.5,0],[1,0.5,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" parent="1" vertex="1">
+            <mxGeometry x="68" y="32" width="91" height="38" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;div style=&quot;font-size: 1px&quot;&gt;&lt;font style=&quot;font-size: 11.29px; direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;Return &lt;i&gt;STD_OK&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="RaQ1Jy0vWYm-qhS4mqpq-92">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=52;fillColor=#d5e8d4;shape=stencil(tVLREoIgEPwaHnEQxsl3s/9gEpSJwDko7e+DsEkze2l627vdu5uFRaxyHe8FosR5sCcxqMZ3iO0Rpcp0ApQPCLEasUpaEC3Yi2lS3fOojOhsr3HDmObyMtsVcYqS29Qh5FEfklwrM5OXeUa/yjkcAwfr7TDpiyTfXvjkMR+Vw2A998qaBac5tAKHU1hq3i4oNwjRr9ofvayt/+Rk+yX/4iWA159KpXWKxJx/z0Bopfyw+g4=);strokeColor=#82b366;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0.5,1,0],[0.5,0,0],[0,0.5,0],[1,0.5,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" parent="1" vertex="1">
+            <mxGeometry x="-112.5" y="624" width="101" height="38" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-95" style="edgeStyle=none;curved=1;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;fontFamily=Calibri;" parent="1" source="RaQ1Jy0vWYm-qhS4mqpq-97" target="RaQ1Jy0vWYm-qhS4mqpq-106" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-60.20499999999993" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-96" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=12;startSize=8;endSize=8;fontFamily=Calibri;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="RaQ1Jy0vWYm-qhS4mqpq-97" edge="1" target="8TYVb3OXIl3L788C4FlH-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="114" y="219" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="69" y="154" />
+              <mxPoint x="69" y="492" />
+              <mxPoint x="-62" y="492" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="RaQ1Jy0vWYm-qhS4mqpq-97">
+          <mxCell style="vsdxID=219;fillColor=#fff2cc;shape=stencil(UzV2Ls5ILEhVNTIoLinKz04tz0wpyVA1dlE1MsrMy0gtyiwBslSNXVWNndPyi1LTi/JL81Ig/IJEkEoQKze/DGRCBUSfAUiHkUElhGcK4bpBVOZk5iGpNEVVikeloQHZpsK0YlWLz1QgA+HFtMycHEgIIcujBwlQCBKcxq4A);strokeColor=#d6b656;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" parent="1" vertex="1">
+            <mxGeometry x="-114" y="116" width="101" height="76" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-98" value="&lt;div style=&quot;&quot;&gt;&lt;i style=&quot;border-color: var(--border-color); font-size: 11.29px;&quot;&gt;NumberOfDCMs&lt;/i&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;i style=&quot;border-color: var(--border-color); font-size: 11.29px;&quot;&gt;&amp;nbsp;&amp;lt; 2&lt;/i&gt;&lt;/div&gt;" style="text;vsdxID=219;fillColor=none;gradientColor=none;strokeColor=none;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;verticalAlign=middle;align=center;overflow=width;;html=1;fontColor=#000000;fontFamily=Calibri;" parent="RaQ1Jy0vWYm-qhS4mqpq-97" vertex="1">
+          <mxGeometry x="8.47" y="15" width="84.67" height="57.15" as="geometry" />
+        </mxCell>
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-99" style="rounded=1;fontColor=#000000;fontFamily=Calibri;" parent="1" vertex="1">
+          <mxGeometry x="110" y="181" as="geometry" />
+        </mxCell>
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-100" value="False" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontFamily=Calibri;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="2" y="135" width="39" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-102" value="True" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontFamily=Calibri;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="-62" y="205" width="39" height="17.33209647495362" as="geometry" />
+        </mxCell>
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-104" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" parent="1" source="RaQ1Jy0vWYm-qhS4mqpq-103" target="RaQ1Jy0vWYm-qhS4mqpq-97" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RaQ1Jy0vWYm-qhS4mqpq-103" value="&lt;p style=&quot;line-height: 80%;&quot;&gt;&lt;font face=&quot;Calibri&quot; style=&quot;font-size: 11.29px;&quot;&gt;&lt;i&gt;NumberOfDCMs&lt;/i&gt; = 0&lt;/font&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="-147" y="28" width="170" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-2" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="RaQ1Jy0vWYm-qhS4mqpq-106" target="8TYVb3OXIl3L788C4FlH-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;font-size: 11.29px;&quot;&gt;Initialize initial direction of &lt;i&gt;DCM&lt;/i&gt;,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-size: 11.29px;&quot;&gt;in both &lt;i&gt;Direction Pins&lt;/i&gt;,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-size: 11.29px;&quot;&gt;using &lt;i&gt;DIO_init&lt;/i&gt; function&lt;br&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_toggle(uint8_t pinNumber, EN_DIO_PORT_T portNumber);  " tags="Flowchart" id="RaQ1Jy0vWYm-qhS4mqpq-106">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=274;fillColor=#d5e8d4;shape=stencil(nZBLDoAgDERP0z3SIyjew0SURgSD+Lu9kMZoXLhwN9O+tukAlrNpJg1SzDH4QW/URgNYgZTkjA4UkwJUgGXng+6DX1zLfmoymdXo17xh5zmRJ6Q42BWCfc2oJfdAr+Yv+AP9Cb7OJ3H/2JG1HNGz/84klThPVCc=);strokeColor=#82b366;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,1,0],[0.5,0,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" parent="1" vertex="1">
+            <mxGeometry x="-148.5" y="243" width="170" height="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-4" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-1" target="8TYVb3OXIl3L788C4FlH-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;font-size: 11.29px;&quot;&gt;Initialize initial value of &lt;i&gt;DCM&lt;/i&gt;,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-size: 11.29px;&quot;&gt;in both &lt;i&gt;Direction Pins&lt;/i&gt;,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-size: 11.29px;&quot;&gt;using &lt;i&gt;DIO_write&lt;/i&gt; function&lt;br&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_toggle(uint8_t pinNumber, EN_DIO_PORT_T portNumber);  " tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-1">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=274;fillColor=#d5e8d4;shape=stencil(nZBLDoAgDERP0z3SIyjew0SURgSD+Lu9kMZoXLhwN9O+tukAlrNpJg1SzDH4QW/URgNYgZTkjA4UkwJUgGXng+6DX1zLfmoymdXo17xh5zmRJ6Q42BWCfc2oJfdAr+Yv+AP9Cb7OJ3H/2JG1HNGz/84klThPVCc=);strokeColor=#82b366;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,1,0],[0.5,0,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="-148.5" y="337" width="170" height="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-3" target="RaQ1Jy0vWYm-qhS4mqpq-97">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-180" y="452" />
+              <mxPoint x="-180" y="154" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-3" value="&lt;p style=&quot;line-height: 80%;&quot;&gt;&lt;font face=&quot;Calibri&quot; style=&quot;font-size: 11.29px;&quot;&gt;Increment &lt;i&gt;NumberOfDCMs&lt;/i&gt;&lt;/font&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-148.5" y="431" width="170" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-7" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-6" target="RaQ1Jy0vWYm-qhS4mqpq-92">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;font-size: 11.29px;&quot;&gt;Initialize &lt;i&gt;PWM &lt;/i&gt;peripheral&lt;/div&gt;&lt;div style=&quot;font-size: 11.29px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;with required &lt;i&gt;Port&lt;/i&gt;, &lt;i&gt;Pin&lt;/i&gt;, and &lt;i&gt;DCM&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11.29px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;i&gt;Frequency&lt;/i&gt; (&lt;i&gt;200 Hz&lt;/i&gt;),&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11.29px;&quot;&gt;using &lt;i&gt;PWM_Initalization&lt;/i&gt; function&lt;br&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_toggle(uint8_t pinNumber, EN_DIO_PORT_T portNumber);  " tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-6">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=274;fillColor=#d5e8d4;shape=stencil(nZBLDoAgDERP0z3SIyjew0SURgSD+Lu9kMZoXLhwN9O+tukAlrNpJg1SzDH4QW/URgNYgZTkjA4UkwJUgGXng+6DX1zLfmoymdXo17xh5zmRJ6Q42BWCfc2oJfdAr+Yv+AP9Cb7OJ3H/2JG1HNGz/84klThPVCc=);strokeColor=#82b366;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,1,0],[0.5,0,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="-147" y="521" width="170" height="65" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-8" value="DCM_controlDCM" style="text;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="421.99998474121094" y="-233.99998474121094" width="158" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-14" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-9" target="8TYVb3OXIl3L788C4FlH-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;font-size: 1px&quot;&gt;&lt;font style=&quot;font-size: 11.29px; direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;Start&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-9">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=30;fillColor=#dae8fc;shape=stencil(tVLREoIgEPwaHnEQxsl3s/9gEpSJwDko7e+DsEkze2l627vdu5uFRaxyHe8FosR5sCcxqMZ3iO0Rpcp0ApQPCLEasUpaEC3Yi2lS3fOojOhsr3HDmObyMtsVcYqS29Qh5FEfklwrM5OXeUa/yjkcAwfr7TDpiyTfXvjkMR+Vw2A998qaBac5tAKHU1hq3i4oNwjRr9ofvayt/+Rk+yX/4iWA159KpXWKxJx/z0Bopfyw+g4=);strokeColor=#6c8ebf;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0.5,1,0],[0.5,0,0],[0,0.5,0],[1,0.5,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="450.5" y="-174" width="101" height="38" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-16" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-10" target="8TYVb3OXIl3L788C4FlH-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="503" y="14" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-83" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-10" target="8TYVb3OXIl3L788C4FlH-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-10">
+          <mxCell style="vsdxID=219;fillColor=#fff2cc;shape=stencil(UzV2Ls5ILEhVNTIoLinKz04tz0wpyVA1dlE1MsrMy0gtyiwBslSNXVWNndPyi1LTi/JL81Ig/IJEkEoQKze/DGRCBUSfAUiHkUElhGcK4bpBVOZk5iGpNEVVikeloQHZpsK0YlWLz1QgA+HFtMycHEgIIcujBwlQCBKcxq4A);strokeColor=#d6b656;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="450.5" y="-89" width="101" height="76" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-11" value="&lt;div style=&quot;font-size: 1px&quot;&gt;&lt;font style=&quot;font-size: 11.29px; direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;&lt;i&gt;DCMConfig&lt;/i&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 1px&quot;&gt;&lt;font style=&quot;font-size: 11.29px; direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;is Null&lt;/font&gt;&lt;/div&gt;" style="text;vsdxID=219;fillColor=none;gradientColor=none;strokeColor=none;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;verticalAlign=middle;align=center;overflow=width;;html=1;fontColor=#000000;fontFamily=Calibri;" vertex="1" parent="8TYVb3OXIl3L788C4FlH-10">
+          <mxGeometry x="8.47" y="9.42" width="84.67" height="57.15" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-69" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-12" target="8TYVb3OXIl3L788C4FlH-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-84" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680.1379310344828" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-12">
+          <mxCell style="vsdxID=219;fillColor=#fff2cc;shape=stencil(UzV2Ls5ILEhVNTIoLinKz04tz0wpyVA1dlE1MsrMy0gtyiwBslSNXVWNndPyi1LTi/JL81Ig/IJEkEoQKze/DGRCBUSfAUiHkUElhGcK4bpBVOZk5iGpNEVVikeloQHZpsK0YlWLz1QgA+HFtMycHEgIIcujBwlQCBKcxq4A);strokeColor=#d6b656;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="450.5" y="32" width="101" height="76" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-13" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 11.29px;&quot;&gt;Correct&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 11.29px;&quot;&gt;&lt;i&gt;ControMode&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;" style="text;vsdxID=219;fillColor=none;gradientColor=none;strokeColor=none;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;verticalAlign=middle;align=center;overflow=width;;html=1;fontColor=#000000;fontFamily=Calibri;" vertex="1" parent="8TYVb3OXIl3L788C4FlH-12">
+          <mxGeometry x="8.47" y="9.42" width="84.67" height="57.15" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-70" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-17" target="8TYVb3OXIl3L788C4FlH-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;font-size: 11.29px;&quot;&gt;Switch on &lt;i&gt;ControlMode&lt;/i&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_toggle(uint8_t pinNumber, EN_DIO_PORT_T portNumber);  " tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-17">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=274;fillColor=#d5e8d4;shape=stencil(nZBLDoAgDERP0z3SIyjew0SURgSD+Lu9kMZoXLhwN9O+tukAlrNpJg1SzDH4QW/URgNYgZTkjA4UkwJUgGXng+6DX1zLfmoymdXo17xh5zmRJ6Q42BWCfc2oJfdAr+Yv+AP9Cb7OJ3H/2JG1HNGz/84klThPVCc=);strokeColor=#82b366;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,1,0],[0.5,0,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="434" y="143" width="134" height="43" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-71" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-18" target="8TYVb3OXIl3L788C4FlH-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-75" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-18" target="8TYVb3OXIl3L788C4FlH-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-18">
+          <mxCell style="vsdxID=219;fillColor=#fff2cc;shape=stencil(UzV2Ls5ILEhVNTIoLinKz04tz0wpyVA1dlE1MsrMy0gtyiwBslSNXVWNndPyi1LTi/JL81Ig/IJEkEoQKze/DGRCBUSfAUiHkUElhGcK4bpBVOZk5iGpNEVVikeloQHZpsK0YlWLz1QgA+HFtMycHEgIIcujBwlQCBKcxq4A);strokeColor=#d6b656;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="450.5" y="219" width="101" height="76" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-19" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 11.29px;&quot;&gt;Case&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 11.29px;&quot;&gt;&lt;i&gt;STOP&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;" style="text;vsdxID=219;fillColor=none;gradientColor=none;strokeColor=none;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;verticalAlign=middle;align=center;overflow=width;;html=1;fontColor=#000000;fontFamily=Calibri;" vertex="1" parent="8TYVb3OXIl3L788C4FlH-18">
+          <mxGeometry x="8.47" y="9.42" width="84.67" height="57.15" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-72" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-61" target="8TYVb3OXIl3L788C4FlH-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-74" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-61" target="8TYVb3OXIl3L788C4FlH-68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-61">
+          <mxCell style="vsdxID=219;fillColor=#fff2cc;shape=stencil(UzV2Ls5ILEhVNTIoLinKz04tz0wpyVA1dlE1MsrMy0gtyiwBslSNXVWNndPyi1LTi/JL81Ig/IJEkEoQKze/DGRCBUSfAUiHkUElhGcK4bpBVOZk5iGpNEVVikeloQHZpsK0YlWLz1QgA+HFtMycHEgIIcujBwlQCBKcxq4A);strokeColor=#d6b656;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="450.81" y="321" width="101" height="76" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-62" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 11.29px;&quot;&gt;Case&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 11.29px;&quot;&gt;&lt;i&gt;ROTATE_CW&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;" style="text;vsdxID=219;fillColor=none;gradientColor=none;strokeColor=none;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;verticalAlign=middle;align=center;overflow=width;;html=1;fontColor=#000000;fontFamily=Calibri;" vertex="1" parent="8TYVb3OXIl3L788C4FlH-61">
+          <mxGeometry x="8.47" y="9.42" width="84.67" height="57.15" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-73" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-63" target="8TYVb3OXIl3L788C4FlH-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-63">
+          <mxCell style="vsdxID=219;fillColor=#fff2cc;shape=stencil(UzV2Ls5ILEhVNTIoLinKz04tz0wpyVA1dlE1MsrMy0gtyiwBslSNXVWNndPyi1LTi/JL81Ig/IJEkEoQKze/DGRCBUSfAUiHkUElhGcK4bpBVOZk5iGpNEVVikeloQHZpsK0YlWLz1QgA+HFtMycHEgIIcujBwlQCBKcxq4A);strokeColor=#d6b656;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="450.5" y="431" width="101" height="76" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-64" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 11.29px;&quot;&gt;Case&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 11.29px;&quot;&gt;&lt;i&gt;ROTATE_CCW&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;" style="text;vsdxID=219;fillColor=none;gradientColor=none;strokeColor=none;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;verticalAlign=middle;align=center;overflow=width;;html=1;fontColor=#000000;fontFamily=Calibri;" vertex="1" parent="8TYVb3OXIl3L788C4FlH-63">
+          <mxGeometry x="8.47" y="9.42" width="84.67" height="57.15" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-77" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-66" target="8TYVb3OXIl3L788C4FlH-76">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="827" y="257" />
+              <mxPoint x="827" y="520" />
+              <mxPoint x="501" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;font-size: 11.29px;&quot;&gt;Set &lt;i&gt;CW Direction Pin Low&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11.29px;&quot;&gt;Set &lt;i&gt;CCW Direction Pin&lt;/i&gt;&amp;nbsp;&lt;i&gt;Low&lt;/i&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_toggle(uint8_t pinNumber, EN_DIO_PORT_T portNumber);  " tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-66">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=274;fillColor=#d5e8d4;shape=stencil(nZBLDoAgDERP0z3SIyjew0SURgSD+Lu9kMZoXLhwN9O+tukAlrNpJg1SzDH4QW/URgNYgZTkjA4UkwJUgGXng+6DX1zLfmoymdXo17xh5zmRJ6Q42BWCfc2oJfdAr+Yv+AP9Cb7OJ3H/2JG1HNGz/84klThPVCc=);strokeColor=#82b366;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,1,0],[0.5,0,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="599" y="232" width="170" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-88" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-67">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="825" y="469" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;font-size: 11.29px;&quot;&gt;Set &lt;i&gt;CW Direction Pin Low&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11.29px;&quot;&gt;Set &lt;i&gt;CCW Direction Pin&lt;/i&gt; &lt;i&gt;High&lt;/i&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_toggle(uint8_t pinNumber, EN_DIO_PORT_T portNumber);  " tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-67">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=274;fillColor=#d5e8d4;shape=stencil(nZBLDoAgDERP0z3SIyjew0SURgSD+Lu9kMZoXLhwN9O+tukAlrNpJg1SzDH4QW/URgNYgZTkjA4UkwJUgGXng+6DX1zLfmoymdXo17xh5zmRJ6Q42BWCfc2oJfdAr+Yv+AP9Cb7OJ3H/2JG1HNGz/84klThPVCc=);strokeColor=#82b366;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,1,0],[0.5,0,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="596.5" y="444" width="170" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-87" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-68">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="826.344827586207" y="359" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;font-size: 11.29px;&quot;&gt;Set &lt;i&gt;CW Direction Pin High&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11.29px;&quot;&gt;Set &lt;i&gt;CCW Direction Pin&lt;/i&gt;&amp;nbsp;&lt;i&gt;Low&lt;/i&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_toggle(uint8_t pinNumber, EN_DIO_PORT_T portNumber);  " tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-68">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=274;fillColor=#d5e8d4;shape=stencil(nZBLDoAgDERP0z3SIyjew0SURgSD+Lu9kMZoXLhwN9O+tukAlrNpJg1SzDH4QW/URgNYgZTkjA4UkwJUgGXng+6DX1zLfmoymdXo17xh5zmRJ6Q42BWCfc2oJfdAr+Yv+AP9Cb7OJ3H/2JG1HNGz/84klThPVCc=);strokeColor=#82b366;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,1,0],[0.5,0,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="596.5" y="334" width="170" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;div style=&quot;font-size: 1px&quot;&gt;&lt;font style=&quot;font-size: 11.29px; direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;Return &lt;i&gt;STD_OK&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-76">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=52;fillColor=#d5e8d4;shape=stencil(tVLREoIgEPwaHnEQxsl3s/9gEpSJwDko7e+DsEkze2l627vdu5uFRaxyHe8FosR5sCcxqMZ3iO0Rpcp0ApQPCLEasUpaEC3Yi2lS3fOojOhsr3HDmObyMtsVcYqS29Qh5FEfklwrM5OXeUa/yjkcAwfr7TDpiyTfXvjkMR+Vw2A998qaBac5tAKHU1hq3i4oNwjRr9ofvayt/+Rk+yX/4iWA159KpXWKxJx/z0Bopfyw+g4=);strokeColor=#82b366;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0.5,1,0],[0.5,0,0],[0,0.5,0],[1,0.5,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="450.81" y="555" width="101" height="38" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-80" value="False" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontFamily=Calibri;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="501.99999999999994" y="-6" width="39" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-81" value="True" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontFamily=Calibri;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="502" y="112" width="39" height="17.33209647495362" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;font-size: 1px&quot;&gt;&lt;font style=&quot;font-size: 11.29px; direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;Return &lt;i&gt;STD_NOK&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-82">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=55;fillColor=#f8cecc;shape=stencil(tVLREoIgEPwaHnEQxsl3s/9gEpSJwDko7e+DsEkze2l627vdu5uFRaxyHe8FosR5sCcxqMZ3iO0Rpcp0ApQPCLEasUpaEC3Yi2lS3fOojOhsr3HDmObyMtsVcYqS29Qh5FEfklwrM5OXeUa/yjkcAwfr7TDpiyTfXvjkMR+Vw2A998qaBac5tAKHU1hq3i4oNwjRr9ofvayt/+Rk+yX/4iWA159KpXWKxJx/z0Bopfyw+g4=);strokeColor=#b85450;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0.5,1,0],[0.5,0,0],[0,0.5,0],[1,0.5,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="636" y="145.5" width="91" height="38" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-85" value="False" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontFamily=Calibri;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="591" y="52" width="39" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-86" value="True" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontFamily=Calibri;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="591" y="-68" width="39" height="17.33209647495362" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-89" value="DCM_controlDCMSpeed" style="text;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="1041" y="-234" width="204" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-98" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-90" target="8TYVb3OXIl3L788C4FlH-91">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;font-size: 1px&quot;&gt;&lt;font style=&quot;font-size: 11.29px; direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;Start&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-90">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=30;fillColor=#dae8fc;shape=stencil(tVLREoIgEPwaHnEQxsl3s/9gEpSJwDko7e+DsEkze2l627vdu5uFRaxyHe8FosR5sCcxqMZ3iO0Rpcp0ApQPCLEasUpaEC3Yi2lS3fOojOhsr3HDmObyMtsVcYqS29Qh5FEfklwrM5OXeUa/yjkcAwfr7TDpiyTfXvjkMR+Vw2A998qaBac5tAKHU1hq3i4oNwjRr9ofvayt/+Rk+yX/4iWA159KpXWKxJx/z0Bopfyw+g4=);strokeColor=#6c8ebf;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0.5,1,0],[0.5,0,0],[0,0.5,0],[1,0.5,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="1083" y="-174" width="101" height="38" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-97" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-91" target="8TYVb3OXIl3L788C4FlH-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-99" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-91" target="8TYVb3OXIl3L788C4FlH-94">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1270.3333028157554" y="-20.333338419596316" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-91">
+          <mxCell style="vsdxID=219;fillColor=#fff2cc;shape=stencil(UzV2Ls5ILEhVNTIoLinKz04tz0wpyVA1dlE1MsrMy0gtyiwBslSNXVWNndPyi1LTi/JL81Ig/IJEkEoQKze/DGRCBUSfAUiHkUElhGcK4bpBVOZk5iGpNEVVikeloQHZpsK0YlWLz1QgA+HFtMycHEgIIcujBwlQCBKcxq4A);strokeColor=#d6b656;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="1083" y="-99.33" width="101" height="76" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-92" value="&lt;div style=&quot;&quot;&gt;&lt;i style=&quot;font-size: 11.29px; background-color: initial;&quot;&gt;SpeedPercentage&lt;/i&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 11.29px; background-color: initial;&quot;&gt;&amp;lt;= &lt;/span&gt;&lt;i style=&quot;font-size: 11.29px; background-color: initial;&quot;&gt;MAX_SPEED&lt;/i&gt;&lt;/div&gt;" style="text;vsdxID=219;fillColor=none;gradientColor=none;strokeColor=none;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;verticalAlign=middle;align=center;overflow=width;;html=1;fontColor=#000000;fontFamily=Calibri;" vertex="1" parent="8TYVb3OXIl3L788C4FlH-91">
+          <mxGeometry x="8.16" y="9.42" width="84.67" height="57.15" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-96" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="8TYVb3OXIl3L788C4FlH-93" target="8TYVb3OXIl3L788C4FlH-95">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;font-size: 11.29px;&quot;&gt;Generate &lt;i&gt;PWM&lt;/i&gt; passing the &lt;i&gt;SpeedPercentage&lt;/i&gt;, using &lt;i&gt;PWM_generatePWM&lt;/i&gt; function&lt;/div&gt;" Function="EN_DIO_Error_T DIO_toggle(uint8_t pinNumber, EN_DIO_PORT_T portNumber);  " tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-93">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=274;fillColor=#d5e8d4;shape=stencil(nZBLDoAgDERP0z3SIyjew0SURgSD+Lu9kMZoXLhwN9O+tukAlrNpJg1SzDH4QW/URgNYgZTkjA4UkwJUgGXng+6DX1zLfmoymdXo17xh5zmRJ6Q42BWCfc2oJfdAr+Yv+AP9Cb7OJ3H/2JG1HNGz/84klThPVCc=);strokeColor=#82b366;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0,0.5,0],[1,0.5,0],[0.5,1,0],[0.5,0,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="1048.5" y="10" width="170" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;div style=&quot;font-size: 1px&quot;&gt;&lt;font style=&quot;font-size: 11.29px; direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;Return &lt;i&gt;STD_NOK&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-94">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=55;fillColor=#f8cecc;shape=stencil(tVLREoIgEPwaHnEQxsl3s/9gEpSJwDko7e+DsEkze2l627vdu5uFRaxyHe8FosR5sCcxqMZ3iO0Rpcp0ApQPCLEasUpaEC3Yi2lS3fOojOhsr3HDmObyMtsVcYqS29Qh5FEfklwrM5OXeUa/yjkcAwfr7TDpiyTfXvjkMR+Vw2A998qaBac5tAKHU1hq3i4oNwjRr9ofvayt/+Rk+yX/4iWA159KpXWKxJx/z0Bopfyw+g4=);strokeColor=#b85450;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0.5,1,0],[0.5,0,0],[0,0.5,0],[1,0.5,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="1273" y="21" width="91" height="38" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;div style=&quot;font-size: 1px&quot;&gt;&lt;font style=&quot;font-size: 11.29px; direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;Return &lt;i&gt;STD_OK&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" Function="EN_DIO_Error_T DIO_init(uint8_t pinNumber, EN_DIO_PORT_T portNumber, EN_DIO_DIRECTION_T direction);" tags="Flowchart" id="8TYVb3OXIl3L788C4FlH-95">
+          <mxCell style="verticalAlign=middle;align=center;overflow=width;vsdxID=52;fillColor=#d5e8d4;shape=stencil(tVLREoIgEPwaHnEQxsl3s/9gEpSJwDko7e+DsEkze2l627vdu5uFRaxyHe8FosR5sCcxqMZ3iO0Rpcp0ApQPCLEasUpaEC3Yi2lS3fOojOhsr3HDmObyMtsVcYqS29Qh5FEfklwrM5OXeUa/yjkcAwfr7TDpiyTfXvjkMR+Vw2A998qaBac5tAKHU1hq3i4oNwjRr9ofvayt/+Rk+yX/4iWA159KpXWKxJx/z0Bopfyw+g4=);strokeColor=#82b366;spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;points=[[0.5,1,0],[0.5,0,0],[0,0.5,0],[1,0.5,0]];labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;fontFamily=Calibri;" vertex="1" parent="1">
+            <mxGeometry x="1083" y="105" width="101" height="38" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-100" value="True" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontFamily=Calibri;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1134" y="-18.33" width="39" height="17.33209647495362" as="geometry" />
+        </mxCell>
+        <mxCell id="8TYVb3OXIl3L788C4FlH-101" value="False" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontFamily=Calibri;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1234" y="-79" width="39" height="17.33209647495362" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
