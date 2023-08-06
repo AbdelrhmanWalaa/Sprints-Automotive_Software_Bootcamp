@@ -10,10 +10,6 @@ This project involves developing a robot using four motors, two buttons, and fou
 
 The robot is designed to move in a continuous rectangular path, howcasing the programmer's skills in controlling the robot's movements and designing an effective control system. The four motors provide the necessary propulsion for the robot, while the two buttons allow for user interaction and control. Additionally, the four LEDs can be utilized for status indication or visual feedback. 
 
-Overall, this project demonstrates the programmer's proficiency in programming robotic systems, utilizing ARM processors, and implementing a control system that enables precise movements and efficient operation
-
-Apologies for the confusion. Let's rewrite the Project Goals and Expected Outcomes based on the provided ARM microcontroller specifications:
-
 ## Project Goals
 
 - Develop a moving car application on an ARM microcontroller using the Sprints Kit with TivaC launch pad.
