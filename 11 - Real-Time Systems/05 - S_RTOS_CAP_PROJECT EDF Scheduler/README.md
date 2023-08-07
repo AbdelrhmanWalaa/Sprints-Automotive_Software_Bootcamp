@@ -38,3 +38,4 @@ To simulate a heavier workload, two additional tasks, Load_1_Simulation and Load
 
 ## Video
 > [FreeRTOS EDF Scheduler](https://drive.google.com/file/d/18fT2M_iGboBTeThPvK7_me9P3f5lazBn/view?usp=drive_link)
+> [FreeRTOS EDF Scheduler Resolution](https://drive.google.com/file/d/1yWK4wNTq9Qg-Z8uWGe54AafGlbFJ0Wee/view?usp=drive_link)
