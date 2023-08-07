@@ -1,0 +1,5 @@
+﻿  main.c
+E:\Courses\Sprints\Automotive Software BootCamp\Part 05 - C Programming\S_DS_01 Check Balanced Paranthethes\Balanced Parentheses\main.c(14,5): warning C4013: 'system' undefined; assuming extern returning int
+E:\Courses\Sprints\Automotive Software BootCamp\Part 05 - C Programming\S_DS_01 Check Balanced Paranthethes\Balanced Parentheses\main.c(241,63): warning C4047: 'function': 'uint8_t *' differs in levels of indirection from 'uint8_t (*)[50]'
+E:\Courses\Sprints\Automotive Software BootCamp\Part 05 - C Programming\S_DS_01 Check Balanced Paranthethes\Balanced Parentheses\main.c(241,44): warning C4024: 'isBalancedParentheses': different types for formal and actual parameter 1
+  Balanced Parentheses.vcxproj -> E:\Courses\Sprints\Automotive Software BootCamp\Part 05 - C Programming\S_DS_01 Check Balanced Paranthethes\Balanced Parentheses\x64\Debug\Balanced Parentheses.exe
