@@ -1,10 +1,10 @@
 # WDT Tester
 
-## Description:
+## Description
 
 Run the WDT tester example and verify its behavior aligns with the provided videos.
 
-## Requirements:
+## Requirements
 
 1. Prepare the development environment:
    - Set up the necessary tools and configurations for development.
