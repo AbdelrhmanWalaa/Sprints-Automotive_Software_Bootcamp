@@ -1,7 +1,7 @@
 # Obstacle Avoidance Car
 
 <p align="center">
-  <img src="https://github.com/AbdelrhmanWalaa/Sprints-Automotive_Software_Bootcamp/assets/44446382/cafa2cd4-dc27-43b6-962d-fdd7bc774b39" alt="Obstacle Avoidance Car">
+  <img src="https://github.com/AbdelrhmanWalaa/Sprints-Automotive_Software_Bootcamp/assets/44446382/3ac39384-5165-4f6a-99bd-c4b20e815664" alt="Obstacle Avoidance Car">
 </p>
 
 ## Overview
