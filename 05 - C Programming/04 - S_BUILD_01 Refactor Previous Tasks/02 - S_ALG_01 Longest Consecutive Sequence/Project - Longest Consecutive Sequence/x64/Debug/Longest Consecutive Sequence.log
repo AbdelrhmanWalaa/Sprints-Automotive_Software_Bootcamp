@@ -1,0 +1,6 @@
+﻿  lcs.c
+  main.c
+E:\Courses\Sprints\Automotive Software BootCamp\Part 05 - C Programming\S_ALG_01 Longest Consecutive Sequence\Longest Consecutive Sequence\main.c(56,51): warning C4133: 'function': incompatible types - from 'uint32_t *' to 'uint8_t *'
+  sort.c
+  Generating Code...
+  Longest Consecutive Sequence.vcxproj -> E:\Courses\Sprints\Automotive Software BootCamp\Part 05 - C Programming\S_ALG_01 Longest Consecutive Sequence\Longest Consecutive Sequence\x64\Debug\Longest Consecutive Sequence.exe
