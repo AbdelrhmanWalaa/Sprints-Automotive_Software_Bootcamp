@@ -11,81 +11,81 @@ The problem of checking if an input string of parentheses is balanced or not is 
 
     - Please use the below typedef
 <br> &emsp; typedef struct stack {
-<br> &emsp;&emsp; uint8_t elements[STACK_SIZE];
-<br> &emsp;&emsp; int8_t top;
+<br> &emsp; &emsp; uint8_t elements[STACK_SIZE];
+<br> &emsp; &emsp; int8_t top;
 <br> &emsp; } ST_stack_t; // Type
 
     - Implement all the below functions
         1. Implement the createEmptyStack function
-<br> &emsp; &emsp; /* Description:
-<br> &emsp; &emsp; &nbsp;* - This function takes a reference to a stacks type
-<br> &emsp; &emsp; &nbsp;* - Initialize this stack with Zeros
-<br> &emsp; &emsp; &nbsp;* - Initialize the top with -1
-<br> &emsp; &emsp; &nbsp;* Return:
-<br> &emsp; &emsp; &nbsp;* - Nothing to return
-<br> &emsp; &emsp; &nbsp;*/
-<br> &emsp; &emsp; void createEmptyStack(ST_stack_t *stack);
+<br> &emsp; /* Description:
+<br> &emsp; &nbsp;* - This function takes a reference to a stacks type
+<br> &emsp; &nbsp;* - Initialize this stack with Zeros
+<br> &emsp; &nbsp;* - Initialize the top with -1
+<br> &emsp; &nbsp;* Return:
+<br> &emsp; &nbsp;* - Nothing to return
+<br> &emsp; &nbsp;*/
+<br> &emsp; void createEmptyStack(ST_stack_t *stack);
 
         2. Implement the push function
-<br> &emsp; &emsp; /* Description:
-<br> &emsp; &emsp; &nbsp;* - This function takes a reference to the stack and data to store
-<br> &emsp; &emsp; &nbsp;* - Stores the data passed into the stack
-<br> &emsp; &emsp; &nbsp;* Return:
-<br> &emsp; &emsp; &nbsp;* - returns -1 if the stack is full
-<br> &emsp; &emsp; &nbsp;* - returns 0 otherwise
-<br> &emsp; &emsp; &nbsp;*/
-<br> &emsp; &emsp; int8_t push(ST_stack_t *stack, uint8_t data);
+<br> &emsp; /* Description:
+<br> &emsp; &nbsp;* - This function takes a reference to the stack and data to store
+<br> &emsp; &nbsp;* - Stores the data passed into the stack
+<br> &emsp; &nbsp;* Return:
+<br> &emsp; &nbsp;* - returns -1 if the stack is full
+<br> &emsp; &nbsp;* - returns 0 otherwise
+<br> &emsp; &nbsp;*/
+<br> &emsp; int8_t push(ST_stack_t *stack, uint8_t data);
 
         3. Implement the pop function
-<br> &emsp; &emsp; /* Description:
-<br> &emsp; &emsp; &nbsp;* - This function takes a reference to the stack
-<br> &emsp; &emsp; &nbsp;* - Stores the data popped from the stack in a data variable
-<br> &emsp; &emsp; &nbsp;* Return:
-<br> &emsp; &emsp; &nbsp;* - returns -2 if the stack is empty
-<br> &emsp; &emsp; &nbsp;* - returns 0 otherwise
-<br> &emsp; &emsp; &nbsp;*/
-<br> &emsp; &emsp; int8_t pop(ST_stack_t *stack, uint8_t *data);
+<br> &emsp; /* Description:
+<br> &emsp; &nbsp;* - This function takes a reference to the stack
+<br> &emsp; &nbsp;* - Stores the data popped from the stack in a data variable
+<br> &emsp; &nbsp;* Return:
+<br> &emsp; &nbsp;* - returns -2 if the stack is empty
+<br> &emsp; &nbsp;* - returns 0 otherwise
+<br> &emsp; &nbsp;*/
+<br> &emsp; int8_t pop(ST_stack_t *stack, uint8_t *data);
 
         4. Implement the printStack function
-<br> &emsp; &emsp; /* Description:
-<br> &emsp; &emsp; &nbsp;* - This function takes a reference to the stack
-<br> &emsp; &emsp; &nbsp;* - Prints all stack's data starting from the top
-<br> &emsp; &emsp; &nbsp;* Return:
-<br> &emsp; &emsp; &nbsp;* - returns -1 if the stack is full
-<br> &emsp; &emsp; &nbsp;* - returns -2 if the stack is empty
-<br> &emsp; &emsp; &nbsp;* - returns 0 otherwise
-<br> &emsp; &emsp; &nbsp;*/
-<br> &emsp; &emsp; int8_t printStack(ST_stack_t *stack);
+<br> &emsp; /* Description:
+<br> &emsp; &nbsp;* - This function takes a reference to the stack
+<br> &emsp; &nbsp;* - Prints all stack's data starting from the top
+<br> &emsp; &nbsp;* Return:
+<br> &emsp; &nbsp;* - returns -1 if the stack is full
+<br> &emsp; &nbsp;* - returns -2 if the stack is empty
+<br> &emsp; &nbsp;* - returns 0 otherwise
+<br> &emsp; &nbsp;*/
+<br> &emsp; int8_t printStack(ST_stack_t *stack);
 
         5. Implement the getStackTop function
-<br> &emsp; &emsp; /* Description:
-<br> &emsp; &emsp; &nbsp;* - This function takes a reference to the stack
-<br> &emsp; &emsp; &nbsp;* - Stores its top data into a variable
-<br> &emsp; &emsp; &nbsp;* Return:
-<br> &emsp; &emsp; &nbsp;* - returns -2 if the stack is empty
-<br> &emsp; &emsp; &nbsp;* - 0 otherwise
-<br> &emsp; &emsp; &nbsp;*/
-<br> &emsp; &emsp; int8_t getStackTop(ST_stack_t *stack, uint8_t *topData);
+<br> &emsp; /* Description:
+<br> &emsp; &nbsp;* - This function takes a reference to the stack
+<br> &emsp; &nbsp;* - Stores its top data into a variable
+<br> &emsp; &nbsp;* Return:
+<br> &emsp; &nbsp;* - returns -2 if the stack is empty
+<br> &emsp; &nbsp;* - 0 otherwise
+<br> &emsp; &nbsp;*/
+<br> &emsp; int8_t getStackTop(ST_stack_t *stack, uint8_t *topData);
 
         6. Implement the isFull function
-<br> &emsp; &emsp; /* Description:
-<br> &emsp; &emsp; &nbsp;* - This function takes a reference to the stack
-<br> &emsp; &emsp; &nbsp;* - Checks if the stack is full or not
-<br> &emsp; &emsp; &nbsp;* Return:
-<br> &emsp; &emsp; &nbsp;* - returns -1 if the stack is full
-<br> &emsp; &emsp; &nbsp;* - 0 otherwise
-<br> &emsp; &emsp; &nbsp;*/
-<br> &emsp; &emsp; int8_t isFull(ST_stack_t *stack);
+<br> &emsp; /* Description:
+<br> &emsp; &nbsp;* - This function takes a reference to the stack
+<br> &emsp; &nbsp;* - Checks if the stack is full or not
+<br> &emsp; &nbsp;* Return:
+<br> &emsp; &nbsp;* - returns -1 if the stack is full
+<br> &emsp; &nbsp;* - 0 otherwise
+<br> &emsp; &nbsp;*/
+<br> &emsp; int8_t isFull(ST_stack_t *stack);
 
         7. Implement the isEmpty function
-<br> &emsp; &emsp; /* Description:
-<br> &emsp; &emsp; &nbsp;* - This function takes a reference to the stack
-<br> &emsp; &emsp; &nbsp;* - Checks if the stack is empty or not
-<br> &emsp; &emsp; &nbsp;* Return:
-<br> &emsp; &emsp; &nbsp;* - returns -2 if the stack is empty
-<br> &emsp; &emsp; &nbsp;* - 0 otherwise
-<br> &emsp; &emsp; &nbsp;*/
-<br> &emsp; &emsp; int8_t isEmpty(ST_stack_t *stack);
+<br> &emsp; /* Description:
+<br> &emsp; &nbsp;* - This function takes a reference to the stack
+<br> &emsp; &nbsp;* - Checks if the stack is empty or not
+<br> &emsp; &nbsp;* Return:
+<br> &emsp; &nbsp;* - returns -2 if the stack is empty
+<br> &emsp; &nbsp;* - 0 otherwise
+<br> &emsp; &nbsp;*/
+<br> &emsp; int8_t isEmpty(ST_stack_t *stack);
 
 2. Test your stack
     - Follow the below algorithm to test your stack
@@ -110,16 +110,16 @@ The problem of checking if an input string of parentheses is balanced or not is 
       balanced parentheses or not.
       
     - Implement the below function
-<br> &emsp; &emsp; /* Description:
-<br> &emsp; &emsp; &nbsp;* - This function takes an expression array max 10 characters
-<br> &emsp; &emsp; &nbsp;* - Checks if the parentheses are balanced or not
-<br> &emsp; &emsp; &nbsp;* - Checks the following parentheses types {, }, (, ) only
-<br> &emsp; &emsp; &nbsp;* Return:
-<br> &emsp; &emsp; &nbsp;* - returns -2 if the neither of paranthethes is used
-<br> &emsp; &emsp; &nbsp;* - returns -1 if the parentheses are not balanced
-<br> &emsp; &emsp; &nbsp;* - returns 0 if the parentheses are balanced
-<br> &emsp; &emsp; &nbsp;*/
-<br> &emsp; &emsp; int8_t isBalancedParanthethes(uint8_t *expression);
+<br> &emsp; /* Description:
+<br> &emsp; &nbsp;* - This function takes an expression array max 10 characters
+<br> &emsp; &nbsp;* - Checks if the parentheses are balanced or not
+<br> &emsp; &nbsp;* - Checks the following parentheses types {, }, (, ) only
+<br> &emsp; &nbsp;* Return:
+<br> &emsp; &nbsp;* - returns -2 if the neither of paranthethes is used
+<br> &emsp; &nbsp;* - returns -1 if the parentheses are not balanced
+<br> &emsp; &nbsp;* - returns 0 if the parentheses are balanced
+<br> &emsp; &nbsp;*/
+<br> &emsp; int8_t isBalancedParanthethes(uint8_t *expression);
 
 4. Test your algorithm
     - Follow the below algorithm to test your algorithm
