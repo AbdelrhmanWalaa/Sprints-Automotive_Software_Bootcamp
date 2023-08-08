@@ -1,3 +1,0 @@
-E:\Courses\Sprints\Automotive Software BootCamp\Part 05 - C Programming\Task 1 - X-O Game\X-O Game\x64\Debug\X-O Game.exe
-E:\Courses\Sprints\Automotive Software BootCamp\Part 05 - C Programming\Task 01 - X-O Game\X-O Game\x64\Debug\X-O Game.exe
-E:\Courses\Sprints\Automotive Software BootCamp\Part 05 - C Programming\S_C_01 X-O Game\X-O Game\x64\Debug\X-O Game.exe
