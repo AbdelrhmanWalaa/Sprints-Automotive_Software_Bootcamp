@@ -10,10 +10,10 @@ The problem of checking if an input string of parentheses is balanced or not is 
     - Maximum stack size is 10.
 
     - Please use the below typedef
-<br> &emsp;        typedef struct stack {
-<br> &emsp;&emsp;     uint8_t elements[STACK_SIZE];
-<br> &emsp;&emsp;     int8_t top;
-<br> &emsp;        } ST_stack_t; // Type
+<br> &emsp; typedef struct stack {
+<br> &emsp;&emsp; uint8_t elements[STACK_SIZE];
+<br> &emsp;&emsp; int8_t top;
+<br> &emsp; } ST_stack_t; // Type
 
     - Implement all the below functions
         1. Implement the createEmptyStack function
