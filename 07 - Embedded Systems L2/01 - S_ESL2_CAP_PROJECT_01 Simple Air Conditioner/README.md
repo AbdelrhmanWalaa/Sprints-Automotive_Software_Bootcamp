@@ -37,8 +37,8 @@ Additionally, some extra features have been included:
 ## Contributors
 
 > [Abdelrhman Walaa](https://github.com/AbdelrhmanWalaa) |
-> [Hossam Elwahsh](https://github.com/HossamElwahsh) |
 > [Mahmoud Mowafey](https://github.com/Mahmoud-Mowafy) |
+> [Hossam Elwahsh](https://github.com/HossamElwahsh) |
 > [Tarek Elgohary](https://github.com/telgohry)
 
 ## Video
