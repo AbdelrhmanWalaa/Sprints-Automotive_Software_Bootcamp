@@ -29,8 +29,8 @@ The ATM ECU will handle the main transaction flows, including PIN validation, am
 ## Contributors
 
 > [Abdelrhman Walaa](https://github.com/AbdelrhmanWalaa) |
-> [Hossam Elwahsh](https://github.com/HossamElwahsh) |
-> [Mahmoud Mowafey](https://github.com/Mahmoud-Mowafy)
+> [Mahmoud Mowafey](https://github.com/Mahmoud-Mowafy) |
+> [Hossam Elwahsh](https://github.com/HossamElwahsh)
 
 ## Video
 > [Simple ATM Machine](https://drive.google.com/file/d/1Yt83rPD1v7XGVWoWsxdxXpQTE4M2Eeba/view?usp=sharing)
