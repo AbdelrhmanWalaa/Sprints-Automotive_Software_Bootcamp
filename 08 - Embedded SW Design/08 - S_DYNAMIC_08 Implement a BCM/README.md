@@ -19,7 +19,7 @@ This project involves developing Basic Communication Manager software.
 6. When MCU_1 finishes receiving the “Confirm BCM Operating” string, LED_1 in MCU_1 will be toggled.
 
 ## Video
-> [Basic Communication Manager]()
+> [Basic Communication Manager](https://drive.google.com/file/d/1_MJVSmXxi7sLUZnT--Ff0y4UByCWKf3G/view?usp=sharing)
 
 ## Circuit Schematic
 
