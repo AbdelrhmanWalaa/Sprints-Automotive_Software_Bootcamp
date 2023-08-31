@@ -20,4 +20,3 @@ This project involves developing Basic Communication Manager software.
 
 ## Video
 > [Basic Communication Manager](https://drive.google.com/file/d/1NR1UsJ8t6ufDnGrmhph00tEdxW7Xndsq/view?usp=sharing)
-
