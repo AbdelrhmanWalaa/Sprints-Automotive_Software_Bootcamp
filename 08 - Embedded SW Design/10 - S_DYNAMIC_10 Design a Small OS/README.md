@@ -21,4 +21,4 @@ In this project, the task is to design a small OS with a priority based preempti
 5. When pressing  BUTTON 1, the SOS will run
 
 ## Video
-> [Small OS]()
+> [Small OS](https://drive.google.com/file/d/134TnuFbZfW89E1ddrbLacKc8HiRsD8lT/view?usp=sharing)
