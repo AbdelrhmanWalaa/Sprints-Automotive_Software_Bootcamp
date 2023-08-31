@@ -37,4 +37,4 @@ RGB LED, this project offers an interactive and visually engaging experience.
      - The system state will return to state 1.
 
 ## Video
-> [RGB LED Blinking]()
+> [RGB LED Blinking](https://drive.google.com/file/d/1J1CSkIBNtMWOHEj-CEod7Uwtp42XUg4R/view?usp=sharing)
